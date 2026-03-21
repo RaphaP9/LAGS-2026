@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (DirectionInputVector == Vector2.zero) return false;
         if (!FixDirectionVectorDueToWalls()) return false;
-        if (checkWall.HitCorner && !checkGround.OnSlope) return false;
+        if (checkWall.HitCorner && checkWall.HitWall && !checkGround.OnSlope) return false;
 
         return true;
     }

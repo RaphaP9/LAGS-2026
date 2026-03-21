@@ -161,7 +161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 81702734}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenuUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 689869553}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenuUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 957851687}
   - component: {fileID: 957851686}
   - component: {fileID: 957851685}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 1200290815}
   - component: {fileID: 1200290814}
   - component: {fileID: 1200290813}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenuBGCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 1767916950}
   - component: {fileID: 1767916952}
   - component: {fileID: 1767916951}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

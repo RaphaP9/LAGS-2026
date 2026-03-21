@@ -19,6 +19,8 @@ public class NewMovementInput : MovementInput
 
     public override bool CanProcessMovementInput()
     {
+        if (ScenesManager.Instance.SceneState != ScenesManager.State.Idle) return false;
+
         return true;
     }
 
