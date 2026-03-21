@@ -79,7 +79,8 @@ public static class GeneralUtilities
 
     #region Vectors
     public static Vector2 Vector3ToVector2(Vector3 vector3) => new Vector2(vector3.x, vector3.y);
-    public static Vector3 Vector2ToVector3(Vector2 vector2) => new Vector3(vector2.x, vector2.y, 0f );
+    public static Vector3 Vector2ToVector3(Vector2 vector2) => new Vector3(vector2.x, vector2.y, 0f);
+    public static Vector3 Vector2ToVector3InZ(Vector2 vector2) => new Vector3(vector2.x, 0f, vector2.y);
     public static float Vector2ToAngleDegrees(Vector2 vector2) => Mathf.Atan2(vector2.y, vector2.x) * Mathf.Rad2Deg;
 
     public static Vector2Int Vector2ToVector2Int(Vector2 vector2)
