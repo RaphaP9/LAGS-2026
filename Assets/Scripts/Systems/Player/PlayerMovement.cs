@@ -36,8 +36,8 @@ public class PlayerMovement : MonoBehaviour
     private float desiredSpeed;
     private float smoothCurrentSpeed;
 
-    public Vector3 LastNonZeroInput {  get; private set; }
-    public Vector3 FixedLastNonZeroInput;
+    public Vector3 LastNonZeroInput { get; private set; }
+    public Vector3 FixedLastNonZeroInput { get; private set; }
 
     private Vector3 smoothDirectionInputVector;
 
