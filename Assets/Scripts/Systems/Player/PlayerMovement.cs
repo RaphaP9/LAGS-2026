@@ -36,9 +36,11 @@ public class PlayerMovement : MonoBehaviour
     private float desiredSpeed;
     private float smoothCurrentSpeed;
 
-    private Vector2 smoothDirectionInputVector;
-    public Vector2 LastNonZeroInput {  get; private set; }
-    public Vector2 FixedLastNonZeroInput { get; private set; }
+    public Vector3 LastNonZeroInput {  get; private set; }
+    public Vector3 FixedLastNonZeroInput;
+
+    private Vector3 smoothDirectionInputVector;
+
     public Vector3 FinalMoveDir { get; private set; }
     public Vector3 SmoothFinalMoveDir { get; private set; }
     public Vector3 FinalMoveVector { get; private set; }
@@ -46,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
 
     public static event EventHandler OnPlayerStopMoving;
     public static event EventHandler OnPlayerStartMoving;
+
+    private const float PROYECTION_MAGNITUDE_THRESHOLD = 0.1f;
 
     private void Awake()
     {
@@ -110,8 +114,8 @@ public class PlayerMovement : MonoBehaviour
     private bool CanMove()
     {
         if (DirectionInputVector == Vector2.zero) return false;
-        if (checkWall.HitCorner && checkWall.HitDiagonalWall && !checkGround.OnSlope) return false;
-        if (checkWall.MovementTowardsWall && checkWall.HitDiagonalWall && !checkGround.OnSlope) return false;
+        if (!FixDirectionVectorDueToWalls()) return false;
+        if (checkWall.HitCorner && !checkGround.OnSlope) return false;
 
         return true;
     }
@@ -121,36 +125,32 @@ public class PlayerMovement : MonoBehaviour
         smoothCurrentSpeed = Mathf.Lerp(smoothCurrentSpeed, desiredSpeed, Time.deltaTime * smoothVelocityFactor);
     }
 
-    private void CalculateLastNonZeroDirectionInput() => LastNonZeroInput = DirectionInputVector != Vector2.zero ? DirectionInputVector : LastNonZeroInput;
+    private void CalculateLastNonZeroDirectionInput() => LastNonZeroInput = GeneralUtilities.Vector2ToVector3InZ(DirectionInputVector != Vector2.zero ? DirectionInputVector : LastNonZeroInput);
 
-    private void FixDirectionVectorDueToWalls()
+    private bool FixDirectionVectorDueToWalls()
     {
-        if (checkWall.HitDiagonalWall)
+        if (!checkWall.HitWall)
         {
-            Vector3 wallNormal = checkWall.GetDiagonalWallInfo().normal;
-
-            Vector3 vector3LastNonZeroInput = GeneralUtilities.Vector2ToVector3InZ(LastNonZeroInput);
-            Vector3 projection = Vector3.Project(vector3LastNonZeroInput, wallNormal);
-
-            Vector3 perpendicularProyection = vector3LastNonZeroInput - projection;
-
-            Vector2 vector2PerpendicularProyection = GeneralUtilities.Vector3ToVector2(perpendicularProyection);
-
-            FixedLastNonZeroInput = vector2PerpendicularProyection.normalized;
-
-            return;
+            FixedLastNonZeroInput = LastNonZeroInput;
+            return true;
         }
+      
+        Vector3 wallNormal = checkWall.GetDiagonalWallInfo().normal;
+        Vector3 proyectionOnNormal = Vector3.Project(LastNonZeroInput, wallNormal);
 
-        FixedLastNonZeroInput = LastNonZeroInput;
+        Vector3 proyectionOnWall = LastNonZeroInput - proyectionOnNormal;
+
+        if (proyectionOnWall.magnitude < PROYECTION_MAGNITUDE_THRESHOLD) return false;
+
+        FixedLastNonZeroInput = proyectionOnWall.normalized;
+        return true;      
     }
 
-    private void SmoothDirectionInputVector() => smoothDirectionInputVector = Vector2.Lerp(smoothDirectionInputVector, FixedLastNonZeroInput, Time.deltaTime * smoothInputFactor);
+    private void SmoothDirectionInputVector() => smoothDirectionInputVector = Vector3.Lerp(smoothDirectionInputVector, FixedLastNonZeroInput, Time.deltaTime * smoothInputFactor);
 
     private void CalculateDesiredMovementDirection()
     {
-        Vector3 moveDirection = GeneralUtilities.Vector2ToVector3InZ(smoothDirectionInputVector);
-
-        Vector3 flattenDir = FlattenVectorOnSlopes(moveDirection);
+        Vector3 flattenDir = FlattenVectorOnSlopes(smoothDirectionInputVector);
 
         FinalMoveDir = flattenDir;
     }
