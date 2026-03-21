@@ -25,10 +25,10 @@ public class PlayerInteraction : MonoBehaviour
     private IInteractable currentInteractable;
     public IInteractable CurrentInteractable => currentInteractable;
 
-    public event EventHandler<OnInteractionEventArgs> OnInteractableSelected;
-    public event EventHandler<OnInteractionEventArgs> OnInteractableDeselected;
+    public static event EventHandler<OnInteractionEventArgs> OnInteractableSelected;
+    public static event EventHandler<OnInteractionEventArgs> OnInteractableDeselected;
 
-    public event EventHandler<OnInteractionEventArgs> OnInteraction;
+    public static event EventHandler<OnInteractionEventArgs> OnInteraction;
 
     public class OnInteractionEventArgs : EventArgs
     {

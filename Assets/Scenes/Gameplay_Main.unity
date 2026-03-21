@@ -917,6 +917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305168748}
   - component: {fileID: 1305168750}
+  - component: {fileID: 1305168753}
   - component: {fileID: 1305168749}
   - component: {fileID: 1305168751}
   - component: {fileID: 1305168752}
@@ -1026,6 +1027,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!225 &1305168753
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305168747}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1315270165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,6 +2261,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2125396982}
+  - component: {fileID: 2125396983}
+  - component: {fileID: 2125396984}
   m_Layer: 5
   m_Name: InteractionUI
   m_TagString: Untagged
@@ -2275,6 +2290,42 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &2125396983
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125396981}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d745cf6ccc2d3744a0f15e8953cd1a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2125396984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125396981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6700dddf963920d4e8032fbe702dd795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2125396983}
+  tooltipText: {fileID: 1567164279}
 --- !u!1001 &2192594287646605537
 PrefabInstance:
   m_ObjectHideFlags: 0
