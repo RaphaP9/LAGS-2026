@@ -8,22 +8,17 @@ public static class GeneralUtilities
 {
     private const bool DEBUG = true;
 
-    #region Seed Consts
-    private const string SEED_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    private const int SEED_SIZE = 8;
-
-    private const int HASH_BASE_NUMBER = 23;
-    private const int HASH_MULTIPLIER_NUMBER = 31;
-    #endregion
-
-    #region GUIDs
-    public static string GenerateGUID()
-    {
-        string generatedGUID = Guid.NewGuid().ToString();
-        return generatedGUID;
-    }
-
-    #endregion
+    private static readonly Vector2Int[] directions8 = new Vector2Int[]
+{
+        new Vector2Int(0,  1),  // Up
+        new Vector2Int(1,  1),  // Up-Right
+        new Vector2Int(1,  0),  // Right
+        new Vector2Int(1, -1),  // Down-Right
+        new Vector2Int(0, -1),  // Down
+        new Vector2Int(-1, -1),  // Down-Left
+        new Vector2Int(-1,  0),  // Left
+        new Vector2Int(-1,  1),  // Up-Left
+};
 
     #region Angles
     public static float NormalizeAngleDeg(float angleDeg)
@@ -79,6 +74,7 @@ public static class GeneralUtilities
 
     #region Vectors
     public static Vector2 Vector3ToVector2(Vector3 vector3) => new Vector2(vector3.x, vector3.y);
+    public static Vector3 Vector3ToVector2InZ(Vector3 vector3) => new Vector2(vector3.x, vector3.z);
     public static Vector3 Vector2ToVector3(Vector2 vector2) => new Vector3(vector2.x, vector2.y, 0f);
     public static Vector3 Vector2ToVector3InZ(Vector2 vector2) => new Vector3(vector2.x, 0f, vector2.y);
     public static float Vector2ToAngleDegrees(Vector2 vector2) => Mathf.Atan2(vector2.y, vector2.x) * Mathf.Rad2Deg;
@@ -169,6 +165,28 @@ public static class GeneralUtilities
         if (vectorA.x * vectorB.x + vectorA.y * vectorB.y > 0) return true;
 
         return false;
+    }
+
+    public static Vector2Int ClampVector2To8Direction(Vector2 vector2)
+    {
+        if (vector2 == Vector2Int.zero) return Vector2Int.zero;
+
+        Vector2Int closestDirection = directions8[0];
+        float maxDotProduct = Vector2.Dot(vector2, closestDirection);
+
+        foreach (Vector2Int direction in directions8)
+        {
+            Vector2 floatDirection = Vector2IntToVector2(direction);
+            float dot = Vector2.Dot(vector2, floatDirection.normalized);
+
+            if (dot > maxDotProduct)
+            {
+                maxDotProduct = dot;
+                closestDirection = direction;
+            }
+        }
+
+        return closestDirection;
     }
     #endregion
 
