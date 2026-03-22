@@ -4,7 +4,7 @@ public class PlayerScaleFlipper : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Transform transformToFlip;
-    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private PlayerFacingDirectionHandler playerFacingDirectionHandler;
 
     private bool facingRight = true;
 
@@ -15,12 +15,12 @@ public class PlayerScaleFlipper : MonoBehaviour
 
     private void HandleFlipDueToFacing()
     {
-        if (playerMovement.IsFacingRight())
+        if (playerFacingDirectionHandler.IsFacingRight)
         {
             CheckFlipRight();
         }
 
-        if (!playerMovement.IsFacingRight())
+        if (!playerFacingDirectionHandler.IsFacingRight)
         {
             CheckFlipLeft();
         }
