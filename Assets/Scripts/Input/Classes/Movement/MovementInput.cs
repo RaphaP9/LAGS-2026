@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class MovementInput : MonoBehaviour, IMovementInput
+public abstract class MovementInput : MonoBehaviour
 {
     public static MovementInput Instance { get; private set; }
 

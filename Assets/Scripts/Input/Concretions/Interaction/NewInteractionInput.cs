@@ -20,6 +20,9 @@ public class NewInteractionInput : InteractionInput
 
     public override bool CanProcessInteractionInput()
     {
+        if (playerInputActions == null) return false;
+
+        if (ScenesManager.Instance.SceneState != ScenesManager.State.Idle) return false;
         return true;
     }
 

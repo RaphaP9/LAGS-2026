@@ -226,5 +226,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void SetMovementState(State state) => this.state = state;
 
+    public bool IsFacingRight() => FixedLastNonZeroInput.x >= 0;
+
     #endregion
 }

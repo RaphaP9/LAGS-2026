@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class InteractionInput : MonoBehaviour, IInteractionInput
+public abstract class InteractionInput : MonoBehaviour
 {
     public static InteractionInput Instance { get; private set; }
 
