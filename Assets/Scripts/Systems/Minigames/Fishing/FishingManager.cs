@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,26 +12,37 @@ public class FishingManager : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField, Range(0, 5)] private int fishingEnergyCost;
-
-    [SerializeField,Range(0f,5f)] private float startingMinigameTime;
+    [Space]
+    [SerializeField, Range(0f,5f)] private float startingMinigameTime;
+    [SerializeField, Range(0f, 5f)] private float minWaitForFishTime;
+    [SerializeField, Range(0f, 5f)] private float maxWaitForFishTime;
+    [SerializeField, Range(0f, 5f)] private float minigameIntervalTime;
 
     [Header("Runtime Filled")]
     [SerializeField] private State state;
 
-    public enum State { StartingMinigame, AskForEnergy, WaitingForFish, PullingFishingRod, Success, Failure}
+    public static event EventHandler OnFishingSuccess;
+    public static event EventHandler OnFishingFail;
+
+    public enum State { StartingMinigame, AskForEnergy, WaitingForFish, PullingFishingRod, MinigameInterval}
 
     private bool energySpent = false;
+    private bool fishingSuccess = false;
+    private bool fishingFail = false;
 
     private void OnEnable()
     {
         minigameEnergyAskUI.OnEnergySpentInUI += MinigameEnergyAskUI_OnEnergySpentInUI;
+        fishingUI.OnFishingSuccess += FishingUI_OnFishingSuccess;
+        fishingUI.OnFishingFail += FishingUI_OnFishingFail;
     }
 
     private void OnDisable()
     {
         minigameEnergyAskUI.OnEnergySpentInUI -= MinigameEnergyAskUI_OnEnergySpentInUI;
+        fishingUI.OnFishingSuccess -= FishingUI_OnFishingSuccess;
+        fishingUI.OnFishingFail -= FishingUI_OnFishingFail;
     }
-
 
     private void Awake()
     {
@@ -61,18 +73,40 @@ public class FishingManager : MonoBehaviour
 
         yield return new WaitForSeconds(startingMinigameTime);
 
-        SetState(State.AskForEnergy);
+        while (true)
+        {
+            SetState(State.AskForEnergy);
 
-        minigameEnergyAskUI.ShowUI(fishingEnergyCost);
+            minigameEnergyAskUI.ShowUI(fishingEnergyCost);
 
-        yield return new WaitUntil(() => energySpent);
-        energySpent = false;
+            yield return new WaitUntil(() => energySpent);
+            energySpent = false;
 
-        minigameEnergyAskUI.HideUI();
+            minigameEnergyAskUI.HideUI();
 
-        SetState(State.WaitingForFish);
+            SetState(State.WaitingForFish);
 
-        fishingUI.StartFishingUIGame();
+            float timeToWait = GeneralUtilities.GetRandomBetweenTwoFloats(minWaitForFishTime, maxWaitForFishTime);
+
+            yield return new WaitForSeconds(timeToWait);
+
+            SetState(State.PullingFishingRod);
+
+            fishingUI.StartFishingUIGame();
+
+            yield return new WaitUntil(() => fishingSuccess || fishingFail);
+
+            if(fishingSuccess) OnFishingSuccess?.Invoke(this, EventArgs.Empty);
+            if(fishingFail) OnFishingFail?.Invoke(this,EventArgs.Empty);
+
+            fishingSuccess = false;
+            fishingFail = false;
+
+            SetState(State.MinigameInterval);
+
+            yield return new WaitForSeconds(minigameIntervalTime);
+
+        }
     }
 
     private void SetState(State state) => this.state = state;
@@ -81,6 +115,15 @@ public class FishingManager : MonoBehaviour
     private void MinigameEnergyAskUI_OnEnergySpentInUI(object sender, MinigameEnergyAskUI.OnEnergySpentInUIEventArgs e)
     {
         energySpent = true;
+    }
+    private void FishingUI_OnFishingSuccess(object sender, System.EventArgs e)
+    {
+        fishingSuccess = true;
+    }
+
+    private void FishingUI_OnFishingFail(object sender, System.EventArgs e)
+    {
+        fishingFail = true;
     }
 
     #endregion

@@ -6,6 +6,11 @@ public class NewInteractionInput : InteractionInput
 {
     private PlayerInputActions playerInputActions;
 
+    private void OnDisable()
+    {
+        playerInputActions.Interaction.Disable();
+    }
+
     protected override void Awake()
     {
         base.Awake();

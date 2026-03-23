@@ -6,6 +6,11 @@ public class NewUIInput : UIInput
 {
     private PlayerInputActions playerInputActions;
 
+    private void OnDisable()
+    {
+        playerInputActions.UI.Disable();
+    }
+
     protected override void Awake()
     {
         base.Awake();

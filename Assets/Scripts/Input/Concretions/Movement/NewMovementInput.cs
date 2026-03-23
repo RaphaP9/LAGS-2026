@@ -5,6 +5,11 @@ public class NewMovementInput : MovementInput
 {
     private PlayerInputActions playerInputActions;
 
+    private void OnDisable()
+    {
+        playerInputActions.Movement.Disable();
+    }
+
     protected override void Awake()
     {
         base.Awake();

@@ -11,9 +11,10 @@ public class FishingUI : MonoBehaviour
     [SerializeField] private InteractionInput interactionInput;
 
     [Header("Settings")]
+    [SerializeField, Range(0f, 3f)] private float startingTime;
+    [Space]
     [SerializeField, Range(0f, 1f)] private float indicatorImpulse;
     [SerializeField, Range(0f, 1f)] private float indicatorBackMovePerSecond;
-    [SerializeField, Range(0f, 3f)] private float startingTiltWaitTime;
     [Space]
     [SerializeField, Range(0.01f, 100f)] private float fillTiltSmoothFactor;
     [SerializeField, Range(0.01f, 100f)] private float indicatorTiltSmoothFactor;
@@ -79,11 +80,13 @@ public class FishingUI : MonoBehaviour
 
         ShowUI();
 
-        yield return new WaitForSeconds(startingTiltWaitTime);
+        yield return new WaitForSeconds(startingTime);
+
+        SetState(State.Playing);
 
         int remainingTilts = GeneralUtilities.GetRandomBetweenTwoInts(minTilts, maxTilts);
 
-        SetState(State.Playing);
+        Debug.Log(remainingTilts);
 
         for(int i = 0; i < remainingTilts; i++)
         {
@@ -106,9 +109,47 @@ public class FishingUI : MonoBehaviour
 
             currentFillTilt = chosenTilt;
 
+            float minSafeZoneTilt = currentFillTilt - safeZoneWidth / 2;
+            float maxSafeZoneTilt = currentFillTilt + safeZoneWidth / 2;
 
+            bool tiltSucceeded = false;
+            float currentSafeZoneTime = 0f;
+            float currentOutTime = 0f;
+
+            while (!tiltSucceeded)
+            {
+                if(GeneralUtilities.IsBetween(minSafeZoneTilt, maxSafeZoneTilt, currentIndicatorTilt))
+                {
+                    currentSafeZoneTime += Time.deltaTime;
+                    currentOutTime = 0f;
+                }
+                else
+                {
+                    currentOutTime += Time.deltaTime;
+                    currentSafeZoneTime = 0f;
+                }
+
+                if (currentOutTime >= outStayTime)
+                {
+                    SetState(State.NotPlaying);
+
+                    OnTiltFail?.Invoke(this, EventArgs.Empty);
+                    Fail();
+                    yield break;
+                }
+
+                if(currentSafeZoneTime >= safeZoneStayTime)
+                {
+                    OnTiltSuccess?.Invoke(this, EventArgs.Empty);
+                    tiltSucceeded = true;
+                }
+
+                yield return null;
+            }
         }
-        
+
+        SetState(State.NotPlaying);
+        Success();
     }
 
     private void ResetPositionsInstantly()
@@ -149,6 +190,18 @@ public class FishingUI : MonoBehaviour
         float xIndicatorPosition = Mathf.Lerp(indicatorHolder.anchoredPosition.x, xIndicatorTargetPosition, indicatorTiltSmoothFactor * Time.deltaTime);
 
         indicatorHolder.anchoredPosition = new Vector2(xIndicatorPosition, indicatorHolder.anchoredPosition.y);
+    }
+
+    private void Fail()
+    {
+        OnFishingFail?.Invoke(this, EventArgs.Empty);
+        FailUI();
+    }
+
+    private void Success()
+    {
+        OnFishingSuccess?.Invoke(this, EventArgs.Empty);
+        SuccessUI();
     }
 
     private void SetState(State state) => this.state = state;

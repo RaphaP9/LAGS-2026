@@ -226,6 +226,14 @@ public static class GeneralUtilities
         return Mathf.Abs(numberA - numberB) <= distance;
     }
 
+    public static bool IsBetween(float numberA, float numberB, float evaluatedNumber)
+    {
+        float min = Mathf.Min(numberA, numberB);
+        float max = Mathf.Max(numberA, numberB);
+
+        return evaluatedNumber >= min && evaluatedNumber <= max;
+    }
+
     #endregion
 
     #region Transforms
