@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7178358471642500544}
   - component: {fileID: 4963182045563713737}
   - component: {fileID: 3158158881584186546}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 8237966183557199872}
   - component: {fileID: 4743961761920305612}
   - component: {fileID: 1506281862829265595}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 7490089070729345881}
   - component: {fileID: 2582330740700517928}
   - component: {fileID: 729852825120577065}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AudioOptionsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 3884007718252678885}
   - component: {fileID: 5683794597684825286}
   - component: {fileID: 1157248750516232153}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 6908072535359796050}
   - component: {fileID: 8687213468326686291}
   - component: {fileID: 5715509834621575538}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 8430264600465177185}
   - component: {fileID: 2604340584300895882}
   - component: {fileID: 1124931113100765315}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 5809985340838642741}
   - component: {fileID: 9030639942593134135}
   - component: {fileID: 2988280075933577811}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 1023494405255168440}
   - component: {fileID: 7454313380507065249}
   - component: {fileID: 5692005570960982222}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145487276501452766}
   - component: {fileID: 2619471427864125995}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GroupsContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 4068185480673047699}
   - component: {fileID: 5819588700859875348}
   - component: {fileID: 1553176182297201676}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GraphicsOptionsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 1863783473800825439}
   - component: {fileID: 4424796755384343199}
   - component: {fileID: 7330393049999610366}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1258,7 +1258,7 @@ GameObject:
   - component: {fileID: 5054769675920407107}
   - component: {fileID: 4207481996986542742}
   - component: {fileID: 8276248058228030264}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1394,7 +1394,7 @@ GameObject:
   - component: {fileID: 4127284321711400242}
   - component: {fileID: 7020036289856534277}
   - component: {fileID: 6196975201269037019}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1471,7 +1471,7 @@ GameObject:
   - component: {fileID: 6238708723485477852}
   - component: {fileID: 3966323570475513198}
   - component: {fileID: 3339312229912069562}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1574,7 +1574,7 @@ GameObject:
   - component: {fileID: 4100552910134672185}
   - component: {fileID: 2057186750400260423}
   - component: {fileID: 5662715344587208642}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1678,7 +1678,7 @@ GameObject:
   - component: {fileID: 982576709530378293}
   - component: {fileID: 5331993896798647201}
   - component: {fileID: 7530129773047283916}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1754,7 +1754,7 @@ GameObject:
   - component: {fileID: 6925250729226615013}
   - component: {fileID: 6905644120368246904}
   - component: {fileID: 6342967632577782401}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1890,7 +1890,7 @@ GameObject:
   - component: {fileID: 206780441499798037}
   - component: {fileID: 2294629588997026296}
   - component: {fileID: 5827798375497637653}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2030,7 +2030,7 @@ GameObject:
   - component: {fileID: 5291914583440354023}
   - component: {fileID: 5098765026175895608}
   - component: {fileID: 3357713532306380108}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AudioOptionsContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2193,7 +2193,7 @@ GameObject:
   - component: {fileID: 5926828850436286697}
   - component: {fileID: 3165200001658001267}
   - component: {fileID: 9038454439260027080}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2269,7 +2269,7 @@ GameObject:
   - component: {fileID: 3656659603439991276}
   - component: {fileID: 9105385847852191778}
   - component: {fileID: 7415219049157800856}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2406,7 +2406,7 @@ GameObject:
   - component: {fileID: 655897657206126772}
   - component: {fileID: 6129264491798657799}
   - component: {fileID: 1759779131690937322}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2454,7 +2454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2525,7 +2525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4990161942637647680}
   - component: {fileID: 8341240442320304596}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GroupsContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2590,7 +2590,7 @@ GameObject:
   - component: {fileID: 3409492475657169929}
   - component: {fileID: 4408347281242397984}
   - component: {fileID: 6440572001957897437}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2729,7 +2729,7 @@ GameObject:
   - component: {fileID: 2065280045613172122}
   - component: {fileID: 7000893204371395732}
   - component: {fileID: 4266566082497000662}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GraphicsOptionsContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2867,7 +2867,7 @@ GameObject:
   - component: {fileID: 166974646814150959}
   - component: {fileID: 7936590551615144180}
   - component: {fileID: 527117604694399111}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3004,7 +3004,7 @@ GameObject:
   - component: {fileID: 1342214192162056079}
   - component: {fileID: 8667628358561873499}
   - component: {fileID: 4295623002329097343}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3052,7 +3052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3125,7 +3125,7 @@ GameObject:
   - component: {fileID: 1445853053494490317}
   - component: {fileID: 2084606828792350560}
   - component: {fileID: 2817326172675897992}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: OptionsContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3217,7 +3217,7 @@ GameObject:
   - component: {fileID: 8578096743757137981}
   - component: {fileID: 202226759927199299}
   - component: {fileID: 433772376126022896}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3337,7 +3337,7 @@ GameObject:
   - component: {fileID: 3311277707339687189}
   - component: {fileID: 7267707918614677247}
   - component: {fileID: 1839634476575252903}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3473,7 +3473,7 @@ GameObject:
   - component: {fileID: 214113812296895513}
   - component: {fileID: 2352696457970266271}
   - component: {fileID: 7414904538923718245}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3549,7 +3549,7 @@ GameObject:
   - component: {fileID: 2954152035921498783}
   - component: {fileID: 3562074984735061055}
   - component: {fileID: 2472880916963099432}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3625,7 +3625,7 @@ GameObject:
   - component: {fileID: 358108692504060170}
   - component: {fileID: 4797422330693440855}
   - component: {fileID: 7256230405264803318}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3701,7 +3701,7 @@ GameObject:
   - component: {fileID: 3872821728518180212}
   - component: {fileID: 3959286124964019610}
   - component: {fileID: 3411712702793136146}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3777,7 +3777,7 @@ GameObject:
   - component: {fileID: 8180072364994142649}
   - component: {fileID: 7966552893866171248}
   - component: {fileID: 2394893409297881514}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3913,7 +3913,7 @@ GameObject:
   - component: {fileID: 5308932604754843843}
   - component: {fileID: 838164063795564488}
   - component: {fileID: 6337860573033160801}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3992,7 +3992,7 @@ GameObject:
   - component: {fileID: 1769187739527269994}
   - component: {fileID: 2116282477514580628}
   - component: {fileID: 1696272157704445583}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
