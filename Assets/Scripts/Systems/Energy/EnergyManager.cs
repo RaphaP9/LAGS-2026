@@ -13,9 +13,16 @@ public class EnergyManager : MonoBehaviour
 
     public int CurrentEnergy => currentEnergy;
 
+    public static event EventHandler<OnEnergyEventArgs> OnEnergyInitialized;
+
     public static event EventHandler<OnEnergyGainedEventArgs> OnEnergyGained;
     public static event EventHandler<OnEnergySpentEventArgs> OnEnergySpent;
     public static event EventHandler<OnEnergyRefillEventArgs> OnEnergyRefill;
+
+    public class OnEnergyEventArgs : EventArgs
+    {
+        public int energy;
+    }
 
     public class OnEnergyGainedEventArgs: EventArgs
     {
@@ -40,6 +47,11 @@ public class EnergyManager : MonoBehaviour
         SetSingleton();
     }
 
+    private void Start()
+    {
+        InitializeEnergy();
+    }
+
     private void SetSingleton()
     {
         if (Instance == null)
@@ -51,6 +63,12 @@ public class EnergyManager : MonoBehaviour
             //Debug.LogWarning("There is more than one FishingManager instance, proceding to destroy duplicate");
             Destroy(gameObject);
         }
+    }
+
+    private void InitializeEnergy()
+    {
+        currentEnergy = StaticDataManager.Instance.Data.currentEnergy;
+        OnEnergyInitialized?.Invoke(this, new OnEnergyEventArgs { energy = currentEnergy });
     }
 
     public void GainEnergy(int quantity)
