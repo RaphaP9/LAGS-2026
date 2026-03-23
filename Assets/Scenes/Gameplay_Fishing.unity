@@ -497,7 +497,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590228756}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -541,11 +541,11 @@ MonoBehaviour:
   interactionInput: {fileID: 741550238}
   startingTime: 2.5
   indicatorImpulse: 0.1
-  indicatorBackMovePerSecond: 0.25
+  indicatorBackMovePerSecond: 0.3
   fillTiltSmoothFactor: 10
   indicatorTiltSmoothFactor: 10
   tiltMinDifference: 0.1
-  tiltMaxDifference: 0.75
+  tiltMaxDifference: 0.9
   minTilts: 3
   maxTilts: 7
   safeZoneWidth: 0.2
