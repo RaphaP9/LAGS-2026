@@ -190,6 +190,14 @@ public static class GeneralUtilities
     }
     #endregion
 
+    #region Ints
+    public static int GetRandomBetweenTwoInts(int numberA, int numberB)
+    {
+        int value = UnityEngine.Random.Range(numberA, numberB + 1);
+        return value;
+    }
+    #endregion
+
     #region Floats
     public static float RoundToNDecimalPlaces(float number, int decimalPlaces) => Mathf.Round(number * Mathf.Pow(10, decimalPlaces)) / Mathf.Pow(10, decimalPlaces);
     public static float FloorToNDecimalPlaces(float number, int decimalPlaces) => Mathf.FloorToInt(number * Mathf.Pow(10, decimalPlaces)) / Mathf.Pow(10, decimalPlaces);
@@ -206,6 +214,16 @@ public static class GeneralUtilities
 
         float value = UnityEngine.Random.Range(min, max);
         return value;
+    }
+
+    public static bool IsAtLeastDistance(float numberA, float numberB, float distance)
+    {
+        return Mathf.Abs(numberA - numberB) >= distance;
+    }
+
+    public static bool IsAtMostDistance(float numberA, float numberB, float distance)
+    {
+        return Mathf.Abs(numberA - numberB) <= distance;
     }
 
     #endregion

@@ -7,6 +7,7 @@ public class FishingManager : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private MinigameEnergyAskUI minigameEnergyAskUI;
+    [SerializeField] private FishingUI fishingUI;
 
     [Header("Settings")]
     [SerializeField, Range(0, 5)] private int fishingEnergyCost;
@@ -71,6 +72,7 @@ public class FishingManager : MonoBehaviour
 
         SetState(State.WaitingForFish);
 
+        fishingUI.StartFishingUIGame();
     }
 
     private void SetState(State state) => this.state = state;
