@@ -80,6 +80,8 @@ public class EnergyManager : MonoBehaviour
         currentEnergy = newEnergy;
 
         OnEnergyGained?.Invoke(this, new OnEnergyGainedEventArgs { newEnergy = currentEnergy, energyGained = energyGained });
+
+        SaveEnergyToData(currentEnergy);
     }
 
     public void SpendEnergy(int quantity)
@@ -91,6 +93,8 @@ public class EnergyManager : MonoBehaviour
         currentEnergy = newEnergy;
 
         OnEnergySpent?.Invoke(this, new OnEnergySpentEventArgs { newEnergy = currentEnergy, energySpent = energySpent });
+
+        SaveEnergyToData(currentEnergy);
     }
 
     public void RefillEnergy(int quantity)
@@ -102,6 +106,8 @@ public class EnergyManager : MonoBehaviour
         currentEnergy = newEnergy;
 
         OnEnergyRefill?.Invoke(this, new OnEnergyRefillEventArgs { newEnergy = currentEnergy, energyRefilled = energyRefilled });
+
+        SaveEnergyToData(currentEnergy);
     }
 
     public bool CanSpendEnergy(int quantity)
@@ -109,4 +115,6 @@ public class EnergyManager : MonoBehaviour
         if (quantity > currentEnergy) return false;
         return true;
     }
+
+    private void SaveEnergyToData(int energy) => StaticDataManager.Instance.SetCurrentEnergy(energy);
 }

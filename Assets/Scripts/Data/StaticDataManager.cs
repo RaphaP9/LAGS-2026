@@ -33,4 +33,8 @@ public class StaticDataManager : MonoBehaviour
     }
 
     public void ResetData(GameSettingsSO gameSettingsSO) => data.ResetData(gameSettingsSO);
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    
+    public void SetCurrentEnergy(int energy) => data.currentEnergy = energy;
 }
