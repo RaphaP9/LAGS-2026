@@ -4,6 +4,9 @@ public class StaticDataManager : MonoBehaviour
 {
     public static StaticDataManager Instance { get; private set; }
 
+    [Header("Components")]
+    [SerializeField] private GameSettingsSO gameSettingsSO;
+
     [Header("Data")]
     [SerializeField] private Data data;
 
@@ -12,6 +15,7 @@ public class StaticDataManager : MonoBehaviour
     private void Awake()
     {
         SetSingleton();
+        ResetData(gameSettingsSO);
     }
 
     private void SetSingleton()
@@ -28,5 +32,5 @@ public class StaticDataManager : MonoBehaviour
         }
     }
 
-    public void ResetData() => data.ResetData();
+    public void ResetData(GameSettingsSO gameSettingsSO) => data.ResetData(gameSettingsSO);
 }

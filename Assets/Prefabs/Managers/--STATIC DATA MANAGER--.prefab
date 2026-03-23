@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e5bf2630b65e848b316fef78462402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSettingsSO: {fileID: 11400000, guid: bb14c12c4b19f6f4c828734f9bbfe50e, type: 2}
   data:
+    currentEnergy: 0
     timesPlayedFishingGame: 0
