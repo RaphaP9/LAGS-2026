@@ -44,6 +44,9 @@
         },
         {
             "m_Id": "b8721be57c4d4ef59ec94cde111e4ac1"
+        },
+        {
+            "m_Id": "85c29126cf5941859415096762c89c3a"
         }
     ],
     "m_Keywords": [],
@@ -206,6 +209,9 @@
         },
         {
             "m_Id": "b78857a4e1f74dd7bcc51dc367e037ca"
+        },
+        {
+            "m_Id": "c1d5c6c6caf24745b1d690a73b3e342c"
         }
     ],
     "m_GroupDatas": [],
@@ -900,6 +906,9 @@
         },
         {
             "m_Id": "b4edba209c914f05bb14b1e2446d7c1d"
+        },
+        {
+            "m_Id": "85c29126cf5941859415096762c89c3a"
         }
     ]
 }
@@ -3560,6 +3569,34 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "85c29126cf5941859415096762c89c3a",
+    "m_Guid": {
+        "m_GuidSerialized": "e0ca9608-53aa-466d-90c4-9bf7c1c6a735"
+    },
+    "m_Name": "Transparency",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Transparency",
+    "m_DefaultReferenceName": "_Transparency",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 1.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "883f474f48a54cfcbec762e1dabffc43",
@@ -4993,6 +5030,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "c1d5c6c6caf24745b1d690a73b3e342c",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 1429.0001220703125,
+            "y": 479.0000305175781,
+            "width": 146.9998779296875,
+            "height": 33.999969482421878
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "cbad4bd758444677bb97fa923c5a38d1"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "85c29126cf5941859415096762c89c3a"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
     "m_ObjectId": "c4677d996b5143cab918feae51c6035b",
     "m_Id": 1,
@@ -5242,6 +5315,21 @@
     "m_ObjectId": "cbac84639a974a5dbf76e2229a007480",
     "m_Id": 0,
     "m_DisplayName": "WaterLevel",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "cbad4bd758444677bb97fa923c5a38d1",
+    "m_Id": 0,
+    "m_DisplayName": "Transparency",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

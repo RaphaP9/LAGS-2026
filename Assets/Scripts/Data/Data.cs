@@ -18,8 +18,13 @@ public class Data
 
     public void ResetData(GameSettingsSO gameSettingsSO)
     {
+        currentDay = gameSettingsSO.startingDay;
+        currentTime = gameSettingsSO.startingTime;
+
         currentPlayerPosition = gameSettingsSO.startingPlayerPosition;
+
         currentEnergy = gameSettingsSO.maxEnergy;
+
         timesPlayedFishingGame = 0;
     }
 }

@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f9bb2f7b665b14aa506f502dfa3dd5, type: 3}
   m_Name: GameSettingsSO
   m_EditorClassIdentifier: 
+  startingPlayerPosition: {x: 0, y: 0}
+  startingDay: 1
+  finalDay: 7
+  startingTime: 300
+  finalTime: 1080
+  minutesInGamePerSecondRealtime: 1
   maxEnergy: 10
