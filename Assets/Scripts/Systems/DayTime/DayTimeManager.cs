@@ -27,6 +27,9 @@ public class DayTimeManager : MonoBehaviour
     public static event EventHandler<OnDayEventArgs> OnDayEnd;
     public static event EventHandler<OnTimeEventArgs> OnTimeChanged;
 
+    private const int MAX_HOURS = 24; 
+    private const int MAX_MINUTES = 60;
+
     public class OnDayEventArgs : EventArgs
     {
         public int day;
@@ -88,6 +91,7 @@ public class DayTimeManager : MonoBehaviour
         currentRawTime += Time.deltaTime * minutesInGamePerSecondRealtime;
 
         int newTime = Mathf.FloorToInt(currentRawTime);
+        newTime = newTime % (MAX_HOURS * MAX_MINUTES);
 
         if(newTime != currentTime)
         {
@@ -125,5 +129,10 @@ public class DayTimeManager : MonoBehaviour
         }
 
         return true;
+    }
+
+    public bool IsCurrentTimeBetweenTwoTimes(int timeA, int timeB)
+    {
+        return GeneralUtilities.IsBetween(timeA, timeB, currentTime);
     }
 }

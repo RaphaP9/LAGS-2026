@@ -13,6 +13,17 @@ public class DummyInteractableMinigame : MonoBehaviour, IInteractable
     [SerializeField] private string minigameScene;
     [SerializeField] private TransitionType minigameSceneTransitionType;
 
+    [Header("Time Settings")]
+    [SerializeField] private int minTime;
+    [SerializeField] private int maxTime;
+    [Space]
+    [SerializeField] private string message;
+    [SerializeField] private Transform messageTransform;
+    [SerializeField] private Color messageColor;
+    [SerializeField] private float messageDuration;
+
+
+
     #region IInteractable Properties
     public float InteractionRange => interactionRange;
     public bool IsSelectable => GameManager.Instance.GameState == GameManager.State.Exploring;
@@ -29,7 +40,16 @@ public class DummyInteractableMinigame : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        ScenesManager.Instance.TransitionLoadTargetScene(minigameScene, minigameSceneTransitionType);
+        if(DayTimeManager.Instance.IsCurrentTimeBetweenTwoTimes(minTime, maxTime))
+        {
+            ScenesManager.Instance.TransitionLoadTargetScene(minigameScene, minigameSceneTransitionType);
+
+        }
+        else
+        {
+            MessageManager.Instance.CreateMessage(message, messageColor, messageTransform.position, messageDuration);
+        }
+
         OnInteractableInteracted?.Invoke(this, EventArgs.Empty);
     }
 
