@@ -129,6 +129,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Dialogue",
+            "id": "d8290a49-6094-4582-a6b0-9531638a5c5a",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "3534a1c1-9126-4e21-ba3a-8893ba70d1de",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "dbc06e72-2940-4bd2-96b2-ca1bb47e85e5",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -9,10 +9,12 @@ public class DummyInteractable : MonoBehaviour, IInteractable
     [SerializeField] private bool isInteractable;
     [Space]
     [SerializeField] private string tooltipMessage;
+    [Space]
+    [SerializeField] private DialogueSO dialogueSO;
 
     #region IInteractable Properties
     public float InteractionRange => interactionRange;
-    public bool IsSelectable => canBeSelected;
+    public bool IsSelectable => GameManager.Instance.GameState == GameManager.State.Exploring;
     public bool IsInteractable => isInteractable;
     public string TooltipMessage => tooltipMessage;
     #endregion
@@ -39,7 +41,7 @@ public class DummyInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("DummyInteracted");
+        DialogueManager.Instance.StartDialogue(dialogueSO); 
         OnInteractableInteracted?.Invoke(this, EventArgs.Empty);      
     }
 
