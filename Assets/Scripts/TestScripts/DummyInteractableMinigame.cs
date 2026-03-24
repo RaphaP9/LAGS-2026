@@ -7,7 +7,6 @@ public class DummyInteractableMinigame : MonoBehaviour, IInteractable
     [SerializeField, Range(1f, 100f)] private float interactionRange;
     [Space]
     [SerializeField] private bool canBeSelected;
-    [SerializeField] private bool isInteractable;
     [Space]
     [SerializeField] private string tooltipMessage;
     [Space]
@@ -17,7 +16,6 @@ public class DummyInteractableMinigame : MonoBehaviour, IInteractable
     #region IInteractable Properties
     public float InteractionRange => interactionRange;
     public bool IsSelectable => GameManager.Instance.GameState == GameManager.State.Exploring;
-    public bool IsInteractable => isInteractable;
     public string TooltipMessage => tooltipMessage;
     #endregion
 
@@ -25,32 +23,14 @@ public class DummyInteractableMinigame : MonoBehaviour, IInteractable
     public event EventHandler OnInteractableSelected;
     public event EventHandler OnInteractableDeselected;
     public event EventHandler OnInteractableInteracted;
-    public event EventHandler OnInteractableFailInteracted;
     #endregion
 
     #region  IInteractable Methods
-
-    public void TryInteract()
-    {
-        if (!isInteractable)
-        {
-            FailInteract();
-            return;
-        }
-
-        Interact();
-    }
 
     public void Interact()
     {
         ScenesManager.Instance.TransitionLoadTargetScene(minigameScene, minigameSceneTransitionType);
         OnInteractableInteracted?.Invoke(this, EventArgs.Empty);
-    }
-
-    public void FailInteract()
-    {
-        //Logic
-        OnInteractableFailInteracted?.Invoke(this, EventArgs.Empty);
     }
 
     public void Select()

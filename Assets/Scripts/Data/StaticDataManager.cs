@@ -39,4 +39,7 @@ public class StaticDataManager : MonoBehaviour
     public void SetCurrentEnergy(int energy) => data.currentEnergy = energy;
 
     public void SetCurrentPlayerPosition(Vector2 playerPosition) => data.currentPlayerPosition = playerPosition;
+
+    public void SetCurrentTime(int time) => data.currentTime = time;
+    public void SetCurrentDay(int day) => data.currentDay = day;
 }

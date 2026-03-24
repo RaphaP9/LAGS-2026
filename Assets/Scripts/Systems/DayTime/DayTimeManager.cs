@@ -93,6 +93,8 @@ public class DayTimeManager : MonoBehaviour
         {
             currentTime = newTime;
             OnTimeChanged?.Invoke(this, new OnTimeEventArgs {time = currentTime});
+
+            StaticDataManager.Instance.SetCurrentTime(currentTime);
         }
 
         if(currentTime >= gameSettingsSO.finalTime)

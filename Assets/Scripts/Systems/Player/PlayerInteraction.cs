@@ -155,7 +155,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (InteractionDownInput)
         {
-            currentInteractable.TryInteract();
+            currentInteractable.Interact();
             OnInteraction?.Invoke(this, new OnInteractionEventArgs { interactable = currentInteractable});
         }
     }

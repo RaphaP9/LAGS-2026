@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5028d888ba95154bb1dc26279b4a6a3, type: 3}
   m_Name: MusicPoolSO
   m_EditorClassIdentifier: 
-  sceneNameMusicList: []
+  sceneNameMusicList:
+  - sceneName: Gameplay_Main
+    music: {fileID: 8300000, guid: 661e46bfcf4080b4eb95f664f9b64b46, type: 3}
