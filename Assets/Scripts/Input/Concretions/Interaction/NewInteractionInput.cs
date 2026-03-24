@@ -28,6 +28,17 @@ public class NewInteractionInput : InteractionInput
         if (playerInputActions == null) return false;
 
         if (ScenesManager.Instance.SceneState != ScenesManager.State.Idle) return false;
+
+        if (PauseManager.Instance != null)
+        {
+            if (PauseManager.Instance.GamePaused) return false;
+        }
+
+        if (GameManager.Instance != null)
+        {
+            if (GameManager.Instance.GameState != GameManager.State.Exploring) return false;
+        }
+
         return true;
     }
 

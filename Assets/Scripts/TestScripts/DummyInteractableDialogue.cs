@@ -1,6 +1,6 @@
 using UnityEngine;
 using System;
-public class DummyInteractable : MonoBehaviour, IInteractable
+public class DummyInteractableDialogue : MonoBehaviour, IInteractable
 {
     [Header("Interactable Settings")]
     [SerializeField, Range(1f, 100f)] private float interactionRange;
