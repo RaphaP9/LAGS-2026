@@ -1,12 +1,10 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement Instance { get; private set; }
-
-    [Header("Enabler")]
-    [SerializeField] private bool movementEnabled;
 
     [Header("Components")]
     [SerializeField] private MovementInput movementInput;
@@ -50,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
     public static event EventHandler OnPlayerStartMoving;
 
     private const float PROYECTION_MAGNITUDE_THRESHOLD = 0.1f;
+
+    private bool movementEnabled = true;
 
     private void Awake()
     {
@@ -183,6 +183,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyHorizontalMovement()
     {
+        if (!movementEnabled) return;
         _rigidbody.linearVelocity = new Vector3(FinalMoveVector.x, _rigidbody.linearVelocity.y, FinalMoveVector.z);
     }
 
@@ -224,6 +225,28 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void StopMovement()
+    {
+        FinalMoveVector = Vector3.zero;
+        _rigidbody.linearVelocity = Vector3.zero;
+    }
+
     private void SetMovementState(State state) => this.state = state;
     #endregion
+
+    public void StopPlayerForSeconds(float seconds)
+    {
+        StopAllCoroutines();
+        StartCoroutine(StopPlayerForSecondsCoroutine(seconds));
+    }
+
+    private IEnumerator StopPlayerForSecondsCoroutine(float seconds)
+    {
+        movementEnabled = false;
+
+        StopMovement();
+
+        yield return new WaitForSeconds(seconds);
+        movementEnabled = true;
+    }
 }

@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 186909364784241927}
   - component: {fileID: 180116848822654640}
   - component: {fileID: 1249519277470404687}
+  - component: {fileID: 905656977334702680}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -592,7 +593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e99c42e6716304aab3d01e4e6e9f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementEnabled: 1
   movementInput: {fileID: 0}
   checkGround: {fileID: 7778028731154008871}
   checkWall: {fileID: 2905765022121816318}
@@ -637,6 +637,20 @@ MonoBehaviour:
   gameSettingsSO: {fileID: 11400000, guid: bb14c12c4b19f6f4c828734f9bbfe50e, type: 2}
   _rigidbody: {fileID: 3189521050446118873}
   currentPlayerPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &905656977334702680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795691249990570845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4e3358c180b7f4b961405b2808cc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 186909364784241927}
+  timeStopMovement: 0.5
 --- !u!1 &7591433875707697134
 GameObject:
   m_ObjectHideFlags: 0
