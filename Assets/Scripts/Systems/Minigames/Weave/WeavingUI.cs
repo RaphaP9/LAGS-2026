@@ -12,6 +12,7 @@ public class WeavingUI : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField, Range(0f, 3f)] private float startingTime;
+    [SerializeField, Range(0f, 3f)] private float endingTime;
 
     [Header("Lists")]
     [SerializeField] private List<Transform> loomUIPrefabs;
@@ -65,6 +66,8 @@ public class WeavingUI : MonoBehaviour
         yield return new WaitUntil(() => loomSuccess || loomFail);
 
         SetState(State.NotPlaying);
+
+        yield return new WaitForSeconds(endingTime);
 
         if (loomSuccess) Success();
         if (loomFail) Fail();

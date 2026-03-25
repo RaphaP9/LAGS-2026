@@ -540,6 +540,7 @@ MonoBehaviour:
   indicatorHolder: {fileID: 1562332045}
   minigamesInput: {fileID: 1357388768}
   startingTime: 2.5
+  endingTime: 0.5
   indicatorImpulse: 0.1
   indicatorBackMovePerSecond: 0.3
   fillTiltSmoothFactor: 10

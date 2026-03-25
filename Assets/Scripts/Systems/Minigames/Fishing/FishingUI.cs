@@ -12,6 +12,7 @@ public class FishingUI : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField, Range(0f, 3f)] private float startingTime;
+    [SerializeField, Range(0f, 3f)] private float endingTime;
     [Space]
     [SerializeField, Range(0f, 1f)] private float indicatorImpulse;
     [SerializeField, Range(0f, 1f)] private float indicatorBackMovePerSecond;
@@ -134,7 +135,10 @@ public class FishingUI : MonoBehaviour
                     SetState(State.NotPlaying);
 
                     OnTiltFail?.Invoke(this, EventArgs.Empty);
+
+                    yield return new WaitForSeconds(endingTime);
                     Fail();
+
                     yield break;
                 }
 
@@ -149,6 +153,8 @@ public class FishingUI : MonoBehaviour
         }
 
         SetState(State.NotPlaying);
+
+        yield return new WaitForSeconds(endingTime);
         Success();
     }
 

@@ -661,7 +661,7 @@ MonoBehaviour:
   minigameEnergyAskUI: {fileID: 1857705786}
   weaveUI: {fileID: 597957358}
   startingMinigameTime: 3
-  waitForLoomTime: 2
+  waitForLoomTime: 0.5
   minigameIntervalTime: 3
   state: 0
 --- !u!1 &597957353
@@ -753,8 +753,11 @@ MonoBehaviour:
   loomUIHolder: {fileID: 1286704536}
   refferenceRectTransform: {fileID: 1286704536}
   startingTime: 0.25
+  endingTime: 0.5
   loomUIPrefabs:
-  - {fileID: 3207826018422268430, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
+  - {fileID: 771538531673949980, guid: ba7df7fc491e2e34cb85d979ca080fc6, type: 3}
+  - {fileID: 771538531673949980, guid: 58fb88c74f528eb46abd5350214019f3, type: 3}
+  - {fileID: 771538531673949980, guid: 2fc5b54d6e8eb9d44a2b333797c67d51, type: 3}
   currentLoomUI: {fileID: 0}
   state: 0
 --- !u!1 &615468236
