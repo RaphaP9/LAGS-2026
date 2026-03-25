@@ -17,11 +17,42 @@ MonoBehaviour:
   finalDay: 4
   startingTime: 360
   finalTime: 1080
+  maxEnergy: 100
   inventoryStartingConditions:
   - inventoryObjectID: 1
-    quantity: 3
+    quantity: 0
   - inventoryObjectID: 2
-    quantity: 4
+    quantity: 0
   - inventoryObjectID: 3
-    quantity: 5
-  maxEnergy: 100
+    quantity: 0
+  startingTotoraCrops:
+  - id: 1
+    isHarvested: 0
+  - id: 2
+    isHarvested: 0
+  - id: 3
+    isHarvested: 0
+  - id: 4
+    isHarvested: 0
+  - id: 5
+    isHarvested: 0
+  - id: 6
+    isHarvested: 0
+  - id: 7
+    isHarvested: 0
+  - id: 8
+    isHarvested: 0
+  - id: 9
+    isHarvested: 0
+  - id: 10
+    isHarvested: 0
+  - id: 11
+    isHarvested: 0
+  - id: 12
+    isHarvested: 0
+  - id: 13
+    isHarvested: 0
+  - id: 14
+    isHarvested: 0
+  - id: 15
+    isHarvested: 0

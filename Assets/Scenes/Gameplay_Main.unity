@@ -426,6 +426,11 @@ Transform:
   - {fileID: 791401372}
   m_Father: {fileID: 1389577843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &249900670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+  m_PrefabInstance: {fileID: 296886282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &268179012
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +463,67 @@ Transform:
   - {fileID: 1153160590}
   m_Father: {fileID: 719158552}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &296886282
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1389577843}
+    m_Modifications:
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.698
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950641356825756063, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_Name
+      value: TotoraCrop (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005043603057111397, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: id
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
 --- !u!1001 &378617178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2506,6 +2572,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549319108}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &592413048
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1389577843}
+    m_Modifications:
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.538
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950641356825756063, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_Name
+      value: TotoraCrop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005043603057111397, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
 --- !u!1 &610740086
 GameObject:
   m_ObjectHideFlags: 0
@@ -3621,6 +3748,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 40, y: 1, z: 40}
   m_Center: {x: 0, y: -0.5, z: 0}
+--- !u!4 &1008218962 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+  m_PrefabInstance: {fileID: 592413048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1153160589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,6 +3892,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 15, y: 1, z: 10}
   m_Center: {x: 0, y: -0.5, z: 0}
+--- !u!4 &1242550062 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+  m_PrefabInstance: {fileID: 6471498198791224870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251245753
 GameObject:
   m_ObjectHideFlags: 0
@@ -4130,6 +4267,9 @@ Transform:
   - {fileID: 1986714386}
   - {fileID: 224359120}
   - {fileID: 398293614}
+  - {fileID: 1242550062}
+  - {fileID: 1008218962}
+  - {fileID: 249900670}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543220092
@@ -6524,6 +6664,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3623814128339343900, guid: 9304456fa19e2c444a606183062f2a96, type: 3}
   m_PrefabInstance: {fileID: 5123177818608946655}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6471498198791224870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1389577843}
+    m_Modifications:
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.266
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009232179655905681, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950641356825756063, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
+      propertyPath: m_Name
+      value: TotoraCrop
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cdfc82823e0374c4fa4257b5aa74f46e, type: 3}
 --- !u!224 &7686277808360332478 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5711951589145936098, guid: 0f5d4568daa58e040a76ff31c2ff784f, type: 3}

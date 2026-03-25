@@ -69,4 +69,25 @@ public class StaticDataManager : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
+    public void SetTotoraCropHarvested(int totoraCropID)
+    {
+        foreach(TotoraCropData totoraCropData in data.currentTotoraCrops)
+        {
+            if(totoraCropData.id == totoraCropID)
+            {
+                totoraCropData.isHarvested = true;
+                return;
+            }
+        }
+    }
+
+    public bool GetTotoraCropHarvested(int totoraCropID)
+    {
+        foreach (TotoraCropData totoraCropData in data.currentTotoraCrops)
+        {
+            if (totoraCropData.id == totoraCropID) return totoraCropData.isHarvested;
+        }
+
+        return false;
+    }
 }

@@ -49,3 +49,6 @@ MonoBehaviour:
   timeAddPerFishing: 90
   weavingEnergyCost: 25
   timeAddPerWeave: 120
+  totoraSO: {fileID: 11400000, guid: 33d64778a378b5047bfbf36ef63334af, type: 2}
+  harvestingEnergyCost: 15
+  timeAddPerHarvest: 60

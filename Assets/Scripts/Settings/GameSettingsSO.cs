@@ -14,9 +14,12 @@ public class GameSettingsSO : ScriptableObject
     public int startingTime;
     public int finalTime;
 
+    [Header("Energy")]
+    [Range(5, 100)] public int maxEnergy;
+
     [Header("Inventory Starting Conditions")]
     public List<InventoryObjectIDQuantity> inventoryStartingConditions;
 
-    [Header("Energy")]
-    [Range(5, 100)] public int maxEnergy;
+    [Header("Totora Crops")]
+    public List<TotoraCropData> startingTotoraCrops;
 }

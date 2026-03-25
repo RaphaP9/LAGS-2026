@@ -16,6 +16,8 @@ public class Data
     public int timesFished;
     public int timesHarvested;
     public int timesWoven;
+    [Space]
+    public List<TotoraCropData> currentTotoraCrops;
 
     public Data(GameSettingsSO gameSettingsSO)
     {
@@ -31,6 +33,7 @@ public class Data
         currentPlayerPosition = gameSettingsSO.startingPlayerPosition;
 
         ResetInventory(gameSettingsSO);
+        ResetTorotaCrops(gameSettingsSO);
 
         timesCooked = 0;
         timesFished = 0;
@@ -46,6 +49,17 @@ public class Data
         {
             InventoryObjectIDQuantity newInventoryObjectIDQuantity = new InventoryObjectIDQuantity { inventoryObjectID = inventoryObjectIDQuantity.inventoryObjectID, quantity = inventoryObjectIDQuantity.quantity };
             currentInventory.Add(newInventoryObjectIDQuantity);
+        }
+    }
+
+    public void ResetTorotaCrops(GameSettingsSO gameSettingsSO)
+    {
+        currentTotoraCrops = new List<TotoraCropData>();
+
+        foreach (TotoraCropData totoraCropsData in gameSettingsSO.startingTotoraCrops)
+        {
+            TotoraCropData newTotoraCropsData = new TotoraCropData { id = totoraCropsData.id, isHarvested = totoraCropsData.isHarvested };
+            currentTotoraCrops.Add(newTotoraCropsData);
         }
     }
 }

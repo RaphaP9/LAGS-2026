@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ActivitiesManager : MonoBehaviour
 {
+    public static ActivitiesManager Instance {  get; private set; }
+
     [Header("Fishing")]
     [SerializeField] private InventoryObjectSO fishSO;
     [SerializeField, Range(0,100)] private int fishingEnergyCost;
@@ -11,15 +13,23 @@ public class ActivitiesManager : MonoBehaviour
     [SerializeField, Range(0, 100)] private int weavingEnergyCost;
     [SerializeField, Range(0, 600)] private int timeAddPerWeave;
 
+    [Header("Harvesting")]
+    [SerializeField] private InventoryObjectSO totoraSO;
+    [SerializeField, Range(0, 100)] private int harvestingEnergyCost;
+    [SerializeField, Range(0, 600)] private int timeAddPerHarvest;
+
     public int FishingEnergyCost => fishingEnergyCost;
     public int WeavingEnergyCost => weavingEnergyCost;
+    public int HarvestingEnergyCost => harvestingEnergyCost;
 
     private void OnEnable()
     {
         FishingManager.OnFishingSuccess += FishingManager_OnFishingSuccess;
         FishingManager.OnFishingInterval += FishingManager_OnFishingInterval;
 
-        WeavingManager.OnWeaveInterval += WeaveManager_OnWeaveInterval;   
+        WeavingManager.OnWeaveInterval += WeaveManager_OnWeaveInterval;
+
+        TotoraCropHandler.OnAnyTotoraCropHarvested += TotoraCropHandler_OnAnyTotoraCropHarvested;
     }
 
     private void OnDisable()
@@ -28,6 +38,26 @@ public class ActivitiesManager : MonoBehaviour
         FishingManager.OnFishingInterval -= FishingManager_OnFishingInterval;
 
         WeavingManager.OnWeaveInterval -= WeaveManager_OnWeaveInterval;
+
+        TotoraCropHandler.OnAnyTotoraCropHarvested -= TotoraCropHandler_OnAnyTotoraCropHarvested;
+    }
+
+    private void Awake()
+    {
+        SetSingleton();
+    }
+
+    private void SetSingleton()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            //Debug.LogWarning("There is more than one ActivitiesManager instance, proceding to destroy duplicate");
+            Destroy(gameObject);
+        }
     }
 
     #region Fishing Subscriptions
@@ -46,6 +76,14 @@ public class ActivitiesManager : MonoBehaviour
     {
         DayTimeManager.Instance.AddTime(timeAddPerWeave);
 
+    }
+    #endregion
+
+    #region Harvesting Subscriptions
+    private void TotoraCropHandler_OnAnyTotoraCropHarvested(object sender, TotoraCropHandler.OnTotoraCropEventArgs e)
+    {
+        InventoryManager.Instance.AddInventoryObject(totoraSO, 1);
+        DayTimeManager.Instance.AddTime(timeAddPerHarvest);
     }
     #endregion
 }
