@@ -8,7 +8,7 @@ public class FishingUI : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private RectTransform fillHolder;
     [SerializeField] private RectTransform indicatorHolder;
-    [SerializeField] private InteractionInput interactionInput;
+    [SerializeField] private MinigamesInput minigamesInput;
 
     [Header("Settings")]
     [SerializeField, Range(0f, 3f)] private float startingTime;
@@ -180,7 +180,7 @@ public class FishingUI : MonoBehaviour
 
         currentIndicatorTilt = (currentIndicatorTilt - indicatorBackMovePerSecond * Time.deltaTime) < minIndicatorTilt? minIndicatorTilt : (currentIndicatorTilt - indicatorBackMovePerSecond * Time.deltaTime);
 
-        if (interactionInput.GetInteractionDown())
+        if (minigamesInput.GetFishDown())
         {
             currentIndicatorTilt = currentIndicatorTilt + indicatorImpulse > maxIndicatorTilt? maxIndicatorTilt : currentIndicatorTilt + indicatorImpulse;
         }
