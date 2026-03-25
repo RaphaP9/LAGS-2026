@@ -9,9 +9,12 @@ public class FishingManager : MonoBehaviour
     [Header("Components")]
     [SerializeField] private MinigameEnergyAskUI minigameEnergyAskUI;
     [SerializeField] private FishingUI fishingUI;
+    [SerializeField] private InventoryObjectSO fishInventoryObjectSO;
 
     [Header("Settings")]
-    [SerializeField, Range(0, 5)] private int fishingEnergyCost;
+    [SerializeField, Range(0, 25)] private int fishingEnergyCost;
+    [Space]
+    [SerializeField] private int timeAddPerFishing;
     [Space]
     [SerializeField, Range(0f,5f)] private float startingMinigameTime;
     [SerializeField, Range(0f, 5f)] private float minWaitForFishTime;
@@ -96,7 +99,12 @@ public class FishingManager : MonoBehaviour
 
             yield return new WaitUntil(() => fishingSuccess || fishingFail);
 
-            if(fishingSuccess) OnFishingSuccess?.Invoke(this, EventArgs.Empty);
+            if (fishingSuccess)
+            {
+                InventoryManager.Instance.AddInventoryObject(fishInventoryObjectSO, 1);
+                OnFishingSuccess?.Invoke(this, EventArgs.Empty);
+            }
+
             if(fishingFail) OnFishingFail?.Invoke(this,EventArgs.Empty);
 
             fishingSuccess = false;
@@ -106,6 +114,7 @@ public class FishingManager : MonoBehaviour
 
             yield return new WaitForSeconds(minigameIntervalTime);
 
+            DayTimeManager.Instance.AddTime(timeAddPerFishing);
         }
     }
 

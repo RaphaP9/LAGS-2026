@@ -90,10 +90,9 @@ public class DayTimeManager : MonoBehaviour
 
         currentRawTime += Time.deltaTime * minutesInGamePerSecondRealtime;
 
-        int newTime = Mathf.FloorToInt(currentRawTime);
-        newTime = newTime % (MAX_HOURS * MAX_MINUTES);
+        int newTime = ProcessCurrentRawTime();
 
-        if(newTime != currentTime)
+        if (newTime != currentTime)
         {
             currentTime = newTime;
             OnTimeChanged?.Invoke(this, new OnTimeEventArgs {time = currentTime});
@@ -110,6 +109,14 @@ public class DayTimeManager : MonoBehaviour
         {
             dayEnded = false;
         }
+    }
+
+    private int ProcessCurrentRawTime()
+    {
+        int processedTime = Mathf.FloorToInt(currentRawTime);
+        processedTime = processedTime % (MAX_HOURS * MAX_MINUTES);
+
+        return processedTime;
     }
 
     private bool CanPassTime()
@@ -135,4 +142,24 @@ public class DayTimeManager : MonoBehaviour
     {
         return GeneralUtilities.IsBetween(timeA, timeB, currentTime);
     }
+
+    public void AddTime(int timeToAdd)
+    {
+        currentRawTime += timeToAdd;
+
+        currentTime = ProcessCurrentRawTime();
+        OnTimeChanged?.Invoke(this, new OnTimeEventArgs { time = currentTime });
+
+        StaticDataManager.Instance.SetCurrentTime(currentTime);
+    }
+
+    public void AddTimeWithoutNotify(int timeToAdd)
+    {
+        currentRawTime += timeToAdd;
+
+        currentTime = ProcessCurrentRawTime();
+
+        StaticDataManager.Instance.SetCurrentTime(currentTime);
+    }
+
 }

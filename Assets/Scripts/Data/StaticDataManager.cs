@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class StaticDataManager : MonoBehaviour
 {
@@ -42,4 +43,30 @@ public class StaticDataManager : MonoBehaviour
 
     public void SetCurrentTime(int time) => data.currentTime = time;
     public void SetCurrentDay(int day) => data.currentDay = day;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void IncreaseTimesCooked(int quantity) => data.timesCooked += quantity;
+    public void IncreaseTimesFished(int quantity) => data.timesFished += quantity;
+    public void IncreaseTimesHarvested(int quantity) => data.timesHarvested += quantity;
+    public void IncreaseTimesWoven(int quantity) => data.timesWoven += quantity;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    public void SetCurrentInventory(List<InventoryObjectQuantity> inventory)
+    {
+        foreach (InventoryObjectQuantity item in inventory)
+        {
+            foreach(InventoryObjectIDQuantity inventoryObjectIDQuantity in data.currentInventory)
+            {
+                if(item.inventoryObjectSO.id == inventoryObjectIDQuantity.inventoryObjectID)
+                {
+                    inventoryObjectIDQuantity.quantity = item.quantity;
+                    continue;
+                }
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
 }

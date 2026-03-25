@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections.Generic;
 [CreateAssetMenu(fileName = "NewGameSettingsSO", menuName = "ScriptableObjects/Game/Settings")]
 public class GameSettingsSO : ScriptableObject
 {
@@ -14,7 +14,9 @@ public class GameSettingsSO : ScriptableObject
     public int startingTime;
     public int finalTime;
 
-    [Header("Energy")]
-    [Range(5, 20)] public int maxEnergy;
+    [Header("Inventory Starting Conditions")]
+    public List<InventoryObjectIDQuantity> inventoryStartingConditions;
 
+    [Header("Energy")]
+    [Range(5, 100)] public int maxEnergy;
 }

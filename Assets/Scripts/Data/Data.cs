@@ -1,15 +1,21 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class Data
 {
-    public Vector2 currentPlayerPosition;
-
     public int currentDay;
     public int currentTime;
-
     public int currentEnergy;
-    public int timesPlayedFishingGame;
+    [Space]
+    public Vector2 currentPlayerPosition;
+    [Space]
+    public List<InventoryObjectIDQuantity> currentInventory;
+    [Space]
+    public int timesCooked;
+    public int timesFished;
+    public int timesHarvested;
+    public int timesWoven;
 
     public Data(GameSettingsSO gameSettingsSO)
     {
@@ -20,11 +26,26 @@ public class Data
     {
         currentDay = gameSettingsSO.startingDay;
         currentTime = gameSettingsSO.startingTime;
+        currentEnergy = gameSettingsSO.maxEnergy;
 
         currentPlayerPosition = gameSettingsSO.startingPlayerPosition;
 
-        currentEnergy = gameSettingsSO.maxEnergy;
+        ResetInventory(gameSettingsSO);
 
-        timesPlayedFishingGame = 0;
+        timesCooked = 0;
+        timesFished = 0;
+        timesHarvested = 0;
+        timesWoven = 0;
+    }
+
+    public void ResetInventory(GameSettingsSO gameSettingsSO)
+    {
+        currentInventory = new List<InventoryObjectIDQuantity>();
+
+        foreach(InventoryObjectIDQuantity inventoryObjectIDQuantity in gameSettingsSO.inventoryStartingConditions)
+        {
+            InventoryObjectIDQuantity newInventoryObjectIDQuantity = new InventoryObjectIDQuantity { inventoryObjectID = inventoryObjectIDQuantity.inventoryObjectID, quantity = inventoryObjectIDQuantity.quantity };
+            currentInventory.Add(newInventoryObjectIDQuantity);
+        }
     }
 }
