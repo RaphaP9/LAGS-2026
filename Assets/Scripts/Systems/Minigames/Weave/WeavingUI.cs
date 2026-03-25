@@ -7,8 +7,8 @@ public class WeavingUI : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Animator animator;
-    [SerializeField] private MinigamesInput minigamesInput;
     [SerializeField] private Transform loomUIHolder;
+    [SerializeField] private RectTransform refferenceRectTransform;
 
     [Header("Settings")]
     [SerializeField, Range(0f, 3f)] private float startingTime;
@@ -29,6 +29,20 @@ public class WeavingUI : MonoBehaviour
     public event EventHandler OnWeaveSuccess;
     public event EventHandler OnWeaveFail;
 
+    private bool loomSuccess = false;
+    private bool loomFail = false;
+
+    private void OnEnable()
+    {
+        LoomUI.OnLoomSuccess += LoomUI_OnLoomSuccess;
+        LoomUI.OnLoomFail += LoomUI_OnLoomFail;
+    }
+
+    private void OnDisable()
+    {
+        LoomUI.OnLoomSuccess -= LoomUI_OnLoomSuccess;
+        LoomUI.OnLoomFail -= LoomUI_OnLoomFail;
+    }
 
     public void StartWeavingGame()
     {
@@ -40,16 +54,26 @@ public class WeavingUI : MonoBehaviour
         SetState(State.Starting);
 
         ClearLoomUI();
-        CreateLoomUI();
+        CreateLoomUI(refferenceRectTransform);
 
         ShowUI();
 
         yield return new WaitForSeconds(startingTime);
 
         SetState(State.Playing);
+
+        yield return new WaitUntil(() => loomSuccess || loomFail);
+
+        SetState(State.NotPlaying);
+
+        if (loomSuccess) Success();
+        if (loomFail) Fail();
+
+        loomSuccess = false; 
+        loomFail = false;
     }
 
-    private void CreateLoomUI()
+    private void CreateLoomUI(RectTransform refferenceRectTransform)
     {
         Transform chosenRandomLoomUI = GeneralUtilities.ChooseRandomElementFromList(loomUIPrefabs);
         Transform loomUITransform = Instantiate(chosenRandomLoomUI, loomUIHolder);
@@ -57,6 +81,10 @@ public class WeavingUI : MonoBehaviour
         if (loomUITransform == null) return;
 
         LoomUI loomUI = loomUITransform.GetComponent<LoomUI>();
+
+        if(loomUI == null) return;
+
+        loomUI.InitializeLoomUI(refferenceRectTransform, this);
 
         currentLoomUI = loomUI;
     }
@@ -67,7 +95,7 @@ public class WeavingUI : MonoBehaviour
 
         foreach(Transform child in loomUIHolder)
         {
-            Destroy(child);
+            Destroy(child.gameObject);
         }
     }
 
@@ -85,6 +113,7 @@ public class WeavingUI : MonoBehaviour
         SuccessUI();
     }
 
+    public bool CanWeave() => state == State.Playing;
 
     #region Animations
     public void ShowUI()
@@ -108,4 +137,13 @@ public class WeavingUI : MonoBehaviour
         animator.SetTrigger(FAIL_TRIGGER);
     }
     #endregion
+
+    private void LoomUI_OnLoomSuccess(object sender, EventArgs e)
+    {
+        loomSuccess = true;
+    }
+    private void LoomUI_OnLoomFail(object sender, EventArgs e)
+    {
+        loomFail = true;
+    }
 }
