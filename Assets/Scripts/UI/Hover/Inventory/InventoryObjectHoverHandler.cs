@@ -13,7 +13,7 @@ public class InventoryObjectHoverHandler : UIHoverHandler, IPointerEnterHandler,
     public bool IsHovered => isHovered;
 
     public static event EventHandler<OnInventoryObjectHoverEventArgs> OnInventoryObjectEnter;
-    public static event EventHandler<OnInventoryObjectHoverEventArgs> OInventoryObjectExit;
+    public static event EventHandler<OnInventoryObjectHoverEventArgs> OnInventoryObjectExit;
 
     public class OnInventoryObjectHoverEventArgs : EventArgs
     {
@@ -25,12 +25,12 @@ public class InventoryObjectHoverHandler : UIHoverHandler, IPointerEnterHandler,
     {
         PivotQuadrant pivotQuadrant = GetPivotQuadrantByScreenQuadrant(GeneralUtilities.GetScreenQuadrant(rectTransformRefference));
         isHovered = true;
-        OnInventoryObjectEnter?.Invoke(this, new OnInventoryObjectHoverEventArgs { inventoryObjectSO = singleInventoryObjectUI.InventoryObjectSO });
+        OnInventoryObjectEnter?.Invoke(this, new OnInventoryObjectHoverEventArgs { inventoryObjectSO = singleInventoryObjectUI.InventoryObjectSO, pivotQuadrant = pivotQuadrant });
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         isHovered = false;
-        OInventoryObjectExit?.Invoke(this, new OnInventoryObjectHoverEventArgs { inventoryObjectSO = singleInventoryObjectUI.InventoryObjectSO });
+        OnInventoryObjectExit?.Invoke(this, new OnInventoryObjectHoverEventArgs { inventoryObjectSO = singleInventoryObjectUI.InventoryObjectSO });
     }
 }

@@ -494,5 +494,26 @@ public static class GeneralUtilities
 
         return ScreenQuadrant.TopRight;
     }
+
+    public static void AdjustRectTransformPivotToScreenQuadrant(RectTransform rectTransform, ScreenQuadrant screenQuadrant, RectTransform pivotRectTransform)
+    {
+        switch (screenQuadrant)
+        {
+            case ScreenQuadrant.BottomLeft:
+                rectTransform.pivot = new Vector2(0, 0);
+                break;
+            case ScreenQuadrant.BottomRight:
+                rectTransform.pivot = new Vector2(1, 0);
+                break;
+            case ScreenQuadrant.TopLeft:
+                rectTransform.pivot = new Vector2(0, 1);
+                break;
+            case ScreenQuadrant.TopRight:
+                rectTransform.pivot = new Vector2(1, 1);
+                break;
+        }
+
+        rectTransform.position = pivotRectTransform.position;
+    }
     #endregion
 }
