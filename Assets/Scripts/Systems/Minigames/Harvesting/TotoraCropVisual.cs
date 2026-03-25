@@ -5,6 +5,8 @@ public class TotoraCropVisual : MonoBehaviour
     [Header("Components")]
     [SerializeField] private TotoraCropHandler totoraCropHandler;
     [Space]
+    [SerializeField] private Transform cropHarvestedVFXPrefab;
+    [Space]
     [SerializeField] private Transform notHarvestedTransform;
     [SerializeField] private Transform harvestedTransform;
 
@@ -32,6 +34,11 @@ public class TotoraCropVisual : MonoBehaviour
         notHarvestedTransform.gameObject.SetActive(true);
     }
 
+    private void CreateVFX()
+    {
+        Transform VFXTransform = Instantiate(cropHarvestedVFXPrefab, transform);
+    }
+
     #region Subscriptions
     private void TotoraCropHandler_OnTotoraCropInitialized(object sender, TotoraCropHandler.OnTotoraCropEventArgs e)
     {
@@ -42,6 +49,7 @@ public class TotoraCropVisual : MonoBehaviour
     private void TotoraCropHandler_OnTotoraCropHarvested(object sender, TotoraCropHandler.OnTotoraCropEventArgs e)
     {
         HarvestedVisual();
+        CreateVFX();
     }
     #endregion
 }

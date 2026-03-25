@@ -12,7 +12,19 @@ public class PlayerAnimationController : MonoBehaviour
     protected const string FACE_X_FLOAT = "FaceX";
     protected const string FACE_Y_FLOAT = "FaceY";
 
-    protected virtual void Update()
+    protected const string HARVEST_TRIGGER = "Harvest";
+
+    private void OnEnable()
+    {
+        TotoraCropHandler.OnAnyTotoraCropHarvested += TotoraCropHandler_OnAnyTotoraCropHarvested;
+    }
+
+    private void OnDisable()
+    {
+        TotoraCropHandler.OnAnyTotoraCropHarvested -= TotoraCropHandler_OnAnyTotoraCropHarvested;
+    }
+
+    private  void Update()
     {
         HandleSpeedBlend();
         HandleFacingBlend();
@@ -33,5 +45,18 @@ public class PlayerAnimationController : MonoBehaviour
             animator.SetFloat(FACE_X_FLOAT, playerFacingDirectionHandler.CurrentFacingDirection.x);
             animator.SetFloat(FACE_Y_FLOAT, playerFacingDirectionHandler.CurrentFacingDirection.y);
         }
+    }
+
+    private void TriggerHarvesting()
+    {
+        foreach (Animator animator in animatorList)
+        {
+            animator.SetTrigger(HARVEST_TRIGGER);
+        }
+    }
+
+    private void TotoraCropHandler_OnAnyTotoraCropHarvested(object sender, TotoraCropHandler.OnTotoraCropEventArgs e)
+    {
+        TriggerHarvesting();
     }
 }

@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totoraCropHandler: {fileID: 9005043603057111397}
+  cropHarvestedVFXPrefab: {fileID: 6792984753837108972, guid: f9b697e4c64c66740b749cf3fd2ce329, type: 3}
   notHarvestedTransform: {fileID: 7988927470474489344}
   harvestedTransform: {fileID: 2474679182020219959}
 --- !u!1 &6951828968538029366
