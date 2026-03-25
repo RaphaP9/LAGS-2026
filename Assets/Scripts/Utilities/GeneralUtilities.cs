@@ -476,4 +476,23 @@ public static class GeneralUtilities
         return foundGenerics;
     }
     #endregion
+
+    #region RectTransforms
+    public static ScreenQuadrant GetScreenQuadrant(RectTransform rectTransform, Camera camera = null)
+    {
+        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(camera, rectTransform.position);
+
+        float screenWidth = Screen.width;
+        float screenHeight = Screen.height;
+
+        bool isLeft = screenPoint.x < screenWidth / 2f;
+        bool isBottom = screenPoint.y < screenHeight / 2f;
+
+        if (isBottom && isLeft) return ScreenQuadrant.BottomLeft;
+        if (isBottom && !isLeft) return ScreenQuadrant.BottomRight;
+        if (!isBottom && isLeft) return ScreenQuadrant.TopLeft;
+
+        return ScreenQuadrant.TopRight;
+    }
+    #endregion
 }

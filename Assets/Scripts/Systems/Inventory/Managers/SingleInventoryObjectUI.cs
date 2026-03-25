@@ -11,6 +11,8 @@ public class SingleInventoryObjectUI : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private InventoryObjectSO inventoryObjectSO;
 
+    public InventoryObjectSO InventoryObjectSO => inventoryObjectSO;
+
     public void SetUI(InventoryObjectSO inventoryObjectSO)
     {
         this.inventoryObjectSO = inventoryObjectSO;
