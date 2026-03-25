@@ -7,6 +7,10 @@ public class InventoryObjectHoverHandler : UIHoverHandler, IPointerEnterHandler,
     [Header("Components")]
     [SerializeField] private SingleInventoryObjectUI singleInventoryObjectUI;
 
+    [Header("Settings")]
+    [SerializeField] private bool overrideQuadrant;
+    [SerializeField] private ScreenQuadrant overriderScreenQuadrant;
+
     [Header("Runtime Filled")]
     [SerializeField] private bool isHovered;
 
@@ -23,8 +27,19 @@ public class InventoryObjectHoverHandler : UIHoverHandler, IPointerEnterHandler,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        PivotQuadrant pivotQuadrant = GetPivotQuadrantByScreenQuadrant(GeneralUtilities.GetScreenQuadrant(rectTransformRefference));
+        PivotQuadrant pivotQuadrant;
+
+        if (overrideQuadrant)
+        {
+            pivotQuadrant = GetPivotQuadrantByScreenQuadrant(overriderScreenQuadrant);
+        }
+        else
+        {
+            pivotQuadrant = GetPivotQuadrantByScreenQuadrant(GeneralUtilities.GetScreenQuadrant(rectTransformRefference, canvasRectTransform));
+        }
+
         isHovered = true;
+
         OnInventoryObjectEnter?.Invoke(this, new OnInventoryObjectHoverEventArgs { inventoryObjectSO = singleInventoryObjectUI.InventoryObjectSO, pivotQuadrant = pivotQuadrant });
     }
 

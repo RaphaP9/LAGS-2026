@@ -478,15 +478,19 @@ public static class GeneralUtilities
     #endregion
 
     #region RectTransforms
-    public static ScreenQuadrant GetScreenQuadrant(RectTransform rectTransform, Camera camera = null)
+    public static ScreenQuadrant GetScreenQuadrant(RectTransform rectTransform, RectTransform canvasRectTransform)
     {
-        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(camera, rectTransform.position);
+        Vector2 localPoint = Vector2.zero;
 
-        float screenWidth = Screen.width;
-        float screenHeight = Screen.height;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvasRectTransform,
+            RectTransformUtility.WorldToScreenPoint(null, rectTransform.position),
+            null,
+            out localPoint
+        );
 
-        bool isLeft = screenPoint.x < screenWidth / 2f;
-        bool isBottom = screenPoint.y < screenHeight / 2f;
+        bool isLeft = localPoint.x < 0f;
+        bool isBottom = localPoint.y < 0f;
 
         if (isBottom && isLeft) return ScreenQuadrant.BottomLeft;
         if (isBottom && !isLeft) return ScreenQuadrant.BottomRight;

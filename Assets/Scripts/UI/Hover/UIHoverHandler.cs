@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIHoverHandler : MonoBehaviour
 {
     [Header("Hover Handler Specifics")]
+    [SerializeField] protected RectTransform canvasRectTransform;
     [SerializeField] protected RectTransform rectTransformRefference;
     [Space]
     [SerializeField] protected List<PivotQuadrant> pivotQuadrants;

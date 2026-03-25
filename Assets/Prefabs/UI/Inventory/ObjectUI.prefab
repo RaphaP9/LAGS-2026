@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8c656ad0bc7404b8c7e6f13e98e919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasRectTransform: {fileID: 0}
   rectTransformRefference: {fileID: 975473299366360406}
   pivotQuadrants:
   - screenQuadrant: 0
@@ -375,6 +376,8 @@ MonoBehaviour:
   - screenQuadrant: 3
     rectTransformPoint: {fileID: 8116547175314303571}
   singleInventoryObjectUI: {fileID: 8494916418072160322}
+  overrideQuadrant: 1
+  overriderScreenQuadrant: 0
   isHovered: 0
 --- !u!1 &3912648147815801324
 GameObject:

@@ -5520,6 +5520,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3271569139632878889, guid: ab2131df4dddb124f9d1c5ebf48d5794, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5763478913281315031, guid: ab2131df4dddb124f9d1c5ebf48d5794, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5795,10 +5799,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4261662037205542582, guid: 6b7ee36947dd7b74faed813821acb842, type: 3}
+      propertyPath: canvasRectTransform
+      value: 
+      objectReference: {fileID: 977449162153867993}
     - target: {fileID: 4286279775320671867, guid: 6b7ee36947dd7b74faed813821acb842, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5379984923352737462, guid: 6b7ee36947dd7b74faed813821acb842, type: 3}
+      propertyPath: canvasRectTransform
+      value: 
+      objectReference: {fileID: 977449162153867993}
     - target: {fileID: 7180891364422864276, guid: 6b7ee36947dd7b74faed813821acb842, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5879,6 +5891,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7717956503947017369, guid: 6b7ee36947dd7b74faed813821acb842, type: 3}
+      propertyPath: canvasRectTransform
+      value: 
+      objectReference: {fileID: 977449162153867993}
     - target: {fileID: 9164105183311493889, guid: 6b7ee36947dd7b74faed813821acb842, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
