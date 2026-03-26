@@ -19,6 +19,8 @@ public class WeavingManager : MonoBehaviour
     [Header("Runtime Filled")]
     [SerializeField] private State state;
 
+    public static event EventHandler OnWaitForLoom;
+    public static event EventHandler OnWeaving;
     public static event EventHandler OnWeaveSuccess;
     public static event EventHandler OnWeaveFail;
     public static event EventHandler OnWeaveInterval;
@@ -85,9 +87,13 @@ public class WeavingManager : MonoBehaviour
 
             SetState(State.WaitingForLoom);
 
+            OnWaitForLoom?.Invoke(this, EventArgs.Empty);
+
             yield return new WaitForSeconds(waitForLoomTime);
 
             SetState(State.Weaving);
+
+            OnWeaving?.Invoke(this, EventArgs.Empty);
 
             weaveUI.StartWeavingGame();
 
