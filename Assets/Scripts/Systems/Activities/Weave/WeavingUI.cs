@@ -106,13 +106,13 @@ public class WeavingUI : MonoBehaviour
 
     private void Fail()
     {
-        OnWeaveSuccess?.Invoke(this, EventArgs.Empty);
+        OnWeaveFail?.Invoke(this, EventArgs.Empty);
         FailUI();
     }
 
     private void Success()
     {
-        OnWeaveFail?.Invoke(this, EventArgs.Empty);
+        OnWeaveSuccess?.Invoke(this, EventArgs.Empty);
         SuccessUI();
     }
 

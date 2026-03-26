@@ -20,7 +20,7 @@ public class Data
     [Space]
     public List<TotoraCropData> currentTotoraCrops;
     [Space]
-    public List<ActivitySO> activitiesPerformed;
+    public List<ActivitySO> currentActivitiesPerformed;
 
     public Data(GameSettingsSO gameSettingsSO)
     {
@@ -68,8 +68,10 @@ public class Data
         }
     }
 
+    public void AddActivityPerformed(ActivitySO activitySO) => currentActivitiesPerformed.Add(activitySO);
+
     public void ResetActivitiesPerformed()
     {
-        activitiesPerformed = new List<ActivitySO>();
+        currentActivitiesPerformed = new List<ActivitySO>();
     }
 }

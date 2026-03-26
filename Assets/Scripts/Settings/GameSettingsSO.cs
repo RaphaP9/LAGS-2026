@@ -18,6 +18,9 @@ public class GameSettingsSO : ScriptableObject
     [Range(0, 100)] public int startingMood;
     [Range(0, 100)] public int maxMood;
     [Range(0, 100)] public int minMood;
+    [Space]
+    public List<MoodPenalizations> moodPenalizations;
+
 
     [Header("Activities")]
     [Range(0, 600)] public int timeAddPerFishing;
@@ -29,4 +32,11 @@ public class GameSettingsSO : ScriptableObject
 
     [Header("Totora Crops")]
     public List<TotoraCropData> startingTotoraCrops;
+}
+
+[System.Serializable]
+public class MoodPenalizations
+{
+    [Range(2,10)] public int productiveActivitiesInARow;
+    [Range(-10, 0)] public int moodChange;
 }

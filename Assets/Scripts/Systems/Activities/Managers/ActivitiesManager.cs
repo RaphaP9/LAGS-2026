@@ -20,9 +20,16 @@ public class ActivitiesManager : MonoBehaviour
     [Header("Lists")]
     [SerializeField] private List<ActivitySO> activitiesPerformed;
 
+    public static event EventHandler<OnActivitiesEventArgs> OnActivitiesPerformedInitialized;
+
     public static event EventHandler<OnActivityPerformedEventArgs> OnActivityPerformed;
     public static event EventHandler<OnActivityPerformedEventArgs> OnActivityPerformedSuccess;
     public static event EventHandler<OnActivityPerformedEventArgs> OnActivityPerformedFail;
+
+    public class OnActivitiesEventArgs : EventArgs
+    {
+        public List<ActivitySO> activities;
+    }
 
     public class OnActivityPerformedEventArgs : EventArgs
     {
@@ -76,9 +83,24 @@ public class ActivitiesManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        InitializeActivitiesPerformed();
+    }
+
+    private void InitializeActivitiesPerformed()
+    {
+        activitiesPerformed = new List<ActivitySO>(StaticDataManager.Instance.Data.currentActivitiesPerformed);
+
+        OnActivitiesPerformedInitialized?.Invoke(this, new OnActivitiesEventArgs { activities = activitiesPerformed });
+    }
+
     private void PerformActivity(ActivitySO activitySO)
     {
         activitiesPerformed.Add(activitySO);
+
+        StaticDataManager.Instance.AddActivityPerformed(activitySO);
+
         OnActivityPerformed?.Invoke(this, new OnActivityPerformedEventArgs { activitySO = activitySO, activitiesPerformed = activitiesPerformed });
     }
 
@@ -89,7 +111,13 @@ public class ActivitiesManager : MonoBehaviour
 
     private void PerformActivityFail(ActivitySO activitySO)
     {
-        OnActivityPerformedSuccess?.Invoke(this, new OnActivityPerformedEventArgs { activitySO = activitySO, activitiesPerformed = activitiesPerformed });
+        OnActivityPerformedFail?.Invoke(this, new OnActivityPerformedEventArgs { activitySO = activitySO, activitiesPerformed = activitiesPerformed });
+    }
+
+    public void ResetActivitiesPerformed()
+    {
+        activitiesPerformed.Clear();
+        StaticDataManager.Instance.ResetActivitiesPerformed();
     }
 
     #region Fishing Subscriptions
@@ -101,14 +129,12 @@ public class ActivitiesManager : MonoBehaviour
     {
         PerformActivity(fishingSO);
     }
-
-    private void FishingManager_OnFishingIntervalFail(object sender, EventArgs e)
+    private void FishingManager_OnFishingIntervalSuccess(object sender, EventArgs e)
     {
         PerformActivitySuccess(fishingSO);
-
     }
 
-    private void FishingManager_OnFishingIntervalSuccess(object sender, EventArgs e)
+    private void FishingManager_OnFishingIntervalFail(object sender, EventArgs e)
     {
         PerformActivityFail(fishingSO);
     }

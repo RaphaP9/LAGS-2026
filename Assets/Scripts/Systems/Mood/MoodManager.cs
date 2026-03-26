@@ -29,6 +29,7 @@ public class MoodManager : MonoBehaviour
     private void OnDisable()
     {
         ActivitiesManager.OnActivityPerformed -= ActivitiesManager_OnActivityPerformed;
+        ActivitiesManager.OnActivityPerformedSuccess -= ActivitiesManager_OnActivityPerformedSuccess;
     }
 
 

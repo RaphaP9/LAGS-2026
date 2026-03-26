@@ -674,8 +674,8 @@ MonoBehaviour:
   maxFillTilt: 0.892
   minIndicatorTilt: 0
   maxIndicatorTilt: 1
-  minPositionX: -1.1
-  maxPositionX: 1.1
+  minPositionX: -0.925
+  maxPositionX: 0.925
   state: 0
   currentFillTilt: 0
   currentIndicatorTilt: 0

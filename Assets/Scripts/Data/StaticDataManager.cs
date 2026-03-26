@@ -96,5 +96,6 @@ public class StaticDataManager : MonoBehaviour
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
+    public void AddActivityPerformed(ActivitySO activitySO) => data.AddActivityPerformed(activitySO);
     public void ResetActivitiesPerformed() => data.ResetActivitiesPerformed();
 }
