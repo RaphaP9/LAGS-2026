@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private State state;
     [SerializeField] private State previousState;
 
-    public enum State {Exploring, Dialogue}
+    public enum State {Exploring, Dialogue, DayEnd}
 
     public State GameState => state;
 
@@ -22,12 +22,16 @@ public class GameManager : MonoBehaviour
     {
         DialogueManager.OnDialogueBegin += DialogueManager_OnDialogueBegin;
         DialogueManager.OnDialogueEnd += DialogueManager_OnDialogueEnd;
+
+        DayTimeManager.OnDayEnd += DayTimeManager_OnDayEnd;
     }
 
     private void OnDisable()
     {
         DialogueManager.OnDialogueBegin -= DialogueManager_OnDialogueBegin;
         DialogueManager.OnDialogueEnd -= DialogueManager_OnDialogueEnd;
+
+        DayTimeManager.OnDayEnd -= DayTimeManager_OnDayEnd;
     }
 
     private void Awake()
@@ -76,6 +80,11 @@ public class GameManager : MonoBehaviour
     private void DialogueManager_OnDialogueEnd(object sender, DialogueManager.OnDialogueEventArgs e)
     {
         SetGameState(State.Exploring);
+    }
+
+    private void DayTimeManager_OnDayEnd(object sender, DayTimeManager.OnDayEventArgs e)
+    {
+        SetGameState(State.DayEnd);
     }
     #endregion
 }

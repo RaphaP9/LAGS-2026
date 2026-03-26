@@ -46,6 +46,11 @@ public class Data
         timesWoven = 0;
     }
 
+    public void ResetPlayerPosition(GameSettingsSO gameSettingsSO)
+    {
+        currentPlayerPosition = gameSettingsSO.startingPlayerPosition;
+    }
+
     public void ResetInventory(GameSettingsSO gameSettingsSO)
     {
         currentInventory = new List<InventoryObjectIDQuantity>();

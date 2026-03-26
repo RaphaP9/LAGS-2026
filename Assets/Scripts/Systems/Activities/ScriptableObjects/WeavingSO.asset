@@ -16,3 +16,4 @@ MonoBehaviour:
   description: Tejer
   moodChange: 3
   isProductive: 1
+  timeAdd: 120

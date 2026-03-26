@@ -39,7 +39,7 @@ public class StaticDataManager : MonoBehaviour
     
 
     public void SetCurrentPlayerPosition(Vector2 playerPosition) => data.currentPlayerPosition = playerPosition;
-
+    public void ResetCurrentPlayerPosition() => data.ResetPlayerPosition(gameSettingsSO);
     public void SetCurrentTime(int time) => data.currentTime = time;
     public void SetCurrentDay(int day) => data.currentDay = day;
 

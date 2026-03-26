@@ -9,7 +9,7 @@ public class DayTimeManager : MonoBehaviour
     [SerializeField] private GameSettingsSO gameSettingsSO;
 
     [Header("Settings")]
-    [SerializeField,Range(0f,30f)] private float minutesInGamePerSecondRealtime;
+    [SerializeField,Range(0f,60f)] private float minutesInGamePerSecondRealtime;
 
     [Header("Runtime Filled")]
     [SerializeField] private int currentDay;
@@ -112,6 +112,8 @@ public class DayTimeManager : MonoBehaviour
         {
             dayEnded = true;
             OnDayEnd?.Invoke(this, new OnDayEventArgs { day = currentDay });
+
+            PrepareForNextDay();
         }
         else
         {
@@ -168,6 +170,47 @@ public class DayTimeManager : MonoBehaviour
         currentTime = ProcessCurrentRawTime();
 
         StaticDataManager.Instance.SetCurrentTime(currentTime);
+    }
+
+    public void SetTime(int time)
+    {
+        currentRawTime = time;
+        currentTime = ProcessCurrentRawTime();
+        OnTimeChanged?.Invoke(this, new OnTimeEventArgs { time = currentTime });
+
+        StaticDataManager.Instance.SetCurrentTime(currentTime);
+    }
+
+    public void SetTimeWithoutNotify(int time)
+    {
+        currentRawTime = time;
+        currentTime = ProcessCurrentRawTime();
+
+        StaticDataManager.Instance.SetCurrentTime(currentTime);
+    }
+
+    public void ResetTimeToStart() => SetTimeWithoutNotify(gameSettingsSO.startingTime);
+
+    public void TurnToNextDay() //NeverTrigger Events For This
+    {
+        if (IsLastDay()) return;
+
+        currentDay++;
+        StaticDataManager.Instance.SetCurrentDay(currentDay);
+    }
+
+    public bool IsLastDay()
+    {
+        return currentDay >= gameSettingsSO.finalDay;
+    }
+
+    public void PrepareForNextDay()
+    {
+        StaticDataManager.Instance.ResetActivitiesPerformed();
+        StaticDataManager.Instance.ResetCurrentPlayerPosition();
+
+        ResetTimeToStart();
+        TurnToNextDay();
     }
 
     #region Subscriptions

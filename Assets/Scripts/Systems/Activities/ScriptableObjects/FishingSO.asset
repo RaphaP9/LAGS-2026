@@ -16,3 +16,4 @@ MonoBehaviour:
   description: Pescar
   moodChange: 2
   isProductive: 1
+  timeAdd: 90

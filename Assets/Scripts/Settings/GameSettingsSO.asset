@@ -27,7 +27,7 @@ MonoBehaviour:
     moodChange: -10
   timeAddPerFishing: 90
   timeAddPerWeave: 120
-  timeAddPerHarvest: 50
+  timeAddPerHarvest: 60
   inventoryStartingConditions:
   - inventoryObjectID: 1
     quantity: 0

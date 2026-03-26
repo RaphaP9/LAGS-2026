@@ -21,12 +21,6 @@ public class GameSettingsSO : ScriptableObject
     [Space]
     public List<MoodPenalization> moodPenalizations;
 
-
-    [Header("Activities")]
-    [Range(0, 600)] public int timeAddPerFishing;
-    [Range(0, 600)] public int timeAddPerWeave;
-    [Range(0, 600)] public int timeAddPerHarvest;
-
     [Header("Inventory Starting Conditions")]
     public List<InventoryObjectIDQuantity> inventoryStartingConditions;
 

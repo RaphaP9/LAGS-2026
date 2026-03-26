@@ -149,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2737359861125993189}
   - component: {fileID: 5005122106709051773}
-  - component: {fileID: 7357699893846175694}
+  - component: {fileID: 4551135702556149097}
   m_Layer: 8
   m_Name: WeavingInteractable
   m_TagString: Untagged
@@ -195,7 +195,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &7357699893846175694
+--- !u!114 &4551135702556149097
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,14 +204,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7100172680165879645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfe2c39db40fa99489fbd6b2756cce8d, type: 3}
+  m_Script: {fileID: 11500000, guid: fac068962b8b12b49a29490b79e37abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 2
   tooltipMessage: Sentarse a tejer
   minigameScene: Gameplay_Weaving
   minigameSceneTransitionType: 0
-  minTime: 360
+  minTime: 300
   maxTime: 600
   message: Solo puedes tejer entre las 6AM y 10AM
   messageTransform: {fileID: 8261326085738719700}

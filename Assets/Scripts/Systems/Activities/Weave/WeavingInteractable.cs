@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class FishingInteractable : MonoBehaviour, IInteractable
+public class WeavingInteractable : MonoBehaviour, IInteractable
 {
     [Header("Interactable Settings")]
     [SerializeField, Range(1f, 100f)] private float interactionRange;

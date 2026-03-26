@@ -6,16 +6,31 @@ using System.Collections.Generic;
 
 public class PlayerPositionHandler : MonoBehaviour
 {
+    public static PlayerPositionHandler Instance { get; private set; }
+
     [Header("Components")]
     [SerializeField] private GameSettingsSO gameSettingsSO;
     [SerializeField] private Rigidbody _rigidbody;
 
     [Header("Runtime Filled")]
     [SerializeField] private Vector3 currentPlayerPosition;
-    
-    private void OnDisable()
+
+    private void Awake()
     {
-        SavePlayerPosition();
+        SetSingleton();
+    }
+
+    private void SetSingleton()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            //Debug.LogWarning("There is more than one PlayerPositionHandler instance, proceding to destroy duplicate");
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
@@ -77,7 +92,7 @@ public class PlayerPositionHandler : MonoBehaviour
         currentPlayerPosition = _rigidbody.position;
     }
 
-    private void SavePlayerPosition()
+    public void SavePlayerPosition()
     {
         StaticDataManager.Instance.SetCurrentPlayerPosition(GeneralUtilities.Vector3ToVector2InZ(currentPlayerPosition));
     }
