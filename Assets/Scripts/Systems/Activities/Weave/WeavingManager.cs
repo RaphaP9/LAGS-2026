@@ -24,6 +24,8 @@ public class WeavingManager : MonoBehaviour
     public static event EventHandler OnWeaveSuccess;
     public static event EventHandler OnWeaveFail;
     public static event EventHandler OnWeaveInterval;
+    public static event EventHandler OnWeaveIntervalSuccess;
+    public static event EventHandler OnWeaveIntervalFail;
 
     public enum State { StartingMinigame, AskForPlay, WaitingForLoom, Weaving, MinigameInterval }
 
@@ -103,14 +105,17 @@ public class WeavingManager : MonoBehaviour
 
             if (weaveFail) OnWeaveFail?.Invoke(this, EventArgs.Empty);
 
-            weaveSuccess = false;
-            weaveFail = false;
-
             SetState(State.MinigameInterval);
 
             yield return new WaitForSeconds(minigameIntervalTime);
 
             OnWeaveInterval?.Invoke(this, EventArgs.Empty);
+
+            if(weaveSuccess) OnWeaveIntervalSuccess?.Invoke(this, EventArgs.Empty);
+            if(weaveFail) OnWeaveIntervalFail?.Invoke(this, EventArgs.Empty);
+
+            weaveSuccess = false;
+            weaveFail = false;
         }
     }
 

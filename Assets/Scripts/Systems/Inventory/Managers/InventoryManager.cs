@@ -129,4 +129,8 @@ public partial class InventoryManager : MonoBehaviour
 
         return 0;
     }
+
+    #region Subscriptions
+
+    #endregion
 }

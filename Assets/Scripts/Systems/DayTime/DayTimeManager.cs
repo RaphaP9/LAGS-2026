@@ -40,6 +40,14 @@ public class DayTimeManager : MonoBehaviour
         public int time;
     }
 
+    private void OnEnable()
+    {
+        ActivitiesManager.OnActivityPerformed += ActivitiesManager_OnActivityPerformed;
+    }
+    private void OnDisable()
+    {
+        ActivitiesManager.OnActivityPerformed -= ActivitiesManager_OnActivityPerformed;
+    }
 
     private void Awake()
     {
@@ -162,4 +170,10 @@ public class DayTimeManager : MonoBehaviour
         StaticDataManager.Instance.SetCurrentTime(currentTime);
     }
 
+    #region Subscriptions
+    private void ActivitiesManager_OnActivityPerformed(object sender, ActivitiesManager.OnActivityPerformedEventArgs e)
+    {
+        AddTime(e.activitySO.timeAdd);
+    }
+    #endregion
 }

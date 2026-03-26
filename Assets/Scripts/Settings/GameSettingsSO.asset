@@ -17,6 +17,9 @@ MonoBehaviour:
   finalDay: 4
   startingTime: 360
   finalTime: 1080
+  startingMood: 30
+  maxMood: 100
+  minMood: 0
   timeAddPerFishing: 90
   timeAddPerWeave: 120
   timeAddPerHarvest: 50

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2506045360432204164
+--- !u!1 &5419868833896544014
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8471528538369766403}
-  - component: {fileID: 5356323843593949967}
+  - component: {fileID: 1161635239738690859}
+  - component: {fileID: 9050354970322807839}
   m_Layer: 0
-  m_Name: ActivitiesManager
+  m_Name: Messages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8471528538369766403
+--- !u!4 &1161635239738690859
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2506045360432204164}
+  m_GameObject: {fileID: 5419868833896544014}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,21 +32,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5356323843593949967
+--- !u!114 &9050354970322807839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2506045360432204164}
+  m_GameObject: {fileID: 5419868833896544014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a55f3515087d9141bc04b4d92be4723, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d488509ca410754dbe66693018f387b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishingSO: {fileID: 11400000, guid: 9d6d324798a467d4b967870b0c3ce4a7, type: 2}
-  fishSO: {fileID: 11400000, guid: 866d35ed917399449962a7d9b40ca4f9, type: 2}
-  harvestingSO: {fileID: 11400000, guid: 1b8aae849f7fc9f459ffc2c255cf70b6, type: 2}
-  totoraSO: {fileID: 11400000, guid: 33d64778a378b5047bfbf36ef63334af, type: 2}
-  weavingSO: {fileID: 11400000, guid: d202d6fb3b8c4d6418b715868e7fcdc2, type: 2}
-  activitiesPerformed: []
+  defaultMessageTransform: {fileID: 0}
+  messagePrefab: {fileID: 1480484045075441368, guid: 31fad718e25b66c44af3e4e6516e9161, type: 3}
+  _camera: {fileID: 0}
+  messageCooldown: 1
+  defaultMessageColor: {r: 1, g: 1, b: 1, a: 1}
+  defaultMessageDuration: 5

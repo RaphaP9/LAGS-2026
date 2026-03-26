@@ -7,6 +7,8 @@ public class Data
     public int currentDay;
     public int currentTime;
     [Space]
+    public int currentMood;
+    [Space]
     public Vector2 currentPlayerPosition;
     [Space]
     public List<InventoryObjectIDQuantity> currentInventory;
@@ -17,6 +19,8 @@ public class Data
     public int timesWoven;
     [Space]
     public List<TotoraCropData> currentTotoraCrops;
+    [Space]
+    public List<ActivitySO> activitiesPerformed;
 
     public Data(GameSettingsSO gameSettingsSO)
     {
@@ -28,10 +32,13 @@ public class Data
         currentDay = gameSettingsSO.startingDay;
         currentTime = gameSettingsSO.startingTime;
 
+        currentMood = gameSettingsSO.startingMood;
+
         currentPlayerPosition = gameSettingsSO.startingPlayerPosition;
 
         ResetInventory(gameSettingsSO);
         ResetTorotaCrops(gameSettingsSO);
+        ResetActivitiesPerformed();
 
         timesCooked = 0;
         timesFished = 0;
@@ -59,5 +66,10 @@ public class Data
             TotoraCropData newTotoraCropsData = new TotoraCropData { id = totoraCropsData.id, isHarvested = totoraCropsData.isHarvested };
             currentTotoraCrops.Add(newTotoraCropsData);
         }
+    }
+
+    public void ResetActivitiesPerformed()
+    {
+        activitiesPerformed = new List<ActivitySO>();
     }
 }

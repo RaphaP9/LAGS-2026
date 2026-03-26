@@ -25,6 +25,8 @@ public class FishingManager : MonoBehaviour
     public static event EventHandler OnFishingSuccess;
     public static event EventHandler OnFishingFail;
     public static event EventHandler OnFishingInterval;
+    public static event EventHandler OnFishingIntervalSuccess;
+    public static event EventHandler OnFishingIntervalFail;
 
     public enum State { StartingMinigame, AskForPlay, WaitingForFish, PullingFishingRod, MinigameInterval}
 
@@ -106,14 +108,18 @@ public class FishingManager : MonoBehaviour
 
             if (fishingFail) OnFishingFail?.Invoke(this,EventArgs.Empty);
 
-            fishingSuccess = false;
-            fishingFail = false;
 
             SetState(State.MinigameInterval);
 
             yield return new WaitForSeconds(minigameIntervalTime);
 
             OnFishingInterval?.Invoke(this, EventArgs.Empty);
+
+            if (fishingSuccess) OnFishingIntervalSuccess?.Invoke(this, EventArgs.Empty);
+            if (fishingFail) OnFishingIntervalFail?.Invoke(this, EventArgs.Empty);
+
+            fishingSuccess = false;
+            fishingFail = false;
         }
     }
 

@@ -11,8 +11,13 @@ public class GameSettingsSO : ScriptableObject
     public int finalDay;
 
     [Header("Time - In Minutes")]
-    public int startingTime;
-    public int finalTime;
+    [Range(0,1440)] public int startingTime;
+    [Range(0, 1440)] public int finalTime;
+
+    [Header("Mood")]
+    [Range(0, 100)] public int startingMood;
+    [Range(0, 100)] public int maxMood;
+    [Range(0, 100)] public int minMood;
 
     [Header("Activities")]
     [Range(0, 600)] public int timeAddPerFishing;
