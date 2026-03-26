@@ -64,8 +64,45 @@ public class MoodManager : MonoBehaviour
 
     private void EvaluateProductiveActivitiesInARow(List<ActivitySO> activitiesPerformed)
     {
+        int activitiesInARow = GetProductiveActivitiesInARow(activitiesPerformed); 
+        MoodPenalization moodPenalization = GetMoodPenalization(activitiesInARow);
 
+        if (moodPenalization == null) return;
+        ChangeMood(moodPenalization.moodChange);
     }
+
+    private int GetProductiveActivitiesInARow(List<ActivitySO> activitiesPerformed)
+    {
+        if(activitiesPerformed.Count <= 0) return 0;
+
+        int accumulator = 0;
+
+        for (int i = activitiesPerformed.Count - 1; i >= 0; i--)
+        {
+            if (activitiesPerformed[i].isProductive) accumulator++;
+            else break;
+        }
+
+        return accumulator;
+    }
+
+    private MoodPenalization GetMoodPenalization(int activitiesPerformedInARow)
+    {
+        MoodPenalization chosenPenalization = null;
+
+        foreach (MoodPenalization moodPenalization in gameSettingsSO.moodPenalizations)
+        {
+            if (moodPenalization.productiveActivitiesInARow <= activitiesPerformedInARow)
+            {
+                if (chosenPenalization == null || moodPenalization.productiveActivitiesInARow > chosenPenalization.productiveActivitiesInARow)
+                {
+                    chosenPenalization = moodPenalization;
+                }
+            }
+        }
+
+        return chosenPenalization;
+    } 
 
     private void ChangeMood(int moodChange)
     {

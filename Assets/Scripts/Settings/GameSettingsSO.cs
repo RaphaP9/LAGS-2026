@@ -19,7 +19,7 @@ public class GameSettingsSO : ScriptableObject
     [Range(0, 100)] public int maxMood;
     [Range(0, 100)] public int minMood;
     [Space]
-    public List<MoodPenalizations> moodPenalizations;
+    public List<MoodPenalization> moodPenalizations;
 
 
     [Header("Activities")]
@@ -35,7 +35,7 @@ public class GameSettingsSO : ScriptableObject
 }
 
 [System.Serializable]
-public class MoodPenalizations
+public class MoodPenalization
 {
     [Range(2,10)] public int productiveActivitiesInARow;
     [Range(-10, 0)] public int moodChange;
