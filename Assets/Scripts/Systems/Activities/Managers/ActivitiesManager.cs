@@ -161,6 +161,7 @@ public class ActivitiesManager : MonoBehaviour
     {
         InventoryManager.Instance.AddInventoryObject(totoraSO, 1);
         PerformActivity(harvestingSO);
+        PerformActivitySuccess(harvestingSO);
     }
     #endregion
 }
