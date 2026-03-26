@@ -20,6 +20,8 @@ public class FishingManager : MonoBehaviour
     [Header("Runtime Filled")]
     [SerializeField] private State state;
 
+    public static event EventHandler OnWaitForFish;
+    public static event EventHandler OnPullingRod;
     public static event EventHandler OnFishingSuccess;
     public static event EventHandler OnFishingFail;
     public static event EventHandler OnFishingInterval;
@@ -86,11 +88,15 @@ public class FishingManager : MonoBehaviour
 
             SetState(State.WaitingForFish);
 
+            OnWaitForFish?.Invoke(this, EventArgs.Empty);
+
             float timeToWait = GeneralUtilities.GetRandomBetweenTwoFloats(minWaitForFishTime, maxWaitForFishTime);
 
             yield return new WaitForSeconds(timeToWait);
 
             SetState(State.PullingFishingRod);
+
+            OnPullingRod?.Invoke(this, EventArgs.Empty);
 
             fishingUI.StartFishingUIGame();
 
