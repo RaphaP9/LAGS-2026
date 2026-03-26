@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PullingToFail
+  m_Name: WeavingToFail
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d989eb56e303b6843a412354483c12a4, type: 2}
+  m_Motion: {fileID: 7400000, guid: d3bcb9d6e122de8498b115df4ec08241, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -34,7 +34,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaitForFish
+  m_Name: WaitForLoom
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -48,7 +48,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d90ff4273101be445bb5ca0af6f7c90c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 817334e659a7aff4598f1a916901f1cd, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -122,7 +122,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bb1b45f77a07bc14aad48460da179413, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0f29167d5c7428e4d994883eeaea8541, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -281,7 +281,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaitToPull
+  m_Name: WaitToWeaving
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -295,7 +295,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b197f07cec1829f46b6af019ed2c2607, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6d787d66380e5994fb7084bd11eab82d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -333,7 +333,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PullingRod
+  m_Name: Weaving
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -348,7 +348,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 070c800b9b0204e4ca8d3801aeaf617e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3e6a387882aa4e9499e5aed66c1d45b6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -361,7 +361,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PullingToSuccess
+  m_Name: WeavingToSuccess
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -375,7 +375,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 373cfe7d178bea149b02a3df28b57f30, type: 2}
+  m_Motion: {fileID: 7400000, guid: e7a9e32a16644774faaaa764dfc6f1ea, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -445,7 +445,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bbb7d21a00376db4986ad87343af583b, type: 2}
+  m_Motion: {fileID: 7400000, guid: ff26386814ff16a4486743630f359f76, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -472,7 +472,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: fdc57a55665e38c409247f52ff381771, type: 2}
+  m_Motion: {fileID: 7400000, guid: 337042adbed7d4d4fbbb7898ae11fa96, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
