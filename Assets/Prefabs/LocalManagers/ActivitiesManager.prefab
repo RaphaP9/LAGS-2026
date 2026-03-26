@@ -44,11 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a55f3515087d9141bc04b4d92be4723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSettingsSO: {fileID: 11400000, guid: bb14c12c4b19f6f4c828734f9bbfe50e, type: 2}
   fishSO: {fileID: 11400000, guid: 866d35ed917399449962a7d9b40ca4f9, type: 2}
-  fishingEnergyCost: 20
-  timeAddPerFishing: 90
-  weavingEnergyCost: 25
-  timeAddPerWeave: 120
   totoraSO: {fileID: 11400000, guid: 33d64778a378b5047bfbf36ef63334af, type: 2}
-  harvestingEnergyCost: 15
-  timeAddPerHarvest: 60

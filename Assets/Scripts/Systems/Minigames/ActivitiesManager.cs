@@ -4,23 +4,12 @@ public class ActivitiesManager : MonoBehaviour
 {
     public static ActivitiesManager Instance {  get; private set; }
 
-    [Header("Fishing")]
+    [Header("Components")]
+    [SerializeField] private GameSettingsSO gameSettingsSO;
+
+    [Header("Inventory")]
     [SerializeField] private InventoryObjectSO fishSO;
-    [SerializeField, Range(0,100)] private int fishingEnergyCost;
-    [SerializeField, Range(0, 600)] private int timeAddPerFishing;
-
-    [Header("Weaving")]
-    [SerializeField, Range(0, 100)] private int weavingEnergyCost;
-    [SerializeField, Range(0, 600)] private int timeAddPerWeave;
-
-    [Header("Harvesting")]
     [SerializeField] private InventoryObjectSO totoraSO;
-    [SerializeField, Range(0, 100)] private int harvestingEnergyCost;
-    [SerializeField, Range(0, 600)] private int timeAddPerHarvest;
-
-    public int FishingEnergyCost => fishingEnergyCost;
-    public int WeavingEnergyCost => weavingEnergyCost;
-    public int HarvestingEnergyCost => harvestingEnergyCost;
 
     private void OnEnable()
     {
@@ -67,14 +56,14 @@ public class ActivitiesManager : MonoBehaviour
     }
     private void FishingManager_OnFishingInterval(object sender, System.EventArgs e)
     {
-        DayTimeManager.Instance.AddTime(timeAddPerFishing);
+        DayTimeManager.Instance.AddTime(gameSettingsSO.timeAddPerFishing);
     }
     #endregion
 
     #region Weaving Subscriptions
     private void WeaveManager_OnWeaveInterval(object sender, System.EventArgs e)
     {
-        DayTimeManager.Instance.AddTime(timeAddPerWeave);
+        DayTimeManager.Instance.AddTime(gameSettingsSO.timeAddPerWeave);
 
     }
     #endregion
@@ -83,7 +72,7 @@ public class ActivitiesManager : MonoBehaviour
     private void TotoraCropHandler_OnAnyTotoraCropHarvested(object sender, TotoraCropHandler.OnTotoraCropEventArgs e)
     {
         InventoryManager.Instance.AddInventoryObject(totoraSO, 1);
-        DayTimeManager.Instance.AddTime(timeAddPerHarvest);
+        DayTimeManager.Instance.AddTime(gameSettingsSO.timeAddPerHarvest);
     }
     #endregion
 }

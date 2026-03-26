@@ -6,7 +6,6 @@ public class Data
 {
     public int currentDay;
     public int currentTime;
-    public int currentEnergy;
     [Space]
     public Vector2 currentPlayerPosition;
     [Space]
@@ -28,7 +27,6 @@ public class Data
     {
         currentDay = gameSettingsSO.startingDay;
         currentTime = gameSettingsSO.startingTime;
-        currentEnergy = gameSettingsSO.maxEnergy;
 
         currentPlayerPosition = gameSettingsSO.startingPlayerPosition;
 

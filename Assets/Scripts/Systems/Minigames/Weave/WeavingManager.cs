@@ -8,7 +8,7 @@ public class WeavingManager : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private ActivitiesManager activitiesManager;
-    [SerializeField] private MinigameEnergyAskUI minigameEnergyAskUI;
+    [SerializeField] private MinigameAskPlayUI minigameAskPlayUI;
     [SerializeField] private WeavingUI weaveUI;
 
     [Header("Settings")]
@@ -25,22 +25,22 @@ public class WeavingManager : MonoBehaviour
     public static event EventHandler OnWeaveFail;
     public static event EventHandler OnWeaveInterval;
 
-    public enum State { StartingMinigame, AskForEnergy, WaitingForLoom, Weaving, MinigameInterval }
+    public enum State { StartingMinigame, AskForPlay, WaitingForLoom, Weaving, MinigameInterval }
 
-    private bool energySpent = false;
+    private bool minigamePlayTrigger = false;
     private bool weaveSuccess = false;
     private bool weaveFail = false;
 
     private void OnEnable()
     {
-        minigameEnergyAskUI.OnEnergySpentInUI += MinigameEnergyAskUI_OnEnergySpentInUI;
+        minigameAskPlayUI.OnMinigamePlay += MinigameAskPlayUI_OnMinigamePlay;
         weaveUI.OnWeaveSuccess += WeaveUI_OnWeaveSuccess;
         weaveUI.OnWeaveFail += WeaveUI_OnWeaveFail;
     }
 
     private void OnDisable()
     {
-        minigameEnergyAskUI.OnEnergySpentInUI -= MinigameEnergyAskUI_OnEnergySpentInUI;
+        minigameAskPlayUI.OnMinigamePlay -= MinigameAskPlayUI_OnMinigamePlay;
         weaveUI.OnWeaveSuccess -= WeaveUI_OnWeaveSuccess;
         weaveUI.OnWeaveFail -= WeaveUI_OnWeaveFail;
     }
@@ -76,14 +76,14 @@ public class WeavingManager : MonoBehaviour
 
         while (true)
         {
-            SetState(State.AskForEnergy);
+            SetState(State.AskForPlay);
 
-            minigameEnergyAskUI.ShowUI(activitiesManager.WeavingEnergyCost);
+            minigameAskPlayUI.ShowUI();
 
-            yield return new WaitUntil(() => energySpent);
-            energySpent = false;
+            yield return new WaitUntil(() => minigamePlayTrigger);
+            minigamePlayTrigger = false;
 
-            minigameEnergyAskUI.HideUI();
+            minigameAskPlayUI.HideUI();
 
             SetState(State.WaitingForLoom);
 
@@ -117,10 +117,11 @@ public class WeavingManager : MonoBehaviour
     private void SetState(State state) => this.state = state;
 
     #region Subscriptions
-    private void MinigameEnergyAskUI_OnEnergySpentInUI(object sender, MinigameEnergyAskUI.OnEnergySpentInUIEventArgs e)
+    private void MinigameAskPlayUI_OnMinigamePlay(object sender, System.EventArgs e)
     {
-        energySpent = true;
+        minigamePlayTrigger = true;
     }
+
     private void WeaveUI_OnWeaveSuccess(object sender, System.EventArgs e)
     {
         weaveSuccess = true;

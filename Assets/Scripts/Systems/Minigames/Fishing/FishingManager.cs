@@ -7,7 +7,7 @@ public class FishingManager : MonoBehaviour
     public static FishingManager Instance { get; private set; }
 
     [Header("Components")]
-    [SerializeField] private MinigameEnergyAskUI minigameEnergyAskUI;
+    [SerializeField] private MinigameAskPlayUI minigameAskPlayUI;
     [SerializeField] private FishingUI fishingUI;
     [SerializeField] private ActivitiesManager activitiesManager;
 
@@ -26,22 +26,22 @@ public class FishingManager : MonoBehaviour
     public static event EventHandler OnFishingFail;
     public static event EventHandler OnFishingInterval;
 
-    public enum State { StartingMinigame, AskForEnergy, WaitingForFish, PullingFishingRod, MinigameInterval}
+    public enum State { StartingMinigame, AskForPlay, WaitingForFish, PullingFishingRod, MinigameInterval}
 
-    private bool energySpent = false;
+    private bool mingamePlayTrigger = false;
     private bool fishingSuccess = false;
     private bool fishingFail = false;
 
     private void OnEnable()
     {
-        minigameEnergyAskUI.OnEnergySpentInUI += MinigameEnergyAskUI_OnEnergySpentInUI;
+        minigameAskPlayUI.OnMinigamePlay += MinigameAskPlayUI_OnMinigamePlay;
         fishingUI.OnFishingSuccess += FishingUI_OnFishingSuccess;
         fishingUI.OnFishingFail += FishingUI_OnFishingFail;
     }
 
     private void OnDisable()
     {
-        minigameEnergyAskUI.OnEnergySpentInUI -= MinigameEnergyAskUI_OnEnergySpentInUI;
+        minigameAskPlayUI.OnMinigamePlay -= MinigameAskPlayUI_OnMinigamePlay;
         fishingUI.OnFishingSuccess -= FishingUI_OnFishingSuccess;
         fishingUI.OnFishingFail -= FishingUI_OnFishingFail;
     }
@@ -77,14 +77,14 @@ public class FishingManager : MonoBehaviour
 
         while (true)
         {
-            SetState(State.AskForEnergy);
+            SetState(State.AskForPlay);
 
-            minigameEnergyAskUI.ShowUI(activitiesManager.FishingEnergyCost);
+            minigameAskPlayUI.ShowUI();
 
-            yield return new WaitUntil(() => energySpent);
-            energySpent = false;
+            yield return new WaitUntil(() => mingamePlayTrigger);
+            mingamePlayTrigger = false;
 
-            minigameEnergyAskUI.HideUI();
+            minigameAskPlayUI.HideUI();
 
             SetState(State.WaitingForFish);
 
@@ -120,10 +120,11 @@ public class FishingManager : MonoBehaviour
     private void SetState(State state) => this.state = state;
 
     #region Subscriptions
-    private void MinigameEnergyAskUI_OnEnergySpentInUI(object sender, MinigameEnergyAskUI.OnEnergySpentInUIEventArgs e)
+    private void MinigameAskPlayUI_OnMinigamePlay(object sender, System.EventArgs e)
     {
-        energySpent = true;
+        mingamePlayTrigger = true;
     }
+
     private void FishingUI_OnFishingSuccess(object sender, System.EventArgs e)
     {
         fishingSuccess = true;

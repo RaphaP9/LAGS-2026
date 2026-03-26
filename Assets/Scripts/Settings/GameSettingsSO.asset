@@ -17,7 +17,9 @@ MonoBehaviour:
   finalDay: 4
   startingTime: 360
   finalTime: 1080
-  maxEnergy: 100
+  timeAddPerFishing: 90
+  timeAddPerWeave: 120
+  timeAddPerHarvest: 50
   inventoryStartingConditions:
   - inventoryObjectID: 1
     quantity: 0

@@ -10,9 +10,6 @@ public class TotoraCropInteractable : MonoBehaviour, IInteractable
     [SerializeField, Range(1f, 100f)] private float interactionRange;
     [SerializeField] private string tooltipMessage;
 
-    public event EventHandler OnTotoraCropHarvested;
-    public static event EventHandler OnAnyTotoraCropHarvested;
-
     #region IInteractable Properties
     public float InteractionRange => interactionRange;
     public bool IsSelectable => CheckCanBeSelected();
@@ -31,8 +28,6 @@ public class TotoraCropInteractable : MonoBehaviour, IInteractable
     {
         if(GameManager.Instance.GameState != GameManager.State.Exploring) return false;
         if(totoraCropHandler.IsHarvested) return false;
-
-        if(!EnergyManager.Instance.CanSpendEnergy(ActivitiesManager.Instance.HarvestingEnergyCost)) return false;
 
         return true;
     }

@@ -14,8 +14,10 @@ public class GameSettingsSO : ScriptableObject
     public int startingTime;
     public int finalTime;
 
-    [Header("Energy")]
-    [Range(5, 100)] public int maxEnergy;
+    [Header("Activities")]
+    [Range(0, 600)] public int timeAddPerFishing;
+    [Range(0, 600)] public int timeAddPerWeave;
+    [Range(0, 600)] public int timeAddPerHarvest;
 
     [Header("Inventory Starting Conditions")]
     public List<InventoryObjectIDQuantity> inventoryStartingConditions;

@@ -3,28 +3,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MinigameEnergyAskUI : MonoBehaviour
+public class MinigameAskPlayUI : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Animator animator;
+    [SerializeField] private Button playButton;
     [SerializeField] private Button backButton;
-    [SerializeField] private Button spendEnergyButton;
-    [SerializeField] private TextMeshProUGUI spendEnergyQuantityText;
 
     [Header("Settings")]
     [SerializeField] private string backScene;
     [SerializeField] private TransitionType backTransitionType;
 
-    public event EventHandler<OnEnergySpentInUIEventArgs> OnEnergySpentInUI;
-    private int energyCost = 0;
+    public event EventHandler OnMinigamePlay;
 
     private const string SHOW_TRIGGER = "Show";
     private const string HIDE_TRIGGER = "Hide";
-
-    public class OnEnergySpentInUIEventArgs : EventArgs
-    {
-        public int energy;
-    }
 
     private void Awake()
     {
@@ -34,7 +27,7 @@ public class MinigameEnergyAskUI : MonoBehaviour
     private void InitializeButtonsListeners()
     {
         backButton.onClick.AddListener(LoadBackScene);
-        spendEnergyButton.onClick.AddListener(SpendEnergy);
+        playButton.onClick.AddListener(PlayMinigame);
     }
 
     private void LoadBackScene()
@@ -42,24 +35,13 @@ public class MinigameEnergyAskUI : MonoBehaviour
         ScenesManager.Instance.TransitionLoadTargetScene(backScene, backTransitionType);
     }
 
-    private void SpendEnergy()
+    private void PlayMinigame()
     {
-        if (!EnergyManager.Instance.CanSpendEnergy(energyCost)) return;
-
-        EnergyManager.Instance.SpendEnergy(energyCost);
-
-        OnEnergySpentInUI?.Invoke(this, new OnEnergySpentInUIEventArgs { energy = energyCost});
+        OnMinigamePlay?.Invoke(this, EventArgs.Empty);
     }
 
-    public void ShowUI(int energyCost)
+    public void ShowUI()
     {
-        this.energyCost = energyCost;
-
-        spendEnergyQuantityText.text = energyCost.ToString();
-
-        if (!EnergyManager.Instance.CanSpendEnergy(energyCost)) spendEnergyButton.enabled = false;
-        else spendEnergyButton.enabled = true;
-
         animator.ResetTrigger(HIDE_TRIGGER);
         animator.SetTrigger(SHOW_TRIGGER);
     }
