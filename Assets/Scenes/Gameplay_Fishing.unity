@@ -664,8 +664,8 @@ MonoBehaviour:
   tiltMinDifference: 0.1
   tiltMaxDifference: 0.9
   minTilts: 3
-  maxTilts: 7
-  safeZoneWidth: 0.2
+  maxTilts: 5
+  safeZoneWidth: 0.3
   minSafeZoneStayTime: 3
   maxSafeZoneStayTime: 4
   minOutStayTime: 4
@@ -3056,7 +3056,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3804804493927257898, guid: b4510ccf64c889544b827201b322fe96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.55
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3804804493927257898, guid: b4510ccf64c889544b827201b322fe96, type: 3}
       propertyPath: m_LocalPosition.y

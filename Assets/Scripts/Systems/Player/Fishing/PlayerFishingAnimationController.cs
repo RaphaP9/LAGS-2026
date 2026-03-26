@@ -6,6 +6,7 @@ public class PlayerFishingAnimationController : MonoBehaviour
     [SerializeField] private Animator animator;
 
     private const string WAIT_FOR_FISH_TRIGGER = "Wait";
+    private const string WARNING_TRIGGER = "Warning";
     private const string PULLING_ROD_TRIGGER = "Pulling";
     private const string SUCCESS_TRIGGER = "Success";
     private const string FAIL_TRIGGER = "Fail";
@@ -18,6 +19,8 @@ public class PlayerFishingAnimationController : MonoBehaviour
         FishingManager.OnFishingFail += FishingManager_OnFishingFail;
         FishingManager.OnFishingSuccess += FishingManager_OnFishingSuccess;
         FishingManager.OnFishingInterval += FishingManager_OnFishingInterval;
+
+        FishingUI.OnPlayStart += FishingUI_OnPlayStart;
     }
 
     private void OnDisable()
@@ -27,6 +30,8 @@ public class PlayerFishingAnimationController : MonoBehaviour
         FishingManager.OnFishingFail -= FishingManager_OnFishingFail;
         FishingManager.OnFishingSuccess -= FishingManager_OnFishingSuccess;
         FishingManager.OnFishingInterval -= FishingManager_OnFishingInterval;
+
+        FishingUI.OnPlayStart -= FishingUI_OnPlayStart;
     }
 
     private void WaitForFish()
@@ -35,6 +40,7 @@ public class PlayerFishingAnimationController : MonoBehaviour
         animator.ResetTrigger(SUCCESS_TRIGGER);
         animator.ResetTrigger(FAIL_TRIGGER);
         animator.ResetTrigger(BACK_TO_IDLE_TRIGGER);
+        animator.ResetTrigger(WARNING_TRIGGER);
         animator.SetTrigger(WAIT_FOR_FISH_TRIGGER);
     }
 
@@ -44,6 +50,7 @@ public class PlayerFishingAnimationController : MonoBehaviour
         animator.ResetTrigger(SUCCESS_TRIGGER);
         animator.ResetTrigger(FAIL_TRIGGER);
         animator.ResetTrigger(BACK_TO_IDLE_TRIGGER);
+        animator.ResetTrigger(WARNING_TRIGGER);
         animator.SetTrigger(PULLING_ROD_TRIGGER);
     }
 
@@ -53,6 +60,7 @@ public class PlayerFishingAnimationController : MonoBehaviour
         animator.ResetTrigger(PULLING_ROD_TRIGGER);
         animator.ResetTrigger(FAIL_TRIGGER);
         animator.ResetTrigger(BACK_TO_IDLE_TRIGGER);
+        animator.ResetTrigger(WARNING_TRIGGER);
         animator.SetTrigger(SUCCESS_TRIGGER);
     }
 
@@ -62,6 +70,7 @@ public class PlayerFishingAnimationController : MonoBehaviour
         animator.ResetTrigger(PULLING_ROD_TRIGGER);
         animator.ResetTrigger(SUCCESS_TRIGGER);
         animator.ResetTrigger(BACK_TO_IDLE_TRIGGER);
+        animator.ResetTrigger(WARNING_TRIGGER);
         animator.SetTrigger(FAIL_TRIGGER);
     }
 
@@ -71,7 +80,18 @@ public class PlayerFishingAnimationController : MonoBehaviour
         animator.ResetTrigger(PULLING_ROD_TRIGGER);
         animator.ResetTrigger(SUCCESS_TRIGGER);
         animator.ResetTrigger(FAIL_TRIGGER);
+        animator.ResetTrigger(WARNING_TRIGGER);
         animator.SetTrigger(BACK_TO_IDLE_TRIGGER);
+    }
+
+    private void Warning()
+    {
+        animator.ResetTrigger(WAIT_FOR_FISH_TRIGGER);
+        animator.ResetTrigger(PULLING_ROD_TRIGGER);
+        animator.ResetTrigger(SUCCESS_TRIGGER);
+        animator.ResetTrigger(FAIL_TRIGGER);
+        animator.ResetTrigger(BACK_TO_IDLE_TRIGGER);
+        animator.SetTrigger(WARNING_TRIGGER);
     }
 
     private void FishingManager_OnWaitForFish(object sender, System.EventArgs e)
@@ -81,7 +101,7 @@ public class PlayerFishingAnimationController : MonoBehaviour
 
     private void FishingManager_OnPullingRod(object sender, System.EventArgs e)
     {
-        PullingRod();
+        Warning();
     }
 
     private void FishingManager_OnFishingSuccess(object sender, System.EventArgs e)
@@ -97,5 +117,10 @@ public class PlayerFishingAnimationController : MonoBehaviour
     private void FishingManager_OnFishingInterval(object sender, System.EventArgs e)
     {
         BackToIdle();
+    }
+
+    private void FishingUI_OnPlayStart(object sender, System.EventArgs e)
+    {
+        PullingRod();
     }
 }

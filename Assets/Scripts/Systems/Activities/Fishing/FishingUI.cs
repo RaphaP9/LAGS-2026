@@ -62,6 +62,8 @@ public class FishingUI : MonoBehaviour
     public static event EventHandler OnTiltSuccess;
     public static event EventHandler OnTiltFail;
 
+    public static event EventHandler OnPlayStart;
+
     private void Update()
     {
         HandleLerpFillTilt();
@@ -84,6 +86,8 @@ public class FishingUI : MonoBehaviour
         yield return new WaitForSeconds(startingTime);
 
         SetState(State.Playing);
+
+        OnPlayStart?.Invoke(this, EventArgs.Empty);
 
         int remainingTilts = GeneralUtilities.GetRandomBetweenTwoInts(minTilts, maxTilts);
 

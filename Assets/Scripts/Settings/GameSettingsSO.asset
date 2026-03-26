@@ -21,9 +21,9 @@ MonoBehaviour:
   maxMood: 100
   minMood: 0
   moodPenalizations:
-  - productiveActivitiesInARow: 2
-    moodChange: -5
   - productiveActivitiesInARow: 3
+    moodChange: -5
+  - productiveActivitiesInARow: 4
     moodChange: -10
   timeAddPerFishing: 90
   timeAddPerWeave: 120
