@@ -2,10 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
+
+    [Header("Components")]
+    [SerializeField] private AudioSource audioSource;
 
     [Header("Runtime Filled")]
     [SerializeField] private DialogueSO currentDialogueSO;
@@ -57,6 +61,9 @@ public class DialogueManager : MonoBehaviour
         DialogueUI.OnSentenceTransitionOutEnd += DialogueUI_OnSentenceTransitionOutEnd;
 
         TypewriterHandler.OnCompleteSentenceCommand += TypewriterHandler_OnCompleteSentenceCommand;
+
+        PauseManager.OnGamePaused += PauseManager_OnGamePaused;
+        PauseManager.OnGameResumed += PauseManager_OnGameResumed;
     }
 
     private void OnDisable()
@@ -67,6 +74,9 @@ public class DialogueManager : MonoBehaviour
         DialogueUI.OnSentenceTransitionOutEnd -= DialogueUI_OnSentenceTransitionOutEnd;
 
         TypewriterHandler.OnCompleteSentenceCommand -= TypewriterHandler_OnCompleteSentenceCommand;
+
+        PauseManager.OnGamePaused -= PauseManager_OnGamePaused;
+        PauseManager.OnGameResumed -= PauseManager_OnGameResumed;
     }
 
     private void Awake()
@@ -157,11 +167,17 @@ public class DialogueManager : MonoBehaviour
 
             SetDialogueState(DialogueState.Idle);
 
+            //We play the Sentence Audio
+            PlaySentenceAudio(dialogueSO.dialogueSentences[i]);
+
             OnSentenceIdle?.Invoke(this, new OnDialogueEventArgs { dialogueSentence = currentSentence}); //Loads the entire Sentence
 
             yield return new WaitUntil(() => shouldSkipSentence || shouldSkipDialogue);
 
             shouldSkipSentence = false;
+
+            //Cut the audio
+            StopAudio();
 
             if (shouldSkipDialogue) break;
             #endregion
@@ -222,6 +238,30 @@ public class DialogueManager : MonoBehaviour
     private void ClearCurrentSentence() => currentSentence = null;
     #endregion
 
+    #region Audio
+    private void StopAudio()
+    {
+        audioSource.Stop();
+        audioSource.clip = null;
+    }
+
+    private void PlaySentenceAudio(DialogueSentence dialogueSentence)
+    {
+        audioSource.clip = dialogueSentence.audioClip;
+        audioSource.Play();
+    }
+
+    private void PauseAudio()
+    {
+        audioSource.Pause();
+    }
+
+    private void ResumeAudio()
+    {
+        audioSource.UnPause();
+    }
+    #endregion
+
     #region Subscriptions
     private void DialogueUI_OnDialogueTransitionInEnd(object sender, DialogueUI.OnDialogueSentenceEventArgs e) => dialogueTransitionInCompleted = true;
     private void DialogueUI_OnDialogueTransitionOutEnd(object sender, DialogueUI.OnDialogueSentenceEventArgs e) => dialogueTransitionOutCompleted = true;
@@ -231,6 +271,16 @@ public class DialogueManager : MonoBehaviour
     private void TypewriterHandler_OnCompleteSentenceCommand(object sender, EventArgs e)
     {
         EndSentence();
+    }
+
+    private void PauseManager_OnGamePaused(object sender, EventArgs e)
+    {
+        PauseAudio();
+    }
+
+    private void PauseManager_OnGameResumed(object sender, EventArgs e)
+    {
+        ResumeAudio();
     }
     #endregion
 }
