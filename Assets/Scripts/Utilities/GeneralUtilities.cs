@@ -21,6 +21,24 @@ public static class GeneralUtilities
 };
 
     #region Angles
+    public static Vector3 GetSignedEulerAngles(Quaternion rotation)
+    {
+        Vector3 euler = rotation.eulerAngles;
+
+        euler.x = ConvertToSignedAngle(euler.x);
+        euler.y = ConvertToSignedAngle(euler.y);
+        euler.z = ConvertToSignedAngle(euler.z);
+
+        return euler;
+    }
+
+    public static float ConvertToSignedAngle(float angle)
+    {
+        angle %= 360f;
+        if (angle > 180f) angle -= 360f;
+        return angle;
+    }
+
     public static float NormalizeAngleDeg(float angleDeg)
     {
         float normalizedAngle = (angleDeg % 360f + 360f) % 360f;
