@@ -54,7 +54,7 @@ public class WeavingManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(FishingMinigameCoroutine());
+        StartCoroutine(WeavingMinigameCoroutine());
     }
 
     private void SetSingleton()
@@ -65,12 +65,12 @@ public class WeavingManager : MonoBehaviour
         }
         else
         {
-            //Debug.LogWarning("There is more than one FishingManager instance, proceding to destroy duplicate");
+            //Debug.LogWarning("There is more than one WeavingManager instance, proceding to destroy duplicate");
             Destroy(gameObject);
         }
     }
 
-    private IEnumerator FishingMinigameCoroutine()
+    private IEnumerator WeavingMinigameCoroutine()
     {
         SetState(State.StartingMinigame);
 
