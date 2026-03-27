@@ -21,6 +21,7 @@ public class Data
     public List<TotoraCropData> currentTotoraCrops;
     [Space]
     public List<ActivitySO> currentActivitiesPerformed;
+    public List<ActivitySO> currentActivitiesPerformedSuccessfully;
 
     public Data(GameSettingsSO gameSettingsSO)
     {
@@ -39,6 +40,7 @@ public class Data
         ResetInventory(gameSettingsSO);
         ResetTorotaCrops(gameSettingsSO);
         ResetActivitiesPerformed();
+        ResetActivitiesPerformedSuccessfully();
 
         timesCooked = 0;
         timesFished = 0;
@@ -74,9 +76,15 @@ public class Data
     }
 
     public void AddActivityPerformed(ActivitySO activitySO) => currentActivitiesPerformed.Add(activitySO);
+    public void AddActivityPerformedSuccessfully(ActivitySO activitySO) => currentActivitiesPerformedSuccessfully.Add(activitySO);
 
     public void ResetActivitiesPerformed()
     {
         currentActivitiesPerformed = new List<ActivitySO>();
+    }
+
+    public void ResetActivitiesPerformedSuccessfully()
+    {
+        currentActivitiesPerformedSuccessfully = new List<ActivitySO>();
     }
 }

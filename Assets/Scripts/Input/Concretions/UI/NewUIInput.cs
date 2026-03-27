@@ -40,4 +40,14 @@ public class NewUIInput : UIInput
 
         return pauseInput;
     }
+
+    public override bool GetScheduleDown()
+    {
+        if (!CanProcessInput()) return false;
+        if (InputOnCooldown()) return false;
+
+        bool scheduleInput = playerInputActions.UI.Schedule.WasPerformedThisFrame();
+
+        return scheduleInput;
+    }
 }

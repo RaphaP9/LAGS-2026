@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4669852075423167778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1938992600650242046}
+  - component: {fileID: 759092761635109966}
+  m_Layer: 0
+  m_Name: ScheduleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1938992600650242046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669852075423167778}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &759092761635109966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669852075423167778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91f17ccfca0ca540bbfa1e3f464a51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayScheduleRelations:
+  - day: 1
+    dayScheduleSO: {fileID: 11400000, guid: ee17568c1a941ba44a216bf105421c84, type: 2}
+  - day: 2
+    dayScheduleSO: {fileID: 11400000, guid: e51d94333dcc8b7469c3314c1304c01e, type: 2}
+  - day: 3
+    dayScheduleSO: {fileID: 11400000, guid: 5cc0af9c8257b664cba1128a47fef9c4, type: 2}
+  - day: 4
+    dayScheduleSO: {fileID: 11400000, guid: 5d43b7d98a146224f9b97114d4e254c9, type: 2}
+  activitiesPerformedList: []

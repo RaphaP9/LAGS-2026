@@ -22,12 +22,16 @@ public class ActivitiesManager : MonoBehaviour
 
     [Header("Lists")]
     [SerializeField] private List<ActivitySO> activitiesPerformed;
+    [SerializeField] private List<ActivitySO> activitiesPerformedSuccessfully;
 
     public static event EventHandler<OnActivitiesEventArgs> OnActivitiesPerformedInitialized;
 
     public static event EventHandler<OnActivityPerformedEventArgs> OnActivityPerformed;
     public static event EventHandler<OnActivityPerformedEventArgs> OnActivityPerformedSuccess;
     public static event EventHandler<OnActivityPerformedEventArgs> OnActivityPerformedFail;
+
+    public List<ActivitySO> ActivitiesPerformed => activitiesPerformed;
+    public List<ActivitySO> ActivitiesPerformedSuccessfully => activitiesPerformedSuccessfully;
 
     public class OnActivitiesEventArgs : EventArgs
     {
@@ -38,6 +42,7 @@ public class ActivitiesManager : MonoBehaviour
     {
         public ActivitySO activitySO;
         public List<ActivitySO> activitiesPerformed;
+        public List<ActivitySO> activitiesPerformedSuccessfully;
     }
 
     private void OnEnable()
@@ -102,6 +107,7 @@ public class ActivitiesManager : MonoBehaviour
     private void InitializeActivitiesPerformed()
     {
         activitiesPerformed = new List<ActivitySO>(StaticDataManager.Instance.Data.currentActivitiesPerformed);
+        activitiesPerformedSuccessfully = new List<ActivitySO>(StaticDataManager.Instance.Data.currentActivitiesPerformedSuccessfully);
 
         OnActivitiesPerformedInitialized?.Invoke(this, new OnActivitiesEventArgs { activities = activitiesPerformed });
     }
@@ -109,26 +115,32 @@ public class ActivitiesManager : MonoBehaviour
     private void PerformActivity(ActivitySO activitySO)
     {
         activitiesPerformed.Add(activitySO);
-
         StaticDataManager.Instance.AddActivityPerformed(activitySO);
-
-        OnActivityPerformed?.Invoke(this, new OnActivityPerformedEventArgs { activitySO = activitySO, activitiesPerformed = activitiesPerformed });
+        OnActivityPerformed?.Invoke(this, new OnActivityPerformedEventArgs { activitySO = activitySO, activitiesPerformed = activitiesPerformed, activitiesPerformedSuccessfully = activitiesPerformedSuccessfully });
     }
 
     private void PerformActivitySuccess(ActivitySO activitySO)
     {
-        OnActivityPerformedSuccess?.Invoke(this, new OnActivityPerformedEventArgs { activitySO = activitySO, activitiesPerformed = activitiesPerformed });
+        activitiesPerformedSuccessfully.Add(activitySO);
+        StaticDataManager.Instance.AddActivityPerformedSuccessfully(activitySO);
+        OnActivityPerformedSuccess?.Invoke(this, new OnActivityPerformedEventArgs { activitySO = activitySO, activitiesPerformed = activitiesPerformed, activitiesPerformedSuccessfully = activitiesPerformedSuccessfully });
     }
 
     private void PerformActivityFail(ActivitySO activitySO)
     {
-        OnActivityPerformedFail?.Invoke(this, new OnActivityPerformedEventArgs { activitySO = activitySO, activitiesPerformed = activitiesPerformed });
+        OnActivityPerformedFail?.Invoke(this, new OnActivityPerformedEventArgs { activitySO = activitySO, activitiesPerformed = activitiesPerformed, activitiesPerformedSuccessfully = activitiesPerformedSuccessfully });
     }
 
     public void ResetActivitiesPerformed()
     {
         activitiesPerformed.Clear();
         StaticDataManager.Instance.ResetActivitiesPerformed();
+    }
+
+    public void ResetActivitiesPerformedSuccessfully()
+    {
+        activitiesPerformedSuccessfully.Clear();
+        StaticDataManager.Instance.ResetActivitiesPerformedSuccessfully();
     }
 
     #region Fishing Subscriptions
@@ -179,19 +191,16 @@ public class ActivitiesManager : MonoBehaviour
     #region Music Subscriptions
     private void MusicMinigameManager_OnMusicInterval(object sender, EventArgs e)
     {
-        Debug.Log("A");
         PerformActivity(musicSO);
     }
 
     private void MusicMinigameManager_OnMusicIntervalSuccess(object sender, EventArgs e)
     {
-        Debug.Log("B");
         PerformActivitySuccess(musicSO);
     }
 
     private void MusicMinigameManager_OnMusicIntervalFail(object sender, EventArgs e)
     {
-        Debug.Log("C");
         PerformActivityFail(musicSO);
     }
     #endregion
