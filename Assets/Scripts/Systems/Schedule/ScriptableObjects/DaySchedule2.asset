@@ -15,10 +15,10 @@ MonoBehaviour:
   activityScheduleList:
   - activitySO: {fileID: 11400000, guid: 1b8aae849f7fc9f459ffc2c255cf70b6, type: 2}
     times: 2
-    description: A
+    description: Cosechar dos plantitas de totora
   - activitySO: {fileID: 11400000, guid: d202d6fb3b8c4d6418b715868e7fcdc2, type: 2}
     times: 2
-    description: B
+    description: Realizar dos telares
   - activitySO: {fileID: 11400000, guid: 9d6d324798a467d4b967870b0c3ce4a7, type: 2}
     times: 2
-    description: C
+    description: Pescar dos truchas
