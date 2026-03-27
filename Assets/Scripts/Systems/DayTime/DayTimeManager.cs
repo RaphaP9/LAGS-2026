@@ -213,6 +213,12 @@ public class DayTimeManager : MonoBehaviour
         TurnToNextDay();
     }
 
+    public float GetNormalizedTime()
+    {
+        float normalizedTime = Mathf.InverseLerp(gameSettingsSO.startingTime, gameSettingsSO.finalTime, currentTime);
+        return normalizedTime;
+    }
+
     #region Subscriptions
     private void ActivitiesManager_OnActivityPerformed(object sender, ActivitiesManager.OnActivityPerformedEventArgs e)
     {
