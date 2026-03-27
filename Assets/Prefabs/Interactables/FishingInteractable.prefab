@@ -82,7 +82,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -104,8 +104,8 @@ MonoBehaviour:
   tooltipMessage: Entrar a la totora
   minigameScene: Gameplay_Fishing
   minigameSceneTransitionType: 0
-  minTime: 360
-  maxTime: 480
+  minTime: 0
+  maxTime: 1440
   message: Solo puedes pescar entre las 6AM y 8AM
   messageTransform: {fileID: 7738301424090582700}
   messageColor: {r: 1, g: 0.41960785, b: 0.41960785, a: 1}

@@ -1,13 +1,16 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MusicNoteUI : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] private MusicMinigameUI musicMinigameUI;
     [SerializeField] private MusicNoteSO musicNoteSO;
+    [Space]
+    [SerializeField] private MusicMinigameUI musicMinigameUI;
     [SerializeField] private Button noteButton;
+    [SerializeField] private TextMeshProUGUI nameText;
 
     public static event EventHandler<OnNoteEventArgs> OnNotePlayed;
 
@@ -21,9 +24,19 @@ public class MusicNoteUI : MonoBehaviour
         InitializeButtonsListeners();
     }
 
+    private void Start()
+    {
+        InitializeNote();
+    }
+
     private void InitializeButtonsListeners()
     {
         noteButton.onClick.AddListener(PlayNote);
+    }
+
+    private void InitializeNote()
+    {
+        nameText.text = musicNoteSO.noteName;
     }
 
     private void PlayNote()

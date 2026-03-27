@@ -52,7 +52,7 @@ public class PartitionNoteUI : MonoBehaviour
 
     public void SuccessPartitionNote() 
     {
-        OnPartitionNoteFail?.Invoke(this, new OnPartitionNoteEventArgs { musicNoteSO = musicNoteSO });
+        OnPartitionNoteSuccess?.Invoke(this, new OnPartitionNoteEventArgs { musicNoteSO = musicNoteSO });
         SuccessUI(); 
     }
 }

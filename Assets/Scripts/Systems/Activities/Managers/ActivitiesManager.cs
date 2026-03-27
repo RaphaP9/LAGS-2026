@@ -17,6 +17,9 @@ public class ActivitiesManager : MonoBehaviour
     [Header("Weaving")]
     [SerializeField] private ActivitySO weavingSO;
 
+    [Header("Music")]
+    [SerializeField] private ActivitySO musicSO;
+
     [Header("Lists")]
     [SerializeField] private List<ActivitySO> activitiesPerformed;
 
@@ -49,6 +52,10 @@ public class ActivitiesManager : MonoBehaviour
         WeavingManager.OnWeaveIntervalFail += WeavingManager_OnWeaveIntervalFail;
 
         TotoraCropHandler.OnAnyTotoraCropHarvested += TotoraCropHandler_OnAnyTotoraCropHarvested;
+
+        MusicMinigameManager.OnMusicInterval += MusicMinigameManager_OnMusicInterval;
+        MusicMinigameManager.OnMusicIntervalSuccess += MusicMinigameManager_OnMusicIntervalSuccess;
+        MusicMinigameManager.OnMusicIntervalFail += MusicMinigameManager_OnMusicIntervalFail;
     }
 
     private void OnDisable()
@@ -63,6 +70,10 @@ public class ActivitiesManager : MonoBehaviour
         WeavingManager.OnWeaveIntervalFail -= WeavingManager_OnWeaveIntervalFail;
 
         TotoraCropHandler.OnAnyTotoraCropHarvested -= TotoraCropHandler_OnAnyTotoraCropHarvested;
+
+        MusicMinigameManager.OnMusicInterval -= MusicMinigameManager_OnMusicInterval;
+        MusicMinigameManager.OnMusicIntervalSuccess -= MusicMinigameManager_OnMusicIntervalSuccess;
+        MusicMinigameManager.OnMusicIntervalFail -= MusicMinigameManager_OnMusicIntervalFail;
     }
 
     private void Awake()
@@ -162,6 +173,26 @@ public class ActivitiesManager : MonoBehaviour
         InventoryManager.Instance.AddInventoryObject(totoraSO, 1);
         PerformActivity(harvestingSO);
         PerformActivitySuccess(harvestingSO);
+    }
+    #endregion
+
+    #region Music Subscriptions
+    private void MusicMinigameManager_OnMusicInterval(object sender, EventArgs e)
+    {
+        Debug.Log("A");
+        PerformActivity(musicSO);
+    }
+
+    private void MusicMinigameManager_OnMusicIntervalSuccess(object sender, EventArgs e)
+    {
+        Debug.Log("B");
+        PerformActivitySuccess(musicSO);
+    }
+
+    private void MusicMinigameManager_OnMusicIntervalFail(object sender, EventArgs e)
+    {
+        Debug.Log("C");
+        PerformActivityFail(musicSO);
     }
     #endregion
 }

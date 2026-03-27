@@ -49,4 +49,5 @@ MonoBehaviour:
   harvestingSO: {fileID: 11400000, guid: 1b8aae849f7fc9f459ffc2c255cf70b6, type: 2}
   totoraSO: {fileID: 11400000, guid: 33d64778a378b5047bfbf36ef63334af, type: 2}
   weavingSO: {fileID: 11400000, guid: d202d6fb3b8c4d6418b715868e7fcdc2, type: 2}
+  musicSO: {fileID: 11400000, guid: 8ff992aa03b13644f8c724e23c36f5ed, type: 2}
   activitiesPerformed: []

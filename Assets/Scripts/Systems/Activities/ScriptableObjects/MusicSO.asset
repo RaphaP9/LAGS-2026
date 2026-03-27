@@ -16,3 +16,4 @@ MonoBehaviour:
   description: "Tocar M\xFAsica"
   moodChange: 10
   isProductive: 0
+  timeAdd: 90
