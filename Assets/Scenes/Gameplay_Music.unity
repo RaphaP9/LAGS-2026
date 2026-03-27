@@ -3978,8 +3978,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2017705966}
   partitionUIHolder: {fileID: 1717880411}
-  startingTime: 1.25
-  endingTime: 0.25
+  startingTime: 0.25
+  endingTime: 0.5
   partitionUIPrefabs: []
   currentPartitionUI: {fileID: 0}
   state: 0
