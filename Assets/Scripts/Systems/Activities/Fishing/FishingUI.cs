@@ -61,6 +61,7 @@ public class FishingUI : MonoBehaviour
 
     public static event EventHandler OnTiltSuccess;
     public static event EventHandler OnTiltFail;
+    public static event EventHandler OnAllTiltsSuccess;
 
     public static event EventHandler OnPlayStart;
 
@@ -157,6 +158,8 @@ public class FishingUI : MonoBehaviour
         }
 
         SetState(State.NotPlaying);
+
+        OnAllTiltsSuccess?.Invoke(this, EventArgs.Empty);
 
         yield return new WaitForSeconds(endingTime);
         Success();

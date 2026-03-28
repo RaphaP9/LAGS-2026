@@ -8,6 +8,8 @@ public class MusicMinigameUI : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Animator animator;
     [SerializeField] private Transform partitionUIHolder;
+    [Space]
+    [SerializeField] private MinigameKeybindIndicatorUI minigameKeybindIndicatorUI;
 
     [Header("Settings")]
     [SerializeField, Range(0f, 3f)] private float startingTime;
