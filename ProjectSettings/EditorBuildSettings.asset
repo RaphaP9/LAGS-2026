@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: d638b27207462e84a85b90f67ff957ca
   - enabled: 1
+    path: Assets/Scenes/StartCinematic.unity
+    guid: bc165688af42305429580843f754feb3
+  - enabled: 1
     path: Assets/Scenes/Gameplay_Main.unity
     guid: 27b553ec28093e84f92717f1a6354c06
   - enabled: 1
@@ -20,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay_Music.unity
     guid: 413ee42d32f0db64ea76a173d39ebb4b
+  - enabled: 1
+    path: Assets/Scenes/EndCinematic.unity
+    guid: a24e9219e67e52b4d8084100036930d2
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 2fe03ea2a1b42bd46853ac342cb8820b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
