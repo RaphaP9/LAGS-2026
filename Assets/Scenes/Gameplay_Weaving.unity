@@ -1232,6 +1232,11 @@ MonoBehaviour:
   - {fileID: 771538531673949980, guid: ba7df7fc491e2e34cb85d979ca080fc6, type: 3}
   - {fileID: 771538531673949980, guid: 58fb88c74f528eb46abd5350214019f3, type: 3}
   - {fileID: 771538531673949980, guid: 2fc5b54d6e8eb9d44a2b333797c67d51, type: 3}
+  - {fileID: 771538531673949980, guid: 2d9ebe265f4da044b854762045ef6221, type: 3}
+  - {fileID: 771538531673949980, guid: 084ad36d80b62f54d892112598d961d4, type: 3}
+  - {fileID: 771538531673949980, guid: 9df1d2759c74263439a73d4b061d80d8, type: 3}
+  - {fileID: 771538531673949980, guid: 73534e79efe31ae438d391f6ad85c0d6, type: 3}
+  - {fileID: 771538531673949980, guid: bdb8be1a9f1b02740badfede9c6fb628, type: 3}
   currentLoomUI: {fileID: 0}
   state: 0
 --- !u!1 &615468236
