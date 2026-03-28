@@ -142,7 +142,7 @@ public class DialogueManager : MonoBehaviour
                 SetDialogueState(DialogueState.DialogueTransitionIn);
 
                 dialogueTransitionInCompleted = false;
-                OnDialogueBegin?.Invoke(this, new OnDialogueEventArgs { dialogueSentence = currentSentence });
+                OnDialogueBegin?.Invoke(this, new OnDialogueEventArgs {dialogueSO = dialogueSO, dialogueSentence = currentSentence });
 
                 yield return new WaitUntil(() => dialogueTransitionInCompleted);//Wait for TransitionInCompleted
                 dialogueTransitionInCompleted = false;
@@ -152,7 +152,7 @@ public class DialogueManager : MonoBehaviour
                 SetDialogueState(DialogueState.SentenceTransitionIn);
 
                 sentenceTransitionInCompleted = false;
-                OnSentenceBegin?.Invoke(this, new OnDialogueEventArgs { dialogueSentence = currentSentence });
+                OnSentenceBegin?.Invoke(this, new OnDialogueEventArgs { dialogueSO = dialogueSO, dialogueSentence = currentSentence });
 
                 yield return new WaitUntil(() => sentenceTransitionInCompleted);
                 sentenceTransitionInCompleted = false;
@@ -170,7 +170,7 @@ public class DialogueManager : MonoBehaviour
             //We play the Sentence Audio
             PlaySentenceAudio(dialogueSO.dialogueSentences[i]);
 
-            OnSentenceIdle?.Invoke(this, new OnDialogueEventArgs { dialogueSentence = currentSentence}); //Loads the entire Sentence
+            OnSentenceIdle?.Invoke(this, new OnDialogueEventArgs { dialogueSO = dialogueSO, dialogueSentence = currentSentence}); //Loads the entire Sentence
 
             yield return new WaitUntil(() => shouldSkipSentence || shouldSkipDialogue);
 
@@ -190,7 +190,7 @@ public class DialogueManager : MonoBehaviour
                     SetDialogueState(DialogueState.SentenceTransitionOut);
 
                     sentenceTransitionOutCompleted = false;
-                    OnSentenceEnd?.Invoke(this, new OnDialogueEventArgs { dialogueSentence = currentSentence });
+                    OnSentenceEnd?.Invoke(this, new OnDialogueEventArgs { dialogueSO = dialogueSO, dialogueSentence = currentSentence });
 
                     yield return new WaitUntil(() => sentenceTransitionOutCompleted);
                     sentenceTransitionOutCompleted = false;
@@ -206,7 +206,7 @@ public class DialogueManager : MonoBehaviour
         SetDialogueState(DialogueState.DialogueTransitionOut);
 
         dialogueTransitionOutCompleted = false;
-        OnDialogueEnd?.Invoke(this, new OnDialogueEventArgs { dialogueSentence = currentSentence });
+        OnDialogueEnd?.Invoke(this, new OnDialogueEventArgs { dialogueSO = dialogueSO, dialogueSentence = currentSentence });
 
         yield return new WaitUntil(() => dialogueTransitionOutCompleted);
         dialogueTransitionOutCompleted = false;
