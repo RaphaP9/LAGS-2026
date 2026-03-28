@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ab765388642e914fbb9f1846962d108, type: 3}
-  m_Name: MiSO
+  m_Name: Re4
   m_EditorClassIdentifier: 
   id: 3
-  noteName: Mi
-  soundClip: {fileID: 0}
+  noteName: Re4
+  soundClip: {fileID: 8300000, guid: c4820d5b53a3e7443bf5b0423e9464c8, type: 3}

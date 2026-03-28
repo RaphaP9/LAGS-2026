@@ -10,11 +10,13 @@ public class PausableSFXManager : SFXManager
     protected override void OnEnable()
     {
         base.OnEnable();
+        MusicNoteUI.OnNotePlayed += MusicNoteUI_OnNotePlayed;
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
+        MusicNoteUI.OnNotePlayed -= MusicNoteUI_OnNotePlayed;
     }
 
     #region Singleton Settings
@@ -38,5 +40,11 @@ public class PausableSFXManager : SFXManager
     }
     #endregion
 
+    #region Music Minigame
+    private void MusicNoteUI_OnNotePlayed(object sender, MusicNoteUI.OnNoteEventArgs e)
+    {
+        PlaySound(e.musicNoteSO.soundClip);
+    }
 
+    #endregion
 }

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ab765388642e914fbb9f1846962d108, type: 3}
-  m_Name: SolSO
+  m_Name: Mi4
   m_EditorClassIdentifier: 
-  id: 5
-  noteName: Sol
-  soundClip: {fileID: 0}
+  id: 4
+  noteName: Mi4
+  soundClip: {fileID: 8300000, guid: f3a732786648c88418122944e5c510cc, type: 3}

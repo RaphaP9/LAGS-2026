@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ab765388642e914fbb9f1846962d108, type: 3}
-  m_Name: FaSO
+  m_Name: Do4
   m_EditorClassIdentifier: 
-  id: 4
-  noteName: Fa
-  soundClip: {fileID: 0}
+  id: 2
+  noteName: Do4
+  soundClip: {fileID: 8300000, guid: d4785b1f77ea44d4993ad048cee46c7e, type: 3}
