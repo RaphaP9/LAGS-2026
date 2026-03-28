@@ -486,7 +486,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 561061901388783024, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
       propertyPath: loomPointUIList.Array.size
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 561061901388783024, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
       propertyPath: 'loomPointUIList.Array.data[0]'
@@ -556,6 +556,10 @@ PrefabInstance:
       propertyPath: 'loomPointUIList.Array.data[16]'
       value: 
       objectReference: {fileID: 4898681356558078379}
+    - target: {fileID: 561061901388783024, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
+      propertyPath: 'loomPointUIList.Array.data[17]'
+      value: 
+      objectReference: {fileID: 5343772531338377708}
     - target: {fileID: 655005483313078615, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
       propertyPath: m_Color.b
       value: 0.2627451
@@ -1173,6 +1177,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3431751248513501298, guid: 787f4f8abd344304e9239b5ab20918c2, type: 3}
   m_PrefabInstance: {fileID: 3368215948808780049}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5343772531338377708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7248167847814529277, guid: 787f4f8abd344304e9239b5ab20918c2, type: 3}
+  m_PrefabInstance: {fileID: 3368215948808780049}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4ae4e112537d04899e5bfa1f07800e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3562610779211368947
 PrefabInstance:
   m_ObjectHideFlags: 0
