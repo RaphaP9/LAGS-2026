@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
     private const float PROYECTION_MAGNITUDE_THRESHOLD = 0.1f;
 
     private bool movementEnabled = true;
+    private float previousDesiredSpeed = 0f;
 
     private void Awake()
     {
@@ -88,8 +89,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (!movementEnabled) return;
-
         CalculateDesiredSpeed();
         SmoothSpeed();
 
@@ -113,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CanMove()
     {
+        if (!movementEnabled) return false;
         if (DirectionInputVector == Vector2.zero) return false;
         if (!FixDirectionVectorDueToWalls()) return false;
         if (checkWall.HitCorner && checkWall.HitWall && !checkGround.OnSlope) return false;
@@ -205,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void NotMovingLogic()
     {
-        if (!checkGround.IsGrounded) return;
+        if (previousDesiredSpeed == desiredSpeed) return;
 
         if (desiredSpeed == moveSpeed)
         {
@@ -213,21 +213,26 @@ public class PlayerMovement : MonoBehaviour
             OnPlayerStartMoving?.Invoke(this, EventArgs.Empty);
             return;
         }
+
+        previousDesiredSpeed = desiredSpeed;
     }
 
     private void WalkingLogic()
     {
-        if (!checkGround.IsGrounded || desiredSpeed == 0f)
+        if (previousDesiredSpeed == desiredSpeed) return;
+
+        if (desiredSpeed <= 0f)
         {
             SetMovementState(State.NotMoving);
             OnPlayerStopMoving?.Invoke(this, EventArgs.Empty);
             return;
         }
+
+        previousDesiredSpeed = desiredSpeed;
     }
 
     private void StopMovement()
     {
-        FinalMoveVector = Vector3.zero;
         _rigidbody.linearVelocity = Vector3.zero;
     }
 

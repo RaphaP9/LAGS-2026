@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5673418883594291064}
   finalDayButton: {fileID: 4092238197988733902}
-  finalDayScene: NotDefined
+  finalDayScene: EndCinematic
   finalDayTransitionType: 0
 --- !u!1 &740801937769020250
 GameObject:

@@ -7,4 +7,7 @@ public class SFXPool : ScriptableObject
 {
     [Header("General")]
     public AudioClip[] sfxA;
+
+    [Header("Player")]
+    public AudioClip playerFootsteps;
 }

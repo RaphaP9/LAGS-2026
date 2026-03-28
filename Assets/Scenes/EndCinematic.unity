@@ -2508,6 +2508,10 @@ PrefabInstance:
       value: CinematicManager
       objectReference: {fileID: 0}
     - target: {fileID: 3760461584963155113, guid: bcd0706613e14794f87da5dff6b25255, type: 3}
+      propertyPath: nextScene
+      value: Credits
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760461584963155113, guid: bcd0706613e14794f87da5dff6b25255, type: 3}
       propertyPath: videoPlayer
       value: 
       objectReference: {fileID: 1042655259}
