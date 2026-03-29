@@ -2997,6 +2997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d437dfb94fdc44ea798821be020aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableIntroduction: 0
   playerFollowCamera: {fileID: 1334194778}
   introductionCamera: {fileID: 576905144}
   introductionCameraAnimator: {fileID: 576905145}
@@ -6185,6 +6186,10 @@ PrefabInstance:
       propertyPath: canvasRectTransform
       value: 
       objectReference: {fileID: 977449162153867993}
+    - target: {fileID: 7785575755953310281, guid: 6b7ee36947dd7b74faed813821acb842, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 9164105183311493889, guid: 6b7ee36947dd7b74faed813821acb842, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -15,3 +15,5 @@ MonoBehaviour:
   id: 1
   objectName: Trucha
   description: Una trucha
+  sprite: {fileID: 21300000, guid: 5b835de2e6917714b99bc4200186d35f, type: 3}
+  borderSprite: {fileID: 21300000, guid: b5172345b9e9d3742877f7e6f771f6d2, type: 3}

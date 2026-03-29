@@ -15,3 +15,5 @@ MonoBehaviour:
   id: 2
   objectName: Totora
   description: Fajo de Totora
+  sprite: {fileID: 21300000, guid: d791e21a0abf9a541afa19f7e352a3ee, type: 3}
+  borderSprite: {fileID: 21300000, guid: ab51c8ffb8c5e274695f2168e470bd37, type: 3}

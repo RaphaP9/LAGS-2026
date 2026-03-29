@@ -15,3 +15,5 @@ MonoBehaviour:
   id: 3
   objectName: Flor de Totora
   description: Una flor de totora
+  sprite: {fileID: 21300000, guid: ee32e56dcddafed49ae0dbbe88c1da07, type: 3}
+  borderSprite: {fileID: 21300000, guid: 21510fddc58ed1942987514dedd518ee, type: 3}

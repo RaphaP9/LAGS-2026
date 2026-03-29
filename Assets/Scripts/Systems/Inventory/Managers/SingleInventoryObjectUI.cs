@@ -6,6 +6,7 @@ public class SingleInventoryObjectUI : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Image objectImage;
+    [SerializeField] private Image borderImage;
     [SerializeField] private TextMeshProUGUI quantityText;
 
     [Header("Settings")]
@@ -17,6 +18,7 @@ public class SingleInventoryObjectUI : MonoBehaviour
     {
         this.inventoryObjectSO = inventoryObjectSO;
         objectImage.sprite = inventoryObjectSO.sprite;
+        borderImage.sprite = inventoryObjectSO.borderSprite;
 
         UpdateQuantity();
     }
