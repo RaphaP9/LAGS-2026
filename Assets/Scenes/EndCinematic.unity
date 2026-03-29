@@ -2256,6 +2256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CinematicCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5937536659997238741, guid: b0f6096ebc5dbf14cbaf983dc8810ae6, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: caaef6a951bcda54d8d0fcc4960e8321, type: 3}
     - target: {fileID: 7413135668304908107, guid: b0f6096ebc5dbf14cbaf983dc8810ae6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
