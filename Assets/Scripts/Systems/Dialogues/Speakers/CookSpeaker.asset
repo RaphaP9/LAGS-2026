@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   speakerName: Jefa Uros
-  speakerImage: {fileID: 0}
+  speakerImage: {fileID: 21300000, guid: 7f41414018de29b4397d9d3223c13e1b, type: 3}
   nameColor: {r: 0.654902, g: 0.81960785, b: 1, a: 1}
