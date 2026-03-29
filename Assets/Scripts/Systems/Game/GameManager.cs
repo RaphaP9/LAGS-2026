@@ -14,12 +14,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private State state;
     [SerializeField] private State previousState;
 
-    public enum State {Exploring, Dialogue, DayEnd}
+    public enum State {Exploring, Dialogue, DayEnd, Introduction}
 
     public State GameState => state;
 
     private void OnEnable()
     {
+        IntroductionManager.OnIntroductionStart += IntroductionManager_OnIntroductionStart;
+        IntroductionManager.OnIntroductionEnd += IntroductionManager_OnIntroductionEnd;
+
         DialogueManager.OnDialogueBegin += DialogueManager_OnDialogueBegin;
         DialogueManager.OnDialogueEnd += DialogueManager_OnDialogueEnd;
 
@@ -28,6 +31,9 @@ public class GameManager : MonoBehaviour
 
     private void OnDisable()
     {
+        IntroductionManager.OnIntroductionStart -= IntroductionManager_OnIntroductionStart;
+        IntroductionManager.OnIntroductionEnd -= IntroductionManager_OnIntroductionEnd;
+
         DialogueManager.OnDialogueBegin -= DialogueManager_OnDialogueBegin;
         DialogueManager.OnDialogueEnd -= DialogueManager_OnDialogueEnd;
 
@@ -72,13 +78,25 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Subscriptions
+    private void IntroductionManager_OnIntroductionStart(object sender, EventArgs e)
+    {
+        SetGameState(State.Introduction);
+    }
+
+    private void IntroductionManager_OnIntroductionEnd(object sender, EventArgs e)
+    {
+        SetGameState(State.Exploring);
+    }
+
     private void DialogueManager_OnDialogueBegin(object sender, DialogueManager.OnDialogueEventArgs e)
     {
+        if (state == State.Introduction) return;
         SetGameState(State.Dialogue);
     }
 
     private void DialogueManager_OnDialogueEnd(object sender, DialogueManager.OnDialogueEventArgs e)
     {
+        if (state == State.Introduction) return;
         SetGameState(State.Exploring);
     }
 

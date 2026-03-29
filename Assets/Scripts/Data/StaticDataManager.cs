@@ -45,6 +45,10 @@ public class StaticDataManager : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
+    public void SetHasIntroductedTrue() => data.hasIntroducted = true;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
     public void IncreaseTimesInteractedCook() => data.timesInteractedCook++;
     public void IncreaseTimesInteractedWeaver() => data.timesInteractedWeaver++;
     public void IncreaseTimesInteractedMusician() => data.timesInteractedMusician++;

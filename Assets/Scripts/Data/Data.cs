@@ -18,6 +18,8 @@ public class Data
     public List<ActivitySO> currentActivitiesPerformed;
     public List<ActivitySO> currentActivitiesPerformedSuccessfully;
     [Space]
+    public bool hasIntroducted;
+    [Space]
     public int timesInteractedCook;
     public int timesInteractedWeaver;
     public int timesInteractedMusician;
@@ -41,6 +43,8 @@ public class Data
         ResetTorotaCrops(gameSettingsSO);
         ResetActivitiesPerformed();
         ResetActivitiesPerformedSuccessfully();
+
+        hasIntroducted = false;
 
         timesInteractedCook = 0;
         timesInteractedWeaver = 0;
