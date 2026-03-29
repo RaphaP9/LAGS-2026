@@ -8,6 +8,9 @@ public class IntroductionManager : MonoBehaviour
 {
     public static IntroductionManager Instance {  get; private set; }
 
+    [Header("Enabler")]
+    [SerializeField] private bool enableIntroduction;
+
     [Header("Components")]
     [SerializeField] private CinemachineCamera playerFollowCamera;
     [SerializeField] private CinemachineCamera introductionCamera;
@@ -74,6 +77,7 @@ public class IntroductionManager : MonoBehaviour
 
     private void HandleIntroduction()
     {
+        if (!enableIntroduction) return;
         if (StaticDataManager.Instance.Data.hasIntroducted) return;
 
         StartCoroutine(IntroductionCoroutine());

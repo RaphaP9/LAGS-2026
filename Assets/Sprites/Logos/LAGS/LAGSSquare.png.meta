@@ -1,0 +1,1053 @@
+fileFormatVersion: 2
+guid: cd3fe40e9fa286347bdcddf8faca842c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6436571287904683812
+    second: LAGSSquare_0
+  - first:
+      213: 4734023086950348358
+    second: LAGSSquare_1
+  - first:
+      213: 8880193868413221924
+    second: LAGSSquare_2
+  - first:
+      213: 3572071386652910320
+    second: LAGSSquare_3
+  - first:
+      213: -5407740837574273791
+    second: LAGSSquare_4
+  - first:
+      213: -4053130043727418671
+    second: LAGSSquare_5
+  - first:
+      213: 2455694236019464555
+    second: LAGSSquare_6
+  - first:
+      213: 5800287505825771882
+    second: LAGSSquare_7
+  - first:
+      213: -8476082440171652268
+    second: LAGSSquare_8
+  - first:
+      213: -5290738310640216763
+    second: LAGSSquare_9
+  - first:
+      213: -1644237652271011791
+    second: LAGSSquare_10
+  - first:
+      213: -5453481107808928944
+    second: LAGSSquare_11
+  - first:
+      213: -6613338774455204544
+    second: LAGSSquare_12
+  - first:
+      213: -1130148674791645658
+    second: LAGSSquare_13
+  - first:
+      213: -8897249110259398101
+    second: LAGSSquare_14
+  - first:
+      213: -4142906243413392389
+    second: LAGSSquare_15
+  - first:
+      213: 4407639100984796094
+    second: LAGSSquare_16
+  - first:
+      213: -5608882940976774937
+    second: LAGSSquare_17
+  - first:
+      213: 7123506191439032154
+    second: LAGSSquare_18
+  - first:
+      213: 7867513596124028585
+    second: LAGSSquare_19
+  - first:
+      213: -6550761129184107537
+    second: LAGSSquare_20
+  - first:
+      213: -5640574636423551723
+    second: LAGSSquare_21
+  - first:
+      213: -4325396566175072777
+    second: LAGSSquare_22
+  - first:
+      213: -5368424433527707861
+    second: LAGSSquare_23
+  - first:
+      213: -8254555768361995701
+    second: LAGSSquare_24
+  - first:
+      213: 4450584158920158609
+    second: LAGSSquare_25
+  - first:
+      213: 7693240604417730509
+    second: LAGSSquare_26
+  - first:
+      213: -4247239840917554273
+    second: LAGSSquare_27
+  - first:
+      213: 3237375600422345351
+    second: LAGSSquare_28
+  - first:
+      213: -2136947295868275684
+    second: LAGSSquare_29
+  - first:
+      213: -5221920291160526336
+    second: LAGSSquare_30
+  - first:
+      213: 5410783603601388418
+    second: LAGSSquare_31
+  - first:
+      213: 3732806711323857573
+    second: LAGSSquare_32
+  - first:
+      213: -5419941846312024493
+    second: LAGSSquare_33
+  - first:
+      213: 5300691713711202419
+    second: LAGSSquare_34
+  - first:
+      213: -8340279276199565320
+    second: LAGSSquare_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LAGSSquare_0
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 2156
+        width: 52
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4278903eb7b435950800000000000000
+      internalID: 6436571287904683812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_1
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 2156
+        width: 92
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6467c286ae0a2b140800000000000000
+      internalID: 4734023086950348358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_2
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 2156
+        width: 72
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c3f572649cc3b70800000000000000
+      internalID: 8880193868413221924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_3
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 2156
+        width: 16
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2a8c1200c829130800000000000000
+      internalID: 3572071386652910320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_4
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 2156
+        width: 83
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10513031c58d3f4b0800000000000000
+      internalID: -5407740837574273791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_5
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 2156
+        width: 92
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dae92b13b360c7c0800000000000000
+      internalID: -4053130043727418671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_6
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 2156
+        width: 106
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b691ae695e0641220800000000000000
+      internalID: 2455694236019464555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_7
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 2156
+        width: 57
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61b1eb51c2ce7050800000000000000
+      internalID: 5800287505825771882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_8
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 2156
+        width: 72
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b74aacde7ee5a80800000000000000
+      internalID: -8476082440171652268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_9
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 2156
+        width: 16
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5455dbab9858396b0800000000000000
+      internalID: -5290738310640216763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_10
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 2156
+        width: 101
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138601a119e7e29e0800000000000000
+      internalID: -1644237652271011791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_11
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 2156
+        width: 92
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bbeb383d75154b0800000000000000
+      internalID: -5453481107808928944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_12
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 2156
+        width: 83
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045c7417c63b834a0800000000000000
+      internalID: -6613338774455204544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_13
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 2156
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e5aaf94c7e050f0800000000000000
+      internalID: -1130148674791645658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_14
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 2156
+        width: 92
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a04d8e21f968480800000000000000
+      internalID: -8897249110259398101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_15
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 2156
+        width: 106
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf3c89fb8b07186c0800000000000000
+      internalID: -4142906243413392389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_16
+      rect:
+        serializedVersion: 2
+        x: 2666
+        y: 2156
+        width: 57
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb32250e8641b2d30800000000000000
+      internalID: 4407639100984796094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_17
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 2155
+        width: 72
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0c45caeae3922b0800000000000000
+      internalID: -5608882940976774937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_18
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 2155
+        width: 72
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5fe400a327cbd260800000000000000
+      internalID: 7123506191439032154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_19
+      rect:
+        serializedVersion: 2
+        x: 2951
+        y: 2156
+        width: 81
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae578a8ee50f2d60800000000000000
+      internalID: 7867513596124028585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_20
+      rect:
+        serializedVersion: 2
+        x: 3047
+        y: 2155
+        width: 105
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe36b8ed5750715a0800000000000000
+      internalID: -6550761129184107537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_21
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 2156
+        width: 138
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51565e2d047a8b1b0800000000000000
+      internalID: -5640574636423551723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_22
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 2156
+        width: 101
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fdb0707dba19f3c0800000000000000
+      internalID: -4325396566175072777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_23
+      rect:
+        serializedVersion: 2
+        x: 3415
+        y: 2156
+        width: 92
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27ad0cbb668f75b0800000000000000
+      internalID: -5368424433527707861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_24
+      rect:
+        serializedVersion: 2
+        x: 3517
+        y: 2155
+        width: 72
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b42b120634de17d80800000000000000
+      internalID: -8254555768361995701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_25
+      rect:
+        serializedVersion: 2
+        x: 3605
+        y: 2156
+        width: 57
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19daa6b56b6a3cd30800000000000000
+      internalID: 4450584158920158609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_26
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1935
+        width: 445
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc72ee5b191e3ca60800000000000000
+      internalID: 7693240604417730509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_27
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1935
+        width: 281
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9bf8361ed5ce05c0800000000000000
+      internalID: -4247239840917554273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_28
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1935
+        width: 248
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ad0bbc4f77dec20800000000000000
+      internalID: 3237375600422345351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_29
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1935
+        width: 248
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c143a06a1c90852e0800000000000000
+      internalID: -2136947295868275684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_30
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 1935
+        width: 351
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002f8ff79230887b0800000000000000
+      internalID: -5221920291160526336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_31
+      rect:
+        serializedVersion: 2
+        x: 2484
+        y: 1935
+        width: 127
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2833b291507f61b40800000000000000
+      internalID: 5410783603601388418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_32
+      rect:
+        serializedVersion: 2
+        x: 2718
+        y: 1935
+        width: 281
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a217ab3de79dc330800000000000000
+      internalID: 3732806711323857573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_33
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 1935
+        width: 248
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3560c4b5b9f78c4b0800000000000000
+      internalID: -5419941846312024493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_34
+      rect:
+        serializedVersion: 2
+        x: 3414
+        y: 1935
+        width: 248
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 370ec938707df8940800000000000000
+      internalID: 5300691713711202419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAGSSquare_35
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1657
+        width: 3733
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7a29edf20614c80800000000000000
+      internalID: -8340279276199565320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LAGSSquare_0: 6436571287904683812
+      LAGSSquare_1: 4734023086950348358
+      LAGSSquare_10: -1644237652271011791
+      LAGSSquare_11: -5453481107808928944
+      LAGSSquare_12: -6613338774455204544
+      LAGSSquare_13: -1130148674791645658
+      LAGSSquare_14: -8897249110259398101
+      LAGSSquare_15: -4142906243413392389
+      LAGSSquare_16: 4407639100984796094
+      LAGSSquare_17: -5608882940976774937
+      LAGSSquare_18: 7123506191439032154
+      LAGSSquare_19: 7867513596124028585
+      LAGSSquare_2: 8880193868413221924
+      LAGSSquare_20: -6550761129184107537
+      LAGSSquare_21: -5640574636423551723
+      LAGSSquare_22: -4325396566175072777
+      LAGSSquare_23: -5368424433527707861
+      LAGSSquare_24: -8254555768361995701
+      LAGSSquare_25: 4450584158920158609
+      LAGSSquare_26: 7693240604417730509
+      LAGSSquare_27: -4247239840917554273
+      LAGSSquare_28: 3237375600422345351
+      LAGSSquare_29: -2136947295868275684
+      LAGSSquare_3: 3572071386652910320
+      LAGSSquare_30: -5221920291160526336
+      LAGSSquare_31: 5410783603601388418
+      LAGSSquare_32: 3732806711323857573
+      LAGSSquare_33: -5419941846312024493
+      LAGSSquare_34: 5300691713711202419
+      LAGSSquare_35: -8340279276199565320
+      LAGSSquare_4: -5407740837574273791
+      LAGSSquare_5: -4053130043727418671
+      LAGSSquare_6: 2455694236019464555
+      LAGSSquare_7: 5800287505825771882
+      LAGSSquare_8: -8476082440171652268
+      LAGSSquare_9: -5290738310640216763
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
