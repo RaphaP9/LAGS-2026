@@ -2997,7 +2997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d437dfb94fdc44ea798821be020aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableIntroduction: 0
+  enableIntroduction: 1
   playerFollowCamera: {fileID: 1334194778}
   introductionCamera: {fileID: 576905144}
   introductionCameraAnimator: {fileID: 576905145}

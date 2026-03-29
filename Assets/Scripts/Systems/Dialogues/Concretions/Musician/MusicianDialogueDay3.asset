@@ -16,7 +16,8 @@ MonoBehaviour:
   dialogueSentences:
   - localID: 1
     dialogueSpeakerSO: {fileID: 11400000, guid: 0848ee14d5c72664fb04bba3c4cf57d9, type: 2}
-    sentenceText: MusicianDialogueDay3
+    sentenceText: "Conectarte con tus antepasados a trav\xE9s de la m\xFAsica es
+      la mayor expresi\xF3n de libertad.\r"
     speakerOnRight: 0
     triggerSentenceTransition: 0
     audioClip: {fileID: 0}

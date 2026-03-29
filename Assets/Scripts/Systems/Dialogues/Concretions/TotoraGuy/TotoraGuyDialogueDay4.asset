@@ -16,7 +16,9 @@ MonoBehaviour:
   dialogueSentences:
   - localID: 1
     dialogueSpeakerSO: {fileID: 11400000, guid: 2644a404d84a75b46bcc87dcbc9d8ec0, type: 2}
-    sentenceText: TotoraGuyDialogueDay4
+    sentenceText: 'Ya trabajas como alguien de la isla.
+
+'
     speakerOnRight: 0
     triggerSentenceTransition: 0
     audioClip: {fileID: 0}

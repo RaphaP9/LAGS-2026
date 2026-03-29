@@ -61,7 +61,7 @@ MonoBehaviour:
   - localID: 8
     dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
     sentenceText: "Que la Pachamama te reciba con cari\xF1o y que el dios Inti te
-      de paz \xA1Surti!"
+      de paz. <b>Surti!</b>"
     speakerOnRight: 0
     triggerSentenceTransition: 0
     audioClip: {fileID: 0}

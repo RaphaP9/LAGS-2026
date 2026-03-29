@@ -16,7 +16,8 @@ MonoBehaviour:
   dialogueSentences:
   - localID: 1
     dialogueSpeakerSO: {fileID: 11400000, guid: 61c3fa79ac63dc54aae3452905d6413d, type: 2}
-    sentenceText: WeaverFirstDialogue
+    sentenceText: "Tejer toma tiempo, pero seguro lo puedes lograr, hijita. S\xF3lo
+      sigue el patr\xF3n, ten paciencia y lo lograr\xE1s."
     speakerOnRight: 0
     triggerSentenceTransition: 0
     audioClip: {fileID: 0}

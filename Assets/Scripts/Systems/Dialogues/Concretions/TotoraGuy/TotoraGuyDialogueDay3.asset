@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueSentences:
   - localID: 1
     dialogueSpeakerSO: {fileID: 11400000, guid: 2644a404d84a75b46bcc87dcbc9d8ec0, type: 2}
-    sentenceText: TotoraGuyDialogueDay3
+    sentenceText: "Tienes la mano de obra adecuada, cortas donde debe ser.\r"
     speakerOnRight: 0
     triggerSentenceTransition: 0
     audioClip: {fileID: 0}
