@@ -13,4 +13,17 @@ MonoBehaviour:
   m_Name: SFXPoolSO
   m_EditorClassIdentifier: 
   sfxA: []
-  playerFootsteps: {fileID: 8300000, guid: 3ce188970c9de404f980081a173b4576, type: 3}
+  playerHarvesting:
+  - {fileID: 8300000, guid: c29ce1e5ab438b943a91f1afe326c188, type: 3}
+  playerFootsteps: {fileID: 8300000, guid: 53200677860bf4e43b7f93e0ea2d07b7, type: 3}
+  pullingFish: {fileID: 8300000, guid: d30d44095ae297f4db71a56555fe7e70, type: 3}
+  startFishing:
+  - {fileID: 8300000, guid: 894433db8df6b3a43bb4cae317e256c7, type: 3}
+  throwFishingRod:
+  - {fileID: 8300000, guid: 0590ff53ee71478448e19e04ae57c6f2, type: 3}
+  fishingFail:
+  - {fileID: 8300000, guid: bcb19e7c523b12249b8405ac28e46a0b, type: 3}
+  fishingSuccess:
+  - {fileID: 8300000, guid: 58ef98add94fb11449b0719cfe26a7aa, type: 3}
+  sew:
+  - {fileID: 8300000, guid: fbe9ed5e744b805409d9ba142181541d, type: 3}
