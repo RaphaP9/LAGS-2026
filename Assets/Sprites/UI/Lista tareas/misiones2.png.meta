@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 90a4cd0888678074eb0757f7718baf0e
+guid: 539d2a5f3106c9740aad73e1ddcc0ba9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8506914331288012687
-    second: Adorno_con_Chacana_V2_standardSurface1_Normal_0
+      213: 1006463896615454364
+    second: misiones2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
-    sRGBTexture: 0
+    enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -55,9 +55,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 1
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Adorno_con_Chacana_V2_standardSurface1_Normal_0
+      name: misiones2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 415
+        height: 319
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 178f5ecbc7e51f980800000000000000
-      internalID: -8506914331288012687
+      spriteID: c96050dd49da7fd00800000000000000
+      internalID: 1006463896615454364
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Adorno_con_Chacana_V2_standardSurface1_Normal_0: -8506914331288012687
+      misiones2_0: 1006463896615454364
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

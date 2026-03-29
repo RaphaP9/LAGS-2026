@@ -378,7 +378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9cfb1880f4970304397285b74253def2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -449,14 +449,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1bf437a4cb217754f8989a90bbfe4f0c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -617,14 +617,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 718f1828186c1b94ca12bfef72ea61a4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -876,10 +876,10 @@ MonoBehaviour:
   timeImage: {fileID: 3498285119759315643}
   spriteTimeList:
   - minTime: 900
-    sprite: {fileID: 21300000, guid: 6c6360db0e9724045904e3f95497a555, type: 3}
+    sprite: {fileID: 21300000, guid: fc35cbfa0c39bce49ac9c25d6dedfe43, type: 3}
   - minTime: 720
-    sprite: {fileID: 21300000, guid: 60c3d44bd9ce3604abfb8fdc53bbc437, type: 3}
+    sprite: {fileID: 21300000, guid: 27e65acbb921ce747810ad45e0215aee, type: 3}
   - minTime: 540
-    sprite: {fileID: 21300000, guid: 4865662e6036df54489bc45289a6c003, type: 3}
+    sprite: {fileID: 21300000, guid: a183c3fee5b471742a71a55e18e0af19, type: 3}
   - minTime: 360
-    sprite: {fileID: 21300000, guid: b33973f4544df4e488d577e72deb8239, type: 3}
+    sprite: {fileID: 21300000, guid: 1da8cfcba0b20b54791be58c40182a73, type: 3}

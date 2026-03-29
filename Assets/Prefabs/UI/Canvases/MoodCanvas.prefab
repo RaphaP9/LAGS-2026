@@ -434,12 +434,12 @@ MonoBehaviour:
   minMoodColor: {r: 0.58431375, g: 0.20784314, b: 0.20784314, a: 1}
   spriteMoodList:
   - minMood: 75
-    sprite: {fileID: 21300000, guid: 29f85bacfdb3f584ba972073a4475487, type: 3}
+    sprite: {fileID: 21300000, guid: bf7d4e29aac59b14da0f22ae4762b99a, type: 3}
   - minMood: 25
-    sprite: {fileID: 21300000, guid: 6c6360db0e9724045904e3f95497a555, type: 3}
+    sprite: {fileID: 21300000, guid: 262f6127c20442e4a930a2f3cc553c2e, type: 3}
   - minMood: 0
-    sprite: {fileID: 21300000, guid: cda91843b3b2072429dcf672ef2c4681, type: 3}
-  targetFill: 0
+    sprite: {fileID: 21300000, guid: 47c1a81528864b345a696f789cf37da4, type: 3}
+  targetValue: 0
   targetColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6952296130598111054
 GameObject:
