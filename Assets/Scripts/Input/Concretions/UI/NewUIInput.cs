@@ -31,6 +31,19 @@ public class NewUIInput : UIInput
         return true;
     }
 
+    public override bool CanProcessScheduleInput()
+    {
+        if (playerInputActions == null) return false;
+
+        if (ScenesManager.Instance.SceneState != ScenesManager.State.Idle) return false;
+
+        if (GameManager.Instance == null) return true;
+
+        if(GameManager.Instance.GameState == GameManager.State.Introduction) return false;
+        if(GameManager.Instance.GameState == GameManager.State.DayEnd) return false;
+        return true;
+    }
+
     public override bool GetPauseDown()
     {
         if (!CanProcessInput()) return false;
@@ -44,6 +57,7 @@ public class NewUIInput : UIInput
     public override bool GetScheduleDown()
     {
         if (!CanProcessInput()) return false;
+        if (!CanProcessScheduleInput()) return false;
         if (InputOnCooldown()) return false;
 
         bool scheduleInput = playerInputActions.UI.Schedule.WasPerformedThisFrame();

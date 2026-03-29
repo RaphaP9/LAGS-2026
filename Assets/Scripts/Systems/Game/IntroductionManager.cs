@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class IntroductionManager : MonoBehaviour
 {
@@ -11,18 +12,42 @@ public class IntroductionManager : MonoBehaviour
     [SerializeField] private CinemachineCamera playerFollowCamera;
     [SerializeField] private CinemachineCamera introductionCamera;
     [Space]
-    [SerializeField] private Animator introductionAnimator;
+    [SerializeField] private Animator introductionCameraAnimator;
     [Space]
     [SerializeField] private DialogueSO introductionDialogue;
 
     [Header("Settings")]
     [SerializeField, Range(0f, 3f)] private float timeToStartIntroduction;
+    [SerializeField] private List<SentenceIDAnimationTriggerRelation> sentenceIDAnimationTriggerRelations;
 
     public static event EventHandler OnIntroductionStart;
     public static event EventHandler OnIntroductionEnd;
 
     private const int HIGH_PRIORITY = 1;
     private const int LOW_PRIORITY = 0;
+
+    private const string NULL_STRING = "";
+
+    private bool introductionDialogueEnd = false;
+
+    [System.Serializable]
+    public class SentenceIDAnimationTriggerRelation
+    {
+        public int sentenceID;
+        public string animationTrigger;
+    }
+
+    private void OnEnable()
+    {
+        DialogueManager.OnSentenceBegin += DialogueManager_OnSentenceBegin;
+        DialogueManager.OnDialogueEnd += DialogueManager_OnDialogueEnd;
+    }
+
+    private void OnDisable()
+    {
+        DialogueManager.OnSentenceBegin -= DialogueManager_OnSentenceBegin;
+        DialogueManager.OnDialogueEnd -= DialogueManager_OnDialogueEnd;
+    }
 
     private void Awake()
     {
@@ -62,6 +87,12 @@ public class IntroductionManager : MonoBehaviour
 
         yield return new WaitForSeconds(timeToStartIntroduction);
 
+        DialogueManager.Instance.StartDialogue(introductionDialogue);
+
+        yield return new WaitUntil(() => introductionDialogueEnd);
+
+        introductionDialogueEnd = false;
+
         OnIntroductionEnd?.Invoke(this, EventArgs.Empty);
         GivePriorityToPlayerFollorCamera();
 
@@ -79,4 +110,46 @@ public class IntroductionManager : MonoBehaviour
         introductionCamera.Priority = LOW_PRIORITY;
         playerFollowCamera.Priority = HIGH_PRIORITY;
     }
+
+    private void SetTriggerBySentenceAnimation(int sentenceID)
+    {
+        string animationTrigger = GetAnimationTriggerBySentenceID(sentenceID);
+        if (animationTrigger == NULL_STRING) return;
+
+        ResetAllTriggers();
+        introductionCameraAnimator.SetTrigger(animationTrigger);
+    }
+
+    private string GetAnimationTriggerBySentenceID(int sentenceID)
+    {
+        foreach (SentenceIDAnimationTriggerRelation relation in sentenceIDAnimationTriggerRelations)
+        {
+            if (relation.sentenceID == sentenceID) return relation.animationTrigger;
+        }
+
+        return NULL_STRING;
+    }
+
+    private void ResetAllTriggers()
+    {
+        foreach(SentenceIDAnimationTriggerRelation relation in sentenceIDAnimationTriggerRelations)
+        {
+            introductionCameraAnimator.ResetTrigger(relation.animationTrigger);
+        }
+    }
+
+    #region Subscriptions
+    private void DialogueManager_OnSentenceBegin(object sender, DialogueManager.OnDialogueEventArgs e)
+    {
+        if (e.dialogueSO != introductionDialogue) return;
+        SetTriggerBySentenceAnimation(e.dialogueSentence.localID);
+    }
+
+    private void DialogueManager_OnDialogueEnd(object sender, DialogueManager.OnDialogueEventArgs e)
+    {
+        if (e.dialogueSO != introductionDialogue) return;
+        introductionDialogueEnd = true; 
+    }
+    #endregion
+
 }
