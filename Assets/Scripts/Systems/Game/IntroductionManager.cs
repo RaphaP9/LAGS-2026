@@ -39,13 +39,13 @@ public class IntroductionManager : MonoBehaviour
 
     private void OnEnable()
     {
-        DialogueManager.OnSentenceBegin += DialogueManager_OnSentenceBegin;
+        DialogueManager.OnSentenceIdle += DialogueManager_OnSentenceIdle;
         DialogueManager.OnDialogueEnd += DialogueManager_OnDialogueEnd;
     }
 
     private void OnDisable()
     {
-        DialogueManager.OnSentenceBegin -= DialogueManager_OnSentenceBegin;
+        DialogueManager.OnSentenceIdle -= DialogueManager_OnSentenceIdle;
         DialogueManager.OnDialogueEnd -= DialogueManager_OnDialogueEnd;
     }
 
@@ -139,7 +139,7 @@ public class IntroductionManager : MonoBehaviour
     }
 
     #region Subscriptions
-    private void DialogueManager_OnSentenceBegin(object sender, DialogueManager.OnDialogueEventArgs e)
+    private void DialogueManager_OnSentenceIdle(object sender, DialogueManager.OnDialogueEventArgs e)
     {
         if (e.dialogueSO != introductionDialogue) return;
         SetTriggerBySentenceAnimation(e.dialogueSentence.localID);

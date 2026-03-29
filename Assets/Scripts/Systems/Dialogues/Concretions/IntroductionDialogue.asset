@@ -16,19 +16,52 @@ MonoBehaviour:
   dialogueSentences:
   - localID: 1
     dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
-    sentenceText: TestDialogue1
+    sentenceText: "\xA1Kamikasi! Bienvenida a las islas flotantes de los Uros, un
+      lugar \xFAnico en el mundo. Pues todo lo que pisas est\xE1 hecho de la totora."
     speakerOnRight: 0
     triggerSentenceTransition: 0
     audioClip: {fileID: 0}
   - localID: 2
     dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
-    sentenceText: TestDialogue2
+    sentenceText: "Aqu\xED vive mi pueblo Uro, desde hace siglos, manteniendo vivas
+      nuestras tradiciones y nuestra forma de vida en armon\xEDa con la naturaleza."
     speakerOnRight: 0
     triggerSentenceTransition: 0
     audioClip: {fileID: 0}
   - localID: 3
-    dialogueSpeakerSO: {fileID: 11400000, guid: 725db2b53cd0fd84d8d4a1e7222d9f8f, type: 2}
-    sentenceText: TestDialogue3
-    speakerOnRight: 1
-    triggerSentenceTransition: 1
+    dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
+    sentenceText: "Esperamos que disfrutes tus d\xEDas aqu\xED."
+    speakerOnRight: 0
+    triggerSentenceTransition: 0
+    audioClip: {fileID: 0}
+  - localID: 4
+    dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
+    sentenceText: "Aprender\xE1s a pescar en el lago."
+    speakerOnRight: 0
+    triggerSentenceTransition: 0
+    audioClip: {fileID: 0}
+  - localID: 5
+    dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
+    sentenceText: A tejer nuestras textiles.
+    speakerOnRight: 0
+    triggerSentenceTransition: 0
+    audioClip: {fileID: 0}
+  - localID: 6
+    dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
+    sentenceText: A cosechar lo que nos da la isla.
+    speakerOnRight: 0
+    triggerSentenceTransition: 0
+    audioClip: {fileID: 0}
+  - localID: 7
+    dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
+    sentenceText: "Y a compartir nuestra m\xFAsica."
+    speakerOnRight: 0
+    triggerSentenceTransition: 0
+    audioClip: {fileID: 0}
+  - localID: 8
+    dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
+    sentenceText: "Que la Pachamama te reciba con cari\xF1o y que el dios Inti te
+      de paz \xA1Surti!"
+    speakerOnRight: 0
+    triggerSentenceTransition: 0
     audioClip: {fileID: 0}

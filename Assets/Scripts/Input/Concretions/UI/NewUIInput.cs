@@ -37,10 +37,12 @@ public class NewUIInput : UIInput
 
         if (ScenesManager.Instance.SceneState != ScenesManager.State.Idle) return false;
 
-        if (GameManager.Instance == null) return true;
+        if (GameManager.Instance != null)
+        {
+            if (GameManager.Instance.GameState == GameManager.State.Introduction) return false;
+            if (GameManager.Instance.GameState == GameManager.State.DayEnd) return false;
+        }
 
-        if(GameManager.Instance.GameState == GameManager.State.Introduction) return false;
-        if(GameManager.Instance.GameState == GameManager.State.DayEnd) return false;
         return true;
     }
 

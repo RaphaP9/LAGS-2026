@@ -43,10 +43,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         SetSingleton();
-    }
-
-    private void Start()
-    {
         SetGameState(startingState);
     }
 

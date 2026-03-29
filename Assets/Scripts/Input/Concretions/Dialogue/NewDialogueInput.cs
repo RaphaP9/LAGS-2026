@@ -32,7 +32,8 @@ public class NewDialogueInput : DialogueInput
 
         if (GameManager.Instance != null)
         {
-            if(GameManager.Instance.GameState != GameManager.State.Dialogue) return false;
+            if(GameManager.Instance.GameState == GameManager.State.Exploring) return false;
+            if(GameManager.Instance.GameState == GameManager.State.DayEnd) return false;
         }
         
         return true;
