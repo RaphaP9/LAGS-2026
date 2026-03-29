@@ -97,10 +97,10 @@ public class IntroductionManager : MonoBehaviour
 
         introductionDialogueEnd = false;
 
+        StaticDataManager.Instance.SetHasIntroductedTrue();
+
         OnIntroductionEnd?.Invoke(this, EventArgs.Empty);
         GivePriorityToPlayerFollorCamera();
-
-        StaticDataManager.Instance.SetHasIntroductedTrue();
     }
 
     private void GivePriorityToIntroductionCamera()

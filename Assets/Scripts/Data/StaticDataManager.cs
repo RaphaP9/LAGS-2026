@@ -49,6 +49,10 @@ public class StaticDataManager : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
+    public void SetHasStartedDay(bool boolean) => data.hasStartedDay = boolean;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
     public void IncreaseTimesInteractedCook() => data.timesInteractedCook++;
     public void IncreaseTimesInteractedWeaver() => data.timesInteractedWeaver++;
     public void IncreaseTimesInteractedMusician() => data.timesInteractedMusician++;

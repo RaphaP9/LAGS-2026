@@ -20,6 +20,8 @@ public class Data
     [Space]
     public bool hasIntroducted;
     [Space]
+    public bool hasStartedDay;
+    [Space]
     public int timesInteractedCook;
     public int timesInteractedWeaver;
     public int timesInteractedMusician;
@@ -45,6 +47,7 @@ public class Data
         ResetActivitiesPerformedSuccessfully();
 
         hasIntroducted = false;
+        hasStartedDay = false;
 
         timesInteractedCook = 0;
         timesInteractedWeaver = 0;

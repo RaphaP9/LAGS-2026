@@ -209,6 +209,7 @@ public class DayTimeManager : MonoBehaviour
         StaticDataManager.Instance.ResetActivitiesPerformed();
         StaticDataManager.Instance.ResetActivitiesPerformedSuccessfully();
         StaticDataManager.Instance.ResetCurrentPlayerPosition();
+        StaticDataManager.Instance.SetHasStartedDay(false);
 
         ResetTimeToStart();
         TurnToNextDay();

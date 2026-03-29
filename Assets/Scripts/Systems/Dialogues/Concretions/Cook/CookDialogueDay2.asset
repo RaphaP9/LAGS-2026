@@ -16,7 +16,8 @@ MonoBehaviour:
   dialogueSentences:
   - localID: 1
     dialogueSpeakerSO: {fileID: 11400000, guid: f86906b0bd665f1488187e604a4d4a07, type: 2}
-    sentenceText: CookDialogueDay2
+    sentenceText: "La Pachamama nos da todo lo que necesitamos, ni m\xE1s ni menos.
+      Si aprendes a vivir con lo justo, ver\xE1s que tu carga era solo orgullo.\r"
     speakerOnRight: 0
     triggerSentenceTransition: 0
     audioClip: {fileID: 0}

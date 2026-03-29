@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CookSpeaker
   m_EditorClassIdentifier: 
   id: 2
-  speakerName: Cocinera
+  speakerName: Jefa Uros
   speakerImage: {fileID: 0}
   nameColor: {r: 0.654902, g: 0.81960785, b: 1, a: 1}
