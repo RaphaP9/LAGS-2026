@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6011545449543121677}
   - component: {fileID: 7291569597136946977}
-  - component: {fileID: 3842541067377823049}
+  - component: {fileID: 1420519964268863008}
   m_Layer: 8
   m_Name: TotoraGuyNPC
   m_TagString: Untagged
@@ -221,7 +221,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &3842541067377823049
+--- !u!114 &1420519964268863008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,12 +230,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2932480251229473622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4065951bf908c648934b48e92fa9f4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c4c79018333739408b601560d6ecc17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 2
   tooltipMessage: Hablar con el vendedor de totora
-  dialogueSO: {fileID: 11400000, guid: d275b63c0257a4442b5a08ccebab99a5, type: 2}
+  firstInteractionDialogue: {fileID: 11400000, guid: 61eec136647b47f42a3379f28fcd1dae, type: 2}
+  dialogueDayRelations:
+  - day: 1
+    dialogueSO: {fileID: 11400000, guid: 98cfb3dae4277764f9ca89fef3df910f, type: 2}
+  - day: 2
+    dialogueSO: {fileID: 11400000, guid: a46faeef4c4356942a1e5e2d80a45b9b, type: 2}
+  - day: 3
+    dialogueSO: {fileID: 11400000, guid: dc934694f04d3fc45abefc724f6fbab7, type: 2}
+  - day: 4
+    dialogueSO: {fileID: 11400000, guid: 082ec968556d5be4296a4d8a541e2d4f, type: 2}
 --- !u!1 &4643632547728003541
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,4 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2388942633990599447}
   associatedDialogues:
-  - {fileID: 11400000, guid: d275b63c0257a4442b5a08ccebab99a5, type: 2}
+  - {fileID: 11400000, guid: 61eec136647b47f42a3379f28fcd1dae, type: 2}
+  - {fileID: 11400000, guid: 98cfb3dae4277764f9ca89fef3df910f, type: 2}
+  - {fileID: 11400000, guid: a46faeef4c4356942a1e5e2d80a45b9b, type: 2}
+  - {fileID: 11400000, guid: dc934694f04d3fc45abefc724f6fbab7, type: 2}
+  - {fileID: 11400000, guid: 082ec968556d5be4296a4d8a541e2d4f, type: 2}

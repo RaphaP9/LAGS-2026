@@ -13,15 +13,16 @@ public class Data
     [Space]
     public List<InventoryObjectIDQuantity> currentInventory;
     [Space]
-    public int timesCooked;
-    public int timesFished;
-    public int timesHarvested;
-    public int timesWoven;
-    [Space]
     public List<TotoraCropData> currentTotoraCrops;
     [Space]
     public List<ActivitySO> currentActivitiesPerformed;
     public List<ActivitySO> currentActivitiesPerformedSuccessfully;
+    [Space]
+    public int timesInteractedCook;
+    public int timesInteractedWeaver;
+    public int timesInteractedMusician;
+    public int timesInteractedTotoraGuy;
+    public int timesInteractedFisher;
 
     public Data(GameSettingsSO gameSettingsSO)
     {
@@ -30,8 +31,6 @@ public class Data
 
     public void ResetData(GameSettingsSO gameSettingsSO)
     {
-        Debug.Log("DataReset");
-
         currentDay = gameSettingsSO.startingDay;
         currentTime = gameSettingsSO.startingTime;
 
@@ -43,10 +42,11 @@ public class Data
         ResetActivitiesPerformed();
         ResetActivitiesPerformedSuccessfully();
 
-        timesCooked = 0;
-        timesFished = 0;
-        timesHarvested = 0;
-        timesWoven = 0;
+        timesInteractedCook = 0;
+        timesInteractedWeaver = 0;
+        timesInteractedMusician = 0;
+        timesInteractedTotoraGuy = 0;
+        timesInteractedFisher = 0;
     }
 
     public void ResetPlayerPosition(GameSettingsSO gameSettingsSO)

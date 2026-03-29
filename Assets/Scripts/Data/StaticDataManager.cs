@@ -45,10 +45,11 @@ public class StaticDataManager : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void IncreaseTimesCooked(int quantity) => data.timesCooked += quantity;
-    public void IncreaseTimesFished(int quantity) => data.timesFished += quantity;
-    public void IncreaseTimesHarvested(int quantity) => data.timesHarvested += quantity;
-    public void IncreaseTimesWoven(int quantity) => data.timesWoven += quantity;
+    public void IncreaseTimesInteractedCook() => data.timesInteractedCook++;
+    public void IncreaseTimesInteractedWeaver() => data.timesInteractedWeaver++;
+    public void IncreaseTimesInteractedMusician() => data.timesInteractedMusician++;
+    public void IncreaseTimesInteractedTotoraGuy() => data.timesInteractedTotoraGuy++;
+    public void IncreaseTimesInteractedFisher() => data.timesInteractedFisher++;
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     public void SetCurrentInventory(List<InventoryObjectQuantity> inventory)

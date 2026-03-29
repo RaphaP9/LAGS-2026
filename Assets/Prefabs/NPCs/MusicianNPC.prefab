@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2991694609910204909}
   - component: {fileID: 7330570807337871107}
-  - component: {fileID: 6927652692720280547}
+  - component: {fileID: 6534467103809899009}
   m_Layer: 8
   m_Name: MusicianNPC
   m_TagString: Untagged
@@ -56,7 +56,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &6927652692720280547
+--- !u!114 &6534467103809899009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,12 +65,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 542906458910069345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4065951bf908c648934b48e92fa9f4e, type: 3}
+  m_Script: {fileID: 11500000, guid: b7217c2cd4755234fb3ae5d99832ca8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 2
   tooltipMessage: "Hablar con el m\xFAsico"
-  dialogueSO: {fileID: 11400000, guid: 9b5304a697899ed40ab2821c9f4f1bd5, type: 2}
+  firstInteractionDialogue: {fileID: 11400000, guid: dc7810020294a2042b8c2031bbe2a966, type: 2}
+  dialogueDayRelations:
+  - day: 1
+    dialogueSO: {fileID: 11400000, guid: 6a727a3e7fa8a8e478e8f5ecc6367f11, type: 2}
+  - day: 2
+    dialogueSO: {fileID: 11400000, guid: 4f49d0ef3d2f61146aeb772142117178, type: 2}
+  - day: 3
+    dialogueSO: {fileID: 11400000, guid: a2021c5dde7f6b343b4dd36a55d56bba, type: 2}
+  - day: 4
+    dialogueSO: {fileID: 11400000, guid: d444c6f903cb6cb409c3a1c9251e29b8, type: 2}
 --- !u!1 &1858758057748285616
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +127,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8381970438971522426}
   associatedDialogues:
-  - {fileID: 11400000, guid: 9b5304a697899ed40ab2821c9f4f1bd5, type: 2}
+  - {fileID: 11400000, guid: dc7810020294a2042b8c2031bbe2a966, type: 2}
+  - {fileID: 11400000, guid: 6a727a3e7fa8a8e478e8f5ecc6367f11, type: 2}
+  - {fileID: 11400000, guid: 4f49d0ef3d2f61146aeb772142117178, type: 2}
+  - {fileID: 11400000, guid: a2021c5dde7f6b343b4dd36a55d56bba, type: 2}
+  - {fileID: 11400000, guid: d444c6f903cb6cb409c3a1c9251e29b8, type: 2}
 --- !u!1 &2512661555085050864
 GameObject:
   m_ObjectHideFlags: 0

@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5759368052994590081}
   - component: {fileID: 4521046861397351568}
-  - component: {fileID: 2208876904846264911}
+  - component: {fileID: 7843999593303546546}
   m_Layer: 8
   m_Name: FisherNPC
   m_TagString: Untagged
@@ -166,7 +166,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &2208876904846264911
+--- !u!114 &7843999593303546546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,12 +175,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 3525166273554953624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4065951bf908c648934b48e92fa9f4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 69e5ae44db4e4a54fbebabe312441a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 2
   tooltipMessage: Hablar con el pescador
-  dialogueSO: {fileID: 11400000, guid: f0200fb2a1e17da41bcf165552590495, type: 2}
+  firstInteractionDialogue: {fileID: 11400000, guid: d2f909ee1d7ea3d4fb01c9eb338be81b, type: 2}
+  dialogueDayRelations:
+  - day: 1
+    dialogueSO: {fileID: 11400000, guid: 773716aa6e95fda418e56742e7149e3c, type: 2}
+  - day: 2
+    dialogueSO: {fileID: 11400000, guid: e4b9937616336ac47aeca41343084e12, type: 2}
+  - day: 3
+    dialogueSO: {fileID: 11400000, guid: c480600694b36004b9bc42bc5f06f238, type: 2}
+  - day: 4
+    dialogueSO: {fileID: 11400000, guid: 47cd0065d568c7f4289c6ca5e805d31c, type: 2}
 --- !u!1 &5827916254532023076
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,4 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4690643595198516051}
   associatedDialogues:
-  - {fileID: 11400000, guid: f0200fb2a1e17da41bcf165552590495, type: 2}
+  - {fileID: 11400000, guid: d2f909ee1d7ea3d4fb01c9eb338be81b, type: 2}
+  - {fileID: 11400000, guid: 773716aa6e95fda418e56742e7149e3c, type: 2}
+  - {fileID: 11400000, guid: e4b9937616336ac47aeca41343084e12, type: 2}
+  - {fileID: 11400000, guid: c480600694b36004b9bc42bc5f06f238, type: 2}
+  - {fileID: 11400000, guid: 47cd0065d568c7f4289c6ca5e805d31c, type: 2}

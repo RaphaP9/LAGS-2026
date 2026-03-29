@@ -247,6 +247,8 @@ public class DialogueManager : MonoBehaviour
 
     private void PlaySentenceAudio(DialogueSentence dialogueSentence)
     {
+        if (dialogueSentence.audioClip == null) return;
+
         audioSource.clip = dialogueSentence.audioClip;
         audioSource.Play();
     }

@@ -158,6 +158,10 @@ MonoBehaviour:
   animator: {fileID: 7383876187233926430}
   associatedDialogues:
   - {fileID: 11400000, guid: 8acf6fc13f87e304a9d62bab2ed8678a, type: 2}
+  - {fileID: 11400000, guid: 4129c031aff99f843bb7a31b1c94fc95, type: 2}
+  - {fileID: 11400000, guid: 8f73aa8376665984b8d52fc23b70cd48, type: 2}
+  - {fileID: 11400000, guid: 8d9005a63bc25fc48909f1c73fc136f5, type: 2}
+  - {fileID: 11400000, guid: 808166c960e6de14bbcb8879de1d09cf, type: 2}
 --- !u!1 &3251534530121600409
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3555083512422730981}
   - component: {fileID: 2705276579706039786}
-  - component: {fileID: 5788810678718200687}
+  - component: {fileID: 5265407465164983731}
   m_Layer: 8
   m_Name: CookNPC
   m_TagString: Untagged
@@ -269,7 +273,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &5788810678718200687
+--- !u!114 &5265407465164983731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,9 +282,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7158147027374090998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4065951bf908c648934b48e92fa9f4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 80b0da4f93ccca24a8a81924e4406583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 2
   tooltipMessage: Hablar con la cocinera
-  dialogueSO: {fileID: 11400000, guid: 8acf6fc13f87e304a9d62bab2ed8678a, type: 2}
+  firstInteractionDialogue: {fileID: 11400000, guid: 8acf6fc13f87e304a9d62bab2ed8678a, type: 2}
+  dialogueDayRelations:
+  - day: 1
+    dialogueSO: {fileID: 11400000, guid: 4129c031aff99f843bb7a31b1c94fc95, type: 2}
+  - day: 2
+    dialogueSO: {fileID: 11400000, guid: 8f73aa8376665984b8d52fc23b70cd48, type: 2}
+  - day: 3
+    dialogueSO: {fileID: 11400000, guid: 8d9005a63bc25fc48909f1c73fc136f5, type: 2}
+  - day: 4
+    dialogueSO: {fileID: 11400000, guid: 808166c960e6de14bbcb8879de1d09cf, type: 2}

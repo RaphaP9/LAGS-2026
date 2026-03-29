@@ -7,6 +7,7 @@ public class MoodUI : MonoBehaviour
     [Header("Components")]
     [SerializeField] private GameSettingsSO gameSettingsSO;
     [SerializeField] private Image moodFill;
+    [SerializeField] private Slider moodSlider;
     [SerializeField] private Image moodImage;
 
     [Header("Settings")]
@@ -18,7 +19,7 @@ public class MoodUI : MonoBehaviour
     [SerializeField] private List<SpriteMood> spriteMoodList; //Note, put on descendent time order
 
     [Header("Runtime Filled")]
-    [SerializeField] private float targetFill;
+    [SerializeField] private float targetValue;
     [SerializeField] private Color targetColor;
 
     private const float FILL_THRESHOLD = 0.05f;
@@ -49,9 +50,9 @@ public class MoodUI : MonoBehaviour
 
     private void HandleMoodLerping()
     {
-        if(Mathf.Abs(targetFill - moodFill.fillAmount) < FILL_THRESHOLD) return;
+        if(Mathf.Abs(targetValue - moodSlider.value) < FILL_THRESHOLD) return;
 
-        moodFill.fillAmount = Mathf.Lerp(moodFill.fillAmount, targetFill, smoothLerpFactor * Time.deltaTime);
+        moodSlider.value = Mathf.Lerp(moodSlider.value, targetValue, smoothLerpFactor * Time.deltaTime);
         moodFill.color = Color.Lerp(moodFill.color, targetColor, smoothLerpFactor * Time.deltaTime);
     }
 
@@ -81,17 +82,17 @@ public class MoodUI : MonoBehaviour
     #region  Subscriptions
     private void MoodManager_OnMoodInitialized(object sender, MoodManager.OnMoodEventArgs e)
     {
-        targetFill = NormalizeMood(e.mood);
+        targetValue = NormalizeMood(e.mood);
         targetColor = GetFillColor(e.mood);
 
-        moodFill.fillAmount = targetFill; //Instant
+        moodSlider.value = targetValue; //Instant
         moodFill.color = targetColor;
         moodImage.sprite = GetMoodSprite(e.mood);
     }
 
     private void MoodManager_OnMoodChanged(object sender, MoodManager.OnMoodEventArgs e)
     {
-        targetFill = NormalizeMood(e.mood);
+        targetValue = NormalizeMood(e.mood);
         targetColor = GetFillColor(e.mood);
         moodImage.sprite = GetMoodSprite(e.mood);
     }
