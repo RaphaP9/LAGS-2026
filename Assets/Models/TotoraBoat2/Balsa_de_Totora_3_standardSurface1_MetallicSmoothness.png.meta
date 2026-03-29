@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 59cbb8c8fad8a974bb9eb708c44d1c91
+guid: f931ca0cf4ceee14389f89cc3c9f1bcb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7187579120987932720
-    second: "Plantas_CortadasPeque\xF1as1_standardSurface1_MetallicSmoothness_0"
+      213: -6126623555387268683
+    second: Balsa_de_Totora_3_standardSurface1_MetallicSmoothness_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Plantas_CortadasPeque\xF1as1_standardSurface1_MetallicSmoothness_0"
+      name: Balsa_de_Totora_3_standardSurface1_MetallicSmoothness_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 512
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 038008d01296fb360800000000000000
-      internalID: 7187579120987932720
+      spriteID: 5b1e99c265cd9faa0800000000000000
+      internalID: -6126623555387268683
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Plantas_CortadasPeque\xF1as1_standardSurface1_MetallicSmoothness_0": 7187579120987932720
+      Balsa_de_Totora_3_standardSurface1_MetallicSmoothness_0: -6126623555387268683
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

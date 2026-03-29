@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5c0d870a601759845973364c74e22c6a
+guid: 7ed1401bdb62dc84c835691446ae7a41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5317699572973947691
-    second: Cartel_V2_standardSurface1_Normal_0
+      213: -2355372296005889212
+    second: Balsa_de_Totora_3_standardSurface1_Normal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cartel_V2_standardSurface1_Normal_0
+      name: Balsa_de_Totora_3_standardSurface1_Normal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d434aaa96cb336b0800000000000000
-      internalID: -5317699572973947691
+      spriteID: 443d5c64069005fd0800000000000000
+      internalID: -2355372296005889212
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cartel_V2_standardSurface1_Normal_0: -5317699572973947691
+      Balsa_de_Totora_3_standardSurface1_Normal_0: -2355372296005889212
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d1a7fae1334784a4ba3bc6102b2c5723
+guid: 36e35b48e8bf29644b08c9046ad344ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 991101913127037525
-    second: Cartel_V2_standardSurface1_MetallicSmoothness_0
+      213: 7771997159096167324
+    second: Adorno_Sol_standardSurface1_AlbedoTransparency_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cartel_V2_standardSurface1_MetallicSmoothness_0
+      name: Adorno_Sol_standardSurface1_AlbedoTransparency_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55aa52c50f911cd00800000000000000
-      internalID: 991101913127037525
+      spriteID: c9ba5470d3eabdb60800000000000000
+      internalID: 7771997159096167324
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cartel_V2_standardSurface1_MetallicSmoothness_0: 991101913127037525
+      Adorno_Sol_standardSurface1_AlbedoTransparency_0: 7771997159096167324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

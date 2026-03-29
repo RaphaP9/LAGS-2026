@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: c6c7e918670f2a24baf4a7ecbcaf8f38
+guid: 9a4580d513403a64d8fd8b4f99162845
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -947554875686887547
-    second: boton2_0
+      213: -3194252870057102954
+    second: "PastoPeque\xF1o_2_standardSurface1_Normal_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
-    sRGBTexture: 1
+    enableMipMap: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -46,18 +46,18 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 40, y: 40, z: 40, w: 40}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 1
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boton2_0
+      name: "PastoPeque\xF1o_2_standardSurface1_Normal_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 322
-        height: 123
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58f5e756cdb99d2f0800000000000000
-      internalID: -947554875686887547
+      spriteID: 691797540fbbba3d0800000000000000
+      internalID: -3194252870057102954
       vertices: []
       indices: 
       edges: []
@@ -125,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      boton2_0: -947554875686887547
+      "PastoPeque\xF1o_2_standardSurface1_Normal_0": -3194252870057102954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

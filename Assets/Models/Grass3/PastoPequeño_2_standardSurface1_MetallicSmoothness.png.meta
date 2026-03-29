@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: bd1f6d21d83524f46b482243d6be634d
+guid: 57fe6b4b349b3e3428b338861ae14c2a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6099844242522602728
-    second: "Plantas_CortadasPeque\xF1as1_standardSurface1_Normal_0"
+      213: -2381670463619378280
+    second: "PastoPeque\xF1o_2_standardSurface1_MetallicSmoothness_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
-    sRGBTexture: 0
+    enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -55,9 +55,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 1
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Plantas_CortadasPeque\xF1as1_standardSurface1_Normal_0"
+      name: "PastoPeque\xF1o_2_standardSurface1_MetallicSmoothness_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8138a33dafff85ba0800000000000000
-      internalID: -6099844242522602728
+      spriteID: 8935debf45b92fed0800000000000000
+      internalID: -2381670463619378280
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Plantas_CortadasPeque\xF1as1_standardSurface1_Normal_0": -6099844242522602728
+      "PastoPeque\xF1o_2_standardSurface1_MetallicSmoothness_0": -2381670463619378280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
