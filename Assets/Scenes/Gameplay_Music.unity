@@ -5426,6 +5426,8 @@ MonoBehaviour:
   endingTime: 0.5
   partitionUIPrefabs:
   - {fileID: 3139088123278635910, guid: 29715389a386ab14ab099fe98569d4a4, type: 3}
+  - {fileID: 3139088123278635910, guid: a693b5cf3ae00a54ea40309b9b2ff419, type: 3}
+  - {fileID: 3139088123278635910, guid: 6c01c602b0715bd46a8aa507c99cec3d, type: 3}
   currentPartitionUI: {fileID: 0}
   state: 0
 --- !u!1 &2054425585
