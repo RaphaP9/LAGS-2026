@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totoraCropHandler: {fileID: 9005043603057111397}
-  interactionRange: 2
+  interactionRange: 3.5
   tooltipMessage: Cosechar Totora
 --- !u!1001 &981106713187249258
 PrefabInstance:

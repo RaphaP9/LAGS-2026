@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 2
-  tooltipMessage: Hablar con la cocinera
+  tooltipMessage: Hablar con la Jefa Uros
   firstInteractionDialogue: {fileID: 11400000, guid: 8acf6fc13f87e304a9d62bab2ed8678a, type: 2}
   dialogueDayRelations:
   - day: 1
