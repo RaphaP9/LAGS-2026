@@ -560,18 +560,6 @@ PrefabInstance:
       propertyPath: 'loomPointUIList.Array.data[17]'
       value: 
       objectReference: {fileID: 5343772531338377708}
-    - target: {fileID: 655005483313078615, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
-      propertyPath: m_Color.b
-      value: 0.2627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 655005483313078615, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
-      propertyPath: m_Color.g
-      value: 0.06666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 655005483313078615, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
-      propertyPath: m_Color.r
-      value: 0.10980392
-      objectReference: {fileID: 0}
     - target: {fileID: 3207826018422268430, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -661,9 +649,17 @@ PrefabInstance:
       value: LoomUI1
       objectReference: {fileID: 0}
     - target: {fileID: 6922154649541261504, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
-      propertyPath: sewPrefab
-      value: 
-      objectReference: {fileID: 8632059307817665871, guid: 92d76ce4874f6c84ba2f7ba3b14ca68f, type: 3}
+      propertyPath: weaveColor.b
+      value: 0.2627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922154649541261504, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
+      propertyPath: weaveColor.g
+      value: 0.06666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922154649541261504, guid: e44b1687ddd97cf468fd55f5d7cbf34a, type: 3}
+      propertyPath: weaveColor.r
+      value: 0.10980392
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

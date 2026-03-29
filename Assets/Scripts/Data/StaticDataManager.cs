@@ -16,7 +16,7 @@ public class StaticDataManager : MonoBehaviour
     private void Awake()
     {
         SetSingleton();
-        ResetData(gameSettingsSO);
+        ResetData();
     }
 
     private void SetSingleton()
@@ -33,7 +33,7 @@ public class StaticDataManager : MonoBehaviour
         }
     }
 
-    public void ResetData(GameSettingsSO gameSettingsSO) => data.ResetData(gameSettingsSO);
+    public void ResetData() => data.ResetData(gameSettingsSO);
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     

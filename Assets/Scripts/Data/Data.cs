@@ -30,13 +30,14 @@ public class Data
 
     public void ResetData(GameSettingsSO gameSettingsSO)
     {
+        Debug.Log("DataReset");
+
         currentDay = gameSettingsSO.startingDay;
         currentTime = gameSettingsSO.startingTime;
 
         currentMood = gameSettingsSO.startingMood;
 
-        currentPlayerPosition = gameSettingsSO.startingPlayerPosition;
-
+        ResetPlayerPosition(gameSettingsSO);
         ResetInventory(gameSettingsSO);
         ResetTorotaCrops(gameSettingsSO);
         ResetActivitiesPerformed();
