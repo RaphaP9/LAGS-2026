@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activityScheduleList:
   - activitySO: {fileID: 11400000, guid: 1b8aae849f7fc9f459ffc2c255cf70b6, type: 2}
-    times: 2
-    description: "Cosechar dos reto\xF1os de totora"
+    times: 3
+    description: "Cosechar tres reto\xF1os de totora"
   - activitySO: {fileID: 11400000, guid: d202d6fb3b8c4d6418b715868e7fcdc2, type: 2}
-    times: 1
-    description: Realizar un tejido muy bonito
-  - activitySO: {fileID: 11400000, guid: 9d6d324798a467d4b967870b0c3ce4a7, type: 2}
     times: 2
-    description: Pescar dos truchas en el lago
+    description: Realizar dos tejidos muy bonito
+  - activitySO: {fileID: 11400000, guid: 9d6d324798a467d4b967870b0c3ce4a7, type: 2}
+    times: 3
+    description: Pescar tres truchas en el lago

@@ -17,8 +17,8 @@ MonoBehaviour:
     times: 2
     description: Cosechar dos plantitas de totora
   - activitySO: {fileID: 11400000, guid: d202d6fb3b8c4d6418b715868e7fcdc2, type: 2}
-    times: 1
-    description: Realizar un telar
+    times: 3
+    description: Realizar tres telares
   - activitySO: {fileID: 11400000, guid: 9d6d324798a467d4b967870b0c3ce4a7, type: 2}
     times: 2
     description: Pescar dos truchas
