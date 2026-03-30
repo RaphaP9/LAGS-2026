@@ -2969,7 +2969,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Programacion del Juego
+  m_text: "Programaci\xF3n del Juego"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25befa974308e86488ed24246bc4a62b, type: 2}
   m_sharedMaterial: {fileID: 1454428316625905445, guid: 25befa974308e86488ed24246bc4a62b, type: 2}
@@ -5391,7 +5391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Behig\xEDn Mendoza Hurtado"
+  m_text: Behigin Mendoza Hurtado
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25befa974308e86488ed24246bc4a62b, type: 2}
   m_sharedMaterial: {fileID: 1454428316625905445, guid: 25befa974308e86488ed24246bc4a62b, type: 2}

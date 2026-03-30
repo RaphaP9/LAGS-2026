@@ -292,7 +292,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeFadeInTime: 0.3
   volumeFadeOutTime: 0.3
-  exceptionTransitions: []
+  exceptionTransitions:
+  - originScene: Gameplay_Main
+    targetScene: Gameplay_Fishing
+  - originScene: Gameplay_Fishing
+    targetScene: Gameplay_Main
+  - originScene: Gameplay_Main
+    targetScene: Gameplay_Weaving
+  - originScene: Gameplay_Weaving
+    targetScene: Gameplay_Main
   fadeInExceptionTransitions: []
   fadeOutExceptionTransitions: []
 --- !u!1 &3436544090391414308
