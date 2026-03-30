@@ -301,6 +301,8 @@ MonoBehaviour:
     targetScene: Gameplay_Weaving
   - originScene: Gameplay_Weaving
     targetScene: Gameplay_Main
+  - originScene: Gameplay_Main
+    targetScene: Gameplay_Main
   fadeInExceptionTransitions: []
   fadeOutExceptionTransitions: []
 --- !u!1 &3436544090391414308
