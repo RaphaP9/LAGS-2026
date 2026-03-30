@@ -20,4 +20,4 @@ MonoBehaviour:
   - sceneName: Gameplay_Fishing
     music: {fileID: 8300000, guid: 1ab946d95888ff34c9cfc68548a9e49b, type: 3}
   - sceneName: Credits
-    music: {fileID: 8300000, guid: 661e46bfcf4080b4eb95f664f9b64b46, type: 3}
+    music: {fileID: 8300000, guid: 1ab946d95888ff34c9cfc68548a9e49b, type: 3}
