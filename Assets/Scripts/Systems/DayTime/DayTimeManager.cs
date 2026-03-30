@@ -189,7 +189,12 @@ public class DayTimeManager : MonoBehaviour
         StaticDataManager.Instance.SetCurrentTime(currentTime);
     }
 
-    public void ResetTimeToStart() => SetTimeWithoutNotify(gameSettingsSO.startingTime);
+    public void SetTimeOnlyToData(int time)
+    {
+        StaticDataManager.Instance.SetCurrentTime(time);
+    }
+
+    public void ResetTimeToStart() => SetTimeOnlyToData(gameSettingsSO.startingTime);
 
     public void TurnToNextDay() //NeverTrigger Events For This
     {
