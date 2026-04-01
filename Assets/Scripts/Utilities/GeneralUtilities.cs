@@ -425,6 +425,18 @@ public static class GeneralUtilities
         return shuffledPoolCopy.GetRange(0, quantity);
     }
 
+    public static List<T> InvertList<T>(List<T> originalList)
+    {
+        List<T> invertedList = new List<T>();
+
+        for (int i = originalList.Count - 1; i >= 0; i--)
+        {
+            invertedList.Add(originalList[i]);
+        }
+
+        return invertedList;
+    }
+
     #endregion
 
     #region Generics

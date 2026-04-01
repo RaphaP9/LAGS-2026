@@ -298,9 +298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98c1c83923b0b446bbb62c8deb49fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loomUI: {fileID: 561061901388783024}
   UILineRenderer: {fileID: 655005483313078615}
   sewPrefab: {fileID: 8632059307817665871, guid: 2f1d7eb0b1a8f3b4cb204a5134a6d513, type: 3}
   weaveColor: {r: 1, g: 1, b: 1, a: 1}
+  sewUIList: []
 --- !u!114 &655005483313078615
 MonoBehaviour:
   m_ObjectHideFlags: 0

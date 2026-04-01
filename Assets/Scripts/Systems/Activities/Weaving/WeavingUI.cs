@@ -13,6 +13,8 @@ public class WeavingUI : MonoBehaviour
     [Header("Settings")]
     [SerializeField, Range(0f, 3f)] private float startingTime;
     [SerializeField, Range(0f, 3f)] private float endingTime;
+    [Space]
+    [SerializeField] private bool enableUnweave;
 
     [Header("Lists")]
     [SerializeField] private List<Transform> loomUIPrefabs;
@@ -117,6 +119,7 @@ public class WeavingUI : MonoBehaviour
     }
 
     public bool CanWeave() => state == State.Playing;
+    public bool EnableUnweave() => enableUnweave;  
 
     #region Animations
     public void ShowUI()

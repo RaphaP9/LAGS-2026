@@ -15,10 +15,13 @@ public class LoomPointUI : MonoBehaviour, IPointerClickHandler
     [SerializeField] private bool isWoven;
     [SerializeField] private int wovenAtNumber;
 
+    public Vector2 RelativePosition => relativePosition;
+
     private RectTransform refferenceRectTransform;
     private WeavingUI weavingUI;
 
     public static event EventHandler<OnPointWovenEventArgs> OnPointWoven;
+    public static event EventHandler<OnPointWovenEventArgs> OnPointUnwoven;
 
     public class OnPointWovenEventArgs : EventArgs
     {
@@ -46,11 +49,23 @@ public class LoomPointUI : MonoBehaviour, IPointerClickHandler
         OnPointWoven?.Invoke(this, new OnPointWovenEventArgs {loomPointUI = this, pointNumber = pointNumber, relativePosition = relativePosition });
     }
 
+    private void UnweavePoint()
+    {
+        isWoven = false;
+        OnPointUnwoven?.Invoke(this, new OnPointWovenEventArgs { loomPointUI = this, pointNumber = pointNumber, relativePosition = relativePosition });
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (!weavingUI.CanWeave()) return;
 
-        if (isWoven) return;
-        WeavePoint();       
+        if (!isWoven)
+        {
+            WeavePoint();
+        }
+        else if (weavingUI.EnableUnweave())
+        {
+            UnweavePoint();
+        }
     }
 }

@@ -31056,7 +31056,7 @@ MonoBehaviour:
   partitionUIHolder: {fileID: 1717880411}
   minigameKeybindIndicatorUI: {fileID: 0}
   startingTime: 0.25
-  endingTime: 0.5
+  endingTime: 1.5
   partitionUIPrefabs:
   - {fileID: 3139088123278635910, guid: 29715389a386ab14ab099fe98569d4a4, type: 3}
   - {fileID: 3139088123278635910, guid: a693b5cf3ae00a54ea40309b9b2ff419, type: 3}

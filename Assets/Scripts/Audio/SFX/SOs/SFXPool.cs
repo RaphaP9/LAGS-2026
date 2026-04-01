@@ -21,4 +21,8 @@ public class SFXPool : ScriptableObject
 
     [Header("Weaving")]
     public AudioClip[] sew;
+
+    [Header("General")]
+    public AudioClip[] success;
+    public AudioClip[] fail;
 }

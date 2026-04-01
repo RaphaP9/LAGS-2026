@@ -1,21 +1,30 @@
 using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class LoomWeaveVisual : MonoBehaviour
 {
     [Header("Components")]
+    [SerializeField] private LoomUI loomUI;
     [SerializeField] private UILineRenderer UILineRenderer;
     [SerializeField] private Transform sewPrefab;
 
     [Header("Settings")]
     [SerializeField] private Color weaveColor;
 
+    [Header("Lists")]
+    [SerializeField] private List<SewUI> sewUIList;
+
     private void OnEnable()
     {
-        LoomPointUI.OnPointWoven += LoomPointUI_OnPointWoven;
+        loomUI.OnWovenPointAdded += LoomUI_OnWovenPointAdded;
+        loomUI.OnWovenPointRemoved += LoomUI_OnWovenPointRemoved;
     }
+
     private void OnDisable()
     {
-        LoomPointUI.OnPointWoven -= LoomPointUI_OnPointWoven;
+        loomUI.OnWovenPointAdded -= LoomUI_OnWovenPointAdded;
+        loomUI.OnWovenPointRemoved -= LoomUI_OnWovenPointRemoved;
     }
 
     private void Start()
@@ -28,27 +37,55 @@ public class LoomWeaveVisual : MonoBehaviour
         UILineRenderer.color = weaveColor;
     }
 
-    private void AddUILineRendererPoint(Vector2 position)
+    private void UpdateLineRenderer(List<LoomPointUI> loomPoints)
     {
-        UILineRenderer.AddPoint(position);
+        UILineRenderer.ClearPoints();
+
+        foreach(LoomPointUI loomPoint in loomPoints)
+        {
+            UILineRenderer.AddPoint(loomPoint.RelativePosition);
+        }
     }
 
-    private void AddSewPoint(Vector2 position)
+    private void AddSewPoint(LoomPointUI loomPointUI)
     {
         Transform sewTransform = Instantiate(sewPrefab, transform);
         RectTransform rectTransorm = sewTransform.GetComponent<RectTransform>();
-        rectTransorm.localPosition = position;
+        rectTransorm.localPosition = loomPointUI.RelativePosition;
 
         SewUI sewUI = sewTransform.GetComponentInChildren<SewUI>();
 
         if (sewUI == null) return;
 
-        sewUI.SetColor(weaveColor);
+        sewUI.SetSew(loomPointUI, weaveColor);
+        sewUIList.Add(sewUI);
     }
 
-    private void LoomPointUI_OnPointWoven(object sender, LoomPointUI.OnPointWovenEventArgs e)
+    private void RemoveSewPoint(LoomPointUI loomPointUI)
     {
-        AddSewPoint(e.relativePosition);
-        AddUILineRendererPoint(e.relativePosition);
+        foreach(SewUI sewUI in sewUIList)
+        {
+            if (sewUI.LinkedLoomPointUI == loomPointUI)
+            {
+                sewUIList.Remove(sewUI);
+                sewUI.DestroySew();
+                return;
+            }
+        }
     }
+
+
+    #region Subscriptions
+    private void LoomUI_OnWovenPointAdded(object sender, LoomUI.OnWovenPointEventArgs e)
+    {
+        AddSewPoint(e.wovenPoint);
+        UpdateLineRenderer(e.wovenLoomPointUIList);
+    }
+
+    private void LoomUI_OnWovenPointRemoved(object sender, LoomUI.OnWovenPointEventArgs e)
+    {
+        RemoveSewPoint(e.wovenPoint);
+        UpdateLineRenderer(e.wovenLoomPointUIList);
+    }
+    #endregion
 }

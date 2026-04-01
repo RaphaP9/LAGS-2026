@@ -27,3 +27,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 58ef98add94fb11449b0719cfe26a7aa, type: 3}
   sew:
   - {fileID: 8300000, guid: fbe9ed5e744b805409d9ba142181541d, type: 3}
+  success:
+  - {fileID: 8300000, guid: 3a4a8b57eb51b0242a769eaa49e76d8c, type: 3}
+  fail:
+  - {fileID: 8300000, guid: 2e00ee3f5f5f4be45be1024883542c23, type: 3}
